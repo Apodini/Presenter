@@ -167,8 +167,6 @@ extension CoderView: CustomStringConvertible {
 
 // MARK: - InternalView
 
-#if canImport(SwiftUI)
-
 extension CoderView: InternalView {
 
     public var view: _View {
@@ -176,5 +174,3 @@ extension CoderView: InternalView {
     }
 
 }
-
-#endif

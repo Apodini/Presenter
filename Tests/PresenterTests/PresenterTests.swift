@@ -1,5 +1,5 @@
 
-#if !os(watchOS) && canImport(XCTest)
+#if !os(watchOS) && canImport(XCTest) && canImport(SwiftUI)
 
 import XCTest
 import Presenter

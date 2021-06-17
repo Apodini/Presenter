@@ -46,6 +46,8 @@ struct Nil: InternalView, Codable {
 
 }
 
+#if canImport(SwiftUI)
+
 extension SwiftUI.EmptyView: _View {
 
     public var erasedCodableBody: _CodableView? {
@@ -65,6 +67,8 @@ extension SwiftUI.EmptyView: _View {
     }
 
 }
+
+#endif
 
 // MARK: - CustomStringConvertible
 

@@ -43,6 +43,12 @@ public protocol View: _View, Codable {
 
 extension Never: View {
 
+    public var body: Never {
+        get {
+            fatalError("This can't happen.")
+        }
+    }
+
     public init(from decoder: Decoder) throws {
         fatalError()
     }

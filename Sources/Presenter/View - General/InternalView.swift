@@ -9,6 +9,8 @@ extension InternalView {
         fatalError()
     }
 
+    #if canImport(SwiftUI)
+
     public func eraseToAnyView() -> AnyView {
         view.eraseToAnyView()
     }
@@ -20,5 +22,7 @@ extension InternalView {
     public func apply(_ modifier: AnyViewModifying) -> _View {
         view.apply(modifier)
     }
+
+    #endif
 
 }

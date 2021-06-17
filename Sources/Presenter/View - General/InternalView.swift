@@ -1,6 +1,10 @@
 
 public protocol InternalView: View where Body == Never {
+
+    #if canImport(SwiftUI)
     var view: _View { get }
+    #endif
+
 }
 
 extension InternalView {

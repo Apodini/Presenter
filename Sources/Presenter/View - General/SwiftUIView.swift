@@ -8,13 +8,13 @@ public protocol SwiftUIView: View where Body == Never {
 
 }
 
-#if canImport(SwiftUI)
-
 extension SwiftUIView {
 
     public var body: Never {
         fatalError()
     }
+
+    #if canImport(SwiftUI)
 
     public func eraseToAnyView() -> AnyView {
         AnyView(view)
@@ -28,6 +28,6 @@ extension SwiftUIView {
         modifier.apply(to: view)
     }
 
-}
+    #endif
 
-#endif
+}

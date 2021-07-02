@@ -1,0 +1,3666 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Configuration+Plugin.swift",
+      "line": 16,
+      "symbol": "Presenter.use(plugin:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Configuration+Plugin.swift",
+      "line": 25,
+      "symbol": "Presenter.remove(plugin:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Configuration+Use.swift",
+      "line": 6,
+      "symbol": "Presenter.use(view:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Configuration+Use.swift",
+      "line": 10,
+      "symbol": "Presenter.remove(view:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Configuration+Use.swift",
+      "line": 16,
+      "symbol": "Presenter.use(modifier:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Configuration+Use.swift",
+      "line": 20,
+      "symbol": "Presenter.remove(modifier:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Configuration+Use.swift",
+      "line": 26,
+      "symbol": "Presenter.use(action:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Configuration+Use.swift",
+      "line": 30,
+      "symbol": "Presenter.remove(action:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Configuration.swift",
+      "line": 2,
+      "symbol": "Presenter",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Configuration.swift",
+      "line": 2,
+      "symbol": "Presenter",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Configuration.swift",
+      "line": 4,
+      "symbol": "Presenter",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Configuration.swift",
+      "line": 6,
+      "symbol": "Presenter.decode(from:decoder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Configuration.swift",
+      "line": 16,
+      "symbol": "Presenter.decode(from:decoder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Configuration.swift",
+      "line": 28,
+      "symbol": "Presenter.encode(_:encoder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Configuration.swift",
+      "line": 38,
+      "symbol": "Presenter.encode(_:encoder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/NamedType.swift",
+      "line": 4,
+      "symbol": "NamedType",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/NamedType.swift",
+      "line": 5,
+      "symbol": "NamedType.type",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/NamedType.swift",
+      "line": 8,
+      "symbol": "NamedType",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/NamedType.swift",
+      "line": 10,
+      "symbol": "NamedType.type",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Plugin.swift",
+      "line": 2,
+      "symbol": "Plugin",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Plugin.swift",
+      "line": 4,
+      "symbol": "Plugin.willAdd()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Plugin.swift",
+      "line": 5,
+      "symbol": "Plugin.didAdd()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Plugin.swift",
+      "line": 7,
+      "symbol": "Plugin.willRemove()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Plugin.swift",
+      "line": 8,
+      "symbol": "Plugin.didRemove()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Plugin.swift",
+      "line": 10,
+      "symbol": "Plugin.views",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Plugin.swift",
+      "line": 11,
+      "symbol": "Plugin.viewModifiers",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Plugin.swift",
+      "line": 12,
+      "symbol": "Plugin.actions",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Plugin.swift",
+      "line": 13,
+      "symbol": "Plugin.plugins",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Plugin.swift",
+      "line": 17,
+      "symbol": "Plugin",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Plugin.swift",
+      "line": 19,
+      "symbol": "Plugin.willAdd()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Plugin.swift",
+      "line": 20,
+      "symbol": "Plugin.didAdd()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Plugin.swift",
+      "line": 22,
+      "symbol": "Plugin.willRemove()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Plugin.swift",
+      "line": 23,
+      "symbol": "Plugin.didRemove()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Plugin.swift",
+      "line": 25,
+      "symbol": "Plugin.views",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Plugin.swift",
+      "line": 26,
+      "symbol": "Plugin.viewModifiers",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Plugin.swift",
+      "line": 27,
+      "symbol": "Plugin.actions",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Configuration/Plugin.swift",
+      "line": 28,
+      "symbol": "Plugin.plugins",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/Action.swift",
+      "line": 2,
+      "symbol": "Action",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/Action.swift",
+      "line": 3,
+      "symbol": "Action.type",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/Action.swift",
+      "line": 6,
+      "symbol": "Action.perform(on:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/Action.swift",
+      "line": 10,
+      "symbol": "Action",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/Action.swift",
+      "line": 12,
+      "symbol": "Action.type",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/Binding.swift",
+      "line": 3,
+      "symbol": "Binding",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/Binding.swift",
+      "line": 12,
+      "symbol": "Binding.wrappedValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/Binding.swift",
+      "line": 18,
+      "symbol": "Binding.at(_:default:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/CoderAction.swift",
+      "line": 2,
+      "symbol": "CoderAction",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/CoderAction.swift",
+      "line": 21,
+      "symbol": "CoderAction.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/CoderAction.swift",
+      "line": 104,
+      "symbol": "CoderAction",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/CoderAction.swift",
+      "line": 108,
+      "symbol": "CoderAction.perform(on:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/ComposedAction.swift",
+      "line": 2,
+      "symbol": "ComposedAction",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/ComposedAction.swift",
+      "line": 10,
+      "symbol": "ComposedAction.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/ComposedAction.swift",
+      "line": 18,
+      "symbol": "ComposedAction.perform(on:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/CopyAction.swift",
+      "line": 2,
+      "symbol": "CopyAction",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/CopyAction.swift",
+      "line": 11,
+      "symbol": "CopyAction.init(from:to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/CopyAction.swift",
+      "line": 20,
+      "symbol": "CopyAction.perform(on:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/JavaScriptAction.swift",
+      "line": 6,
+      "symbol": "JavaScriptAction",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/JavaScriptAction.swift",
+      "line": 18,
+      "symbol": "JavaScriptAction.init(script:inputs:resultKey:errorKey:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/JavaScriptAction.swift",
+      "line": 33,
+      "symbol": "JavaScriptAction.perform(on:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/JavaScriptAction.swift",
+      "line": 68,
+      "symbol": "JavaScriptAction",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/JavaScriptAction.swift",
+      "line": 70,
+      "symbol": "JavaScriptAction.ScriptInput",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/JavaScriptAction.swift",
+      "line": 74,
+      "symbol": "JavaScriptAction.ScriptInput.stateKey",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/JavaScriptAction.swift",
+      "line": 75,
+      "symbol": "JavaScriptAction.ScriptInput.variableName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/JavaScriptAction.swift",
+      "line": 79,
+      "symbol": "JavaScriptAction.ScriptInput.init(stateKey:variableName:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/Model.swift",
+      "line": 4,
+      "symbol": "Model",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/Model.swift",
+      "line": 8,
+      "symbol": "Model.state",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/Model.swift",
+      "line": 12,
+      "symbol": "Model.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/Model.swift",
+      "line": 16,
+      "symbol": "Model.binding(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/Model.swift",
+      "line": 23,
+      "symbol": "Model.binding(for:map:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/Model.swift",
+      "line": 31,
+      "symbol": "Model.action(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/Model.swift",
+      "line": 35,
+      "symbol": "Model.action(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/ModelView.swift",
+      "line": 4,
+      "symbol": "ModelView",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/ModelView.swift",
+      "line": 14,
+      "symbol": "ModelView.init(create:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/SetAction.swift",
+      "line": 2,
+      "symbol": "SetAction",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/SetAction.swift",
+      "line": 11,
+      "symbol": "SetAction.init(key:to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/SetAction.swift",
+      "line": 20,
+      "symbol": "SetAction.perform(on:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/State.swift",
+      "line": 3,
+      "symbol": "State",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/State.swift",
+      "line": 12,
+      "symbol": "State.wrappedValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/State.swift",
+      "line": 16,
+      "symbol": "State.projectedValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/State.swift",
+      "line": 22,
+      "symbol": "State.init(_:default:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/Value.swift",
+      "line": 2,
+      "symbol": "Value",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/Value.swift",
+      "line": 13,
+      "symbol": "Value.get(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/Value.swift",
+      "line": 21,
+      "symbol": "Value.static(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Model/Value.swift",
+      "line": 25,
+      "symbol": "Value.at(_:default:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Alignment.swift",
+      "line": 2,
+      "symbol": "HorizontalAlignment",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Alignment.swift",
+      "line": 3,
+      "symbol": "HorizontalAlignment.center",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Alignment.swift",
+      "line": 3,
+      "symbol": "HorizontalAlignment.leading",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Alignment.swift",
+      "line": 3,
+      "symbol": "HorizontalAlignment.trailing",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Alignment.swift",
+      "line": 6,
+      "symbol": "VerticalAlignment",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Alignment.swift",
+      "line": 7,
+      "symbol": "VerticalAlignment.bottom",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Alignment.swift",
+      "line": 7,
+      "symbol": "VerticalAlignment.center",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Alignment.swift",
+      "line": 7,
+      "symbol": "VerticalAlignment.top",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Alignment.swift",
+      "line": 10,
+      "symbol": "Alignment",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Alignment.swift",
+      "line": 11,
+      "symbol": "Alignment.bottom",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Alignment.swift",
+      "line": 11,
+      "symbol": "Alignment.center",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Alignment.swift",
+      "line": 11,
+      "symbol": "Alignment.leading",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Alignment.swift",
+      "line": 11,
+      "symbol": "Alignment.top",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Alignment.swift",
+      "line": 11,
+      "symbol": "Alignment.trailing",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Alignment.swift",
+      "line": 12,
+      "symbol": "Alignment.topLeading",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Alignment.swift",
+      "line": 12,
+      "symbol": "Alignment.topTrailing",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Alignment.swift",
+      "line": 13,
+      "symbol": "Alignment.bottomLeading",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Alignment.swift",
+      "line": 13,
+      "symbol": "Alignment.bottomTrailing",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Angle.swift",
+      "line": 2,
+      "symbol": "Angle",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Angle.swift",
+      "line": 6,
+      "symbol": "Angle.radians",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Angle.swift",
+      "line": 10,
+      "symbol": "Angle.degrees",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Angle.swift",
+      "line": 21,
+      "symbol": "Angle.init(radians:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Angle.swift",
+      "line": 25,
+      "symbol": "Angle.init(degrees:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Angle.swift",
+      "line": 31,
+      "symbol": "Angle.zero",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Angle.swift",
+      "line": 37,
+      "symbol": "Angle",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Animation.swift",
+      "line": 2,
+      "symbol": "Animation",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Animation.swift",
+      "line": 14,
+      "symbol": "Animation.spring(response:damping:blendDuration:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Animation.swift",
+      "line": 20,
+      "symbol": "Animation.interpolatingSpring(mass:stiffness:damping:initialVelocity:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Animation.swift",
+      "line": 28,
+      "symbol": "Animation.default",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Animation.swift",
+      "line": 32,
+      "symbol": "Animation.easeIn(duration:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Animation.swift",
+      "line": 36,
+      "symbol": "Animation.easeIn",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Animation.swift",
+      "line": 40,
+      "symbol": "Animation.easeOut(duration:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Animation.swift",
+      "line": 44,
+      "symbol": "Animation.easeOut",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Animation.swift",
+      "line": 48,
+      "symbol": "Animation.easeInOut(duration:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Animation.swift",
+      "line": 52,
+      "symbol": "Animation.easeInOut",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Animation.swift",
+      "line": 56,
+      "symbol": "Animation.linear(duration:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Animation.swift",
+      "line": 60,
+      "symbol": "Animation.linear",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Animation.swift",
+      "line": 64,
+      "symbol": "Animation.timingCurve(c0x:c0y:c1x:c1y:duration:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Animation.swift",
+      "line": 76,
+      "symbol": "Animation.delay(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Animation.swift",
+      "line": 81,
+      "symbol": "Animation.repeatCount(_:autoreverses:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Animation.swift",
+      "line": 85,
+      "symbol": "Animation.repeatForever(autoreverses:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Animation.swift",
+      "line": 89,
+      "symbol": "Animation.speed(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Animation.swift",
+      "line": 95,
+      "symbol": "Animation",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/AxisSet.swift",
+      "line": 2,
+      "symbol": "AxisSet",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/AxisSet.swift",
+      "line": 6,
+      "symbol": "AxisSet.horizontal",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/AxisSet.swift",
+      "line": 7,
+      "symbol": "AxisSet.vertical",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/AxisSet.swift",
+      "line": 8,
+      "symbol": "AxisSet.both",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/AxisSet.swift",
+      "line": 9,
+      "symbol": "AxisSet.none",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/ColorCode.swift",
+      "line": 2,
+      "symbol": "ColorCode",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/ColorCode.swift",
+      "line": 12,
+      "symbol": "ColorCode.color",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/ColorCode.swift",
+      "line": 16,
+      "symbol": "ColorCode.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/ColorCode.swift",
+      "line": 20,
+      "symbol": "ColorCode.init(string:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/ColorCode.swift",
+      "line": 62,
+      "symbol": "ColorCode",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 2,
+      "symbol": "Font",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 6,
+      "symbol": "Font.Style",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 7,
+      "symbol": "Font.Style.body",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 7,
+      "symbol": "Font.Style.callout",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 7,
+      "symbol": "Font.Style.caption",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 8,
+      "symbol": "Font.Style.footnote",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 8,
+      "symbol": "Font.Style.headline",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 8,
+      "symbol": "Font.Style.largeTitle",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 9,
+      "symbol": "Font.Style.subheadline",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 9,
+      "symbol": "Font.Style.title",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 12,
+      "symbol": "Font.Design",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 13,
+      "symbol": "Font.Design.default",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 14,
+      "symbol": "Font.Design.monospaced",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 15,
+      "symbol": "Font.Design.rounded",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 16,
+      "symbol": "Font.Design.serif",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 19,
+      "symbol": "Font.Weight",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 20,
+      "symbol": "Font.Weight.black",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 21,
+      "symbol": "Font.Weight.bold",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 22,
+      "symbol": "Font.Weight.heavy",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 23,
+      "symbol": "Font.Weight.light",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 24,
+      "symbol": "Font.Weight.medium",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 25,
+      "symbol": "Font.Weight.regular",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 26,
+      "symbol": "Font.Weight.semibold",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 27,
+      "symbol": "Font.Weight.thin",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 28,
+      "symbol": "Font.Weight.ultraLight",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 51,
+      "symbol": "Font.largeTitle",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 55,
+      "symbol": "Font.title",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 59,
+      "symbol": "Font.headline",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 63,
+      "symbol": "Font.subheadline",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 67,
+      "symbol": "Font.body",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 71,
+      "symbol": "Font.callout",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 75,
+      "symbol": "Font.caption",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 79,
+      "symbol": "Font.footnote",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 85,
+      "symbol": "Font.system(size:weight:design:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 89,
+      "symbol": "Font.system(_:design:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 93,
+      "symbol": "Font.custom(_:size:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 99,
+      "symbol": "Font.italic()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 105,
+      "symbol": "Font.bold()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 111,
+      "symbol": "Font.monospacedDigit()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 117,
+      "symbol": "Font.smallCaps()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 123,
+      "symbol": "Font.lowercaseSmallCaps()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 129,
+      "symbol": "Font.uppercaseSmallCaps()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 135,
+      "symbol": "Font.weight(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 143,
+      "symbol": "Font",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 178,
+      "symbol": "Font",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Font.swift",
+      "line": 180,
+      "symbol": "Font.swiftUIValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Gradient.swift",
+      "line": 2,
+      "symbol": "Gradient",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Gradient.swift",
+      "line": 6,
+      "symbol": "Gradient.Stop",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Gradient.swift",
+      "line": 10,
+      "symbol": "Gradient.Stop.colorCode",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Gradient.swift",
+      "line": 11,
+      "symbol": "Gradient.Stop.location",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Gradient.swift",
+      "line": 15,
+      "symbol": "Gradient.Stop.color",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Gradient.swift",
+      "line": 26,
+      "symbol": "Gradient.Stop.init(color:location:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Gradient.swift",
+      "line": 35,
+      "symbol": "Gradient.stops",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Gradient.swift",
+      "line": 39,
+      "symbol": "Gradient.init(colors:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/Gradient.swift",
+      "line": 45,
+      "symbol": "Gradient.init(stops:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/GridItem.swift",
+      "line": 2,
+      "symbol": "GridItem",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/GridItem.swift",
+      "line": 6,
+      "symbol": "GridItem.Size",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/GridItem.swift",
+      "line": 10,
+      "symbol": "GridItem.Size.adaptive(minimum:maximum:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/GridItem.swift",
+      "line": 11,
+      "symbol": "GridItem.Size.fixed(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/GridItem.swift",
+      "line": 12,
+      "symbol": "GridItem.Size.flexible(minimum:maximum:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/GridItem.swift",
+      "line": 18,
+      "symbol": "GridItem.size",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/GridItem.swift",
+      "line": 19,
+      "symbol": "GridItem.spacing",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/GridItem.swift",
+      "line": 20,
+      "symbol": "GridItem.alignment",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/GridItem.swift",
+      "line": 24,
+      "symbol": "GridItem.init(_:spacing:alignment:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/GridItem.swift",
+      "line": 69,
+      "symbol": "GridItem.Size",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/PinnedScrollableViews.swift",
+      "line": 2,
+      "symbol": "PinnedScrollableViews",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/PinnedScrollableViews.swift",
+      "line": 16,
+      "symbol": "PinnedScrollableViews.sectionHeaders",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/PinnedScrollableViews.swift",
+      "line": 17,
+      "symbol": "PinnedScrollableViews.sectionFooters",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/RoundedCornerStyle.swift",
+      "line": 2,
+      "symbol": "RoundedCornerStyle",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/RoundedCornerStyle.swift",
+      "line": 3,
+      "symbol": "RoundedCornerStyle.circular",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/RoundedCornerStyle.swift",
+      "line": 4,
+      "symbol": "RoundedCornerStyle.continuous",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/UnitPoint.swift",
+      "line": 2,
+      "symbol": "UnitPoint",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/UnitPoint.swift",
+      "line": 6,
+      "symbol": "UnitPoint.x",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/UnitPoint.swift",
+      "line": 7,
+      "symbol": "UnitPoint.y",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/UnitPoint.swift",
+      "line": 11,
+      "symbol": "UnitPoint.init(x:y:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/UnitPoint.swift",
+      "line": 18,
+      "symbol": "UnitPoint.bottom",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/UnitPoint.swift",
+      "line": 19,
+      "symbol": "UnitPoint.bottomLeading",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/UnitPoint.swift",
+      "line": 20,
+      "symbol": "UnitPoint.bottomTrailing",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/UnitPoint.swift",
+      "line": 21,
+      "symbol": "UnitPoint.center",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/UnitPoint.swift",
+      "line": 22,
+      "symbol": "UnitPoint.leading",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/UnitPoint.swift",
+      "line": 23,
+      "symbol": "UnitPoint.top",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/UnitPoint.swift",
+      "line": 24,
+      "symbol": "UnitPoint.topLeading",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/UnitPoint.swift",
+      "line": 25,
+      "symbol": "UnitPoint.topTrailing",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/UnitPoint.swift",
+      "line": 26,
+      "symbol": "UnitPoint.trailing",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Types/UnitPoint.swift",
+      "line": 27,
+      "symbol": "UnitPoint.zero",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/CoderView.swift",
+      "line": 2,
+      "symbol": "CoderView",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/CoderView.swift",
+      "line": 18,
+      "symbol": "CoderView.element",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/CoderView.swift",
+      "line": 22,
+      "symbol": "CoderView.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/CoderView.swift",
+      "line": 160,
+      "symbol": "CoderView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/CoderView.swift",
+      "line": 170,
+      "symbol": "CoderView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/CoderView.swift",
+      "line": 174,
+      "symbol": "CoderView.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/InternalView.swift",
+      "line": 2,
+      "symbol": "InternalView",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/InternalView.swift",
+      "line": 5,
+      "symbol": "InternalView.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/InternalView.swift",
+      "line": 10,
+      "symbol": "InternalView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/InternalView.swift",
+      "line": 12,
+      "symbol": "InternalView.body",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/InternalView.swift",
+      "line": 18,
+      "symbol": "InternalView.eraseToAnyView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/InternalView.swift",
+      "line": 22,
+      "symbol": "InternalView.apply(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/InternalView.swift",
+      "line": 26,
+      "symbol": "InternalView.apply(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/ServedView.swift",
+      "line": 4,
+      "symbol": "ServedView",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/ServedView.swift",
+      "line": 8,
+      "symbol": "ServedView.url",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/ServedView.swift",
+      "line": 19,
+      "symbol": "ServedView.init(url:model:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/SwiftUIView.swift",
+      "line": 2,
+      "symbol": "SwiftUIView",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/SwiftUIView.swift",
+      "line": 5,
+      "symbol": "SwiftUIView.SwiftUIBody",
+      "symbol_kind": "source.lang.swift.decl.associatedtype",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/SwiftUIView.swift",
+      "line": 6,
+      "symbol": "SwiftUIView.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/SwiftUIView.swift",
+      "line": 11,
+      "symbol": "SwiftUIView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/SwiftUIView.swift",
+      "line": 13,
+      "symbol": "SwiftUIView.body",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/SwiftUIView.swift",
+      "line": 19,
+      "symbol": "SwiftUIView.eraseToAnyView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/SwiftUIView.swift",
+      "line": 23,
+      "symbol": "SwiftUIView.apply(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/SwiftUIView.swift",
+      "line": 27,
+      "symbol": "SwiftUIView.apply(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 2,
+      "symbol": "_CodableView",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 4,
+      "symbol": "_View",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 6,
+      "symbol": "_View.erasedCodableBody",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 10,
+      "symbol": "_View.eraseToAnyView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 11,
+      "symbol": "_View.apply(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 12,
+      "symbol": "_View.apply(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 20,
+      "symbol": "_View",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 22,
+      "symbol": "_View.eraseToAnyView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 26,
+      "symbol": "_View.apply(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 30,
+      "symbol": "_View.apply(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 35,
+      "symbol": "View",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 35,
+      "symbol": "View",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 35,
+      "symbol": "View",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 36,
+      "symbol": "View",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 36,
+      "symbol": "View",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 36,
+      "symbol": "View",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 36,
+      "symbol": "View",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 36,
+      "symbol": "View",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 36,
+      "symbol": "View",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 36,
+      "symbol": "View",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 37,
+      "symbol": "View",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 37,
+      "symbol": "View",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 39,
+      "symbol": "View",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 40,
+      "symbol": "View.Body",
+      "symbol_kind": "source.lang.swift.decl.associatedtype",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 41,
+      "symbol": "View",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 41,
+      "symbol": "View.body",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 42,
+      "symbol": "View",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 43,
+      "symbol": "View",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 43,
+      "symbol": "View",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 45,
+      "symbol": "View",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 46,
+      "symbol": "Never.body",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 46,
+      "symbol": "View",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 56,
+      "symbol": "View",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 59,
+      "symbol": "View",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 62,
+      "symbol": "View",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 64,
+      "symbol": "View",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 64,
+      "symbol": "View.erasedCodableBody",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 72,
+      "symbol": "View",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 74,
+      "symbol": "View.eraseToAnyView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 78,
+      "symbol": "View",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 78,
+      "symbol": "View.apply(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/View.swift",
+      "line": 82,
+      "symbol": "View.apply(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/ViewBuilder.swift",
+      "line": 3,
+      "symbol": "ViewBuilder",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/ViewBuilder.swift",
+      "line": 7,
+      "symbol": "ViewBuilder.buildBlock(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/ViewBuilder.swift",
+      "line": 11,
+      "symbol": "ViewBuilder.buildBlock(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/ViewBuilder.swift",
+      "line": 15,
+      "symbol": "ViewBuilder.buildBlock(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/ViewBuilder.swift",
+      "line": 19,
+      "symbol": "ViewBuilder.buildEither(first:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/View - General/ViewBuilder.swift",
+      "line": 23,
+      "symbol": "ViewBuilder.buildEither(second:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifier - General/AnyViewModifying.swift",
+      "line": 2,
+      "symbol": "AnyViewModifying",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifier - General/AnyViewModifying.swift",
+      "line": 6,
+      "symbol": "AnyViewModifying.apply(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifier - General/AnyViewModifying.swift",
+      "line": 14,
+      "symbol": "AnyViewModifying",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifier - General/AnyViewModifying.swift",
+      "line": 16,
+      "symbol": "AnyViewModifying.apply(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifier - General/AnyViewModifying.swift",
+      "line": 24,
+      "symbol": "ModifiedContent.erasedCodableBody",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifier - General/CoderViewModifier.swift",
+      "line": 2,
+      "symbol": "CoderViewModifier",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifier - General/CoderViewModifier.swift",
+      "line": 53,
+      "symbol": "CoderViewModifier",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifier - General/CoderViewModifier.swift",
+      "line": 63,
+      "symbol": "CoderViewModifier",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifier - General/CoderViewModifier.swift",
+      "line": 92,
+      "symbol": "CoderViewModifier.register(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifier - General/CoderViewModifier.swift",
+      "line": 105,
+      "symbol": "CoderViewModifier.unregister(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifier - General/CoderViewModifier.swift",
+      "line": 115,
+      "symbol": "CoderViewModifier",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifier - General/CoderViewModifier.swift",
+      "line": 117,
+      "symbol": "CoderViewModifier.apply(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/AccentColor.swift",
+      "line": 47,
+      "symbol": "View.accentColor(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/AnimationModifier.swift",
+      "line": 38,
+      "symbol": "View.animation(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/AspectRatio.swift",
+      "line": 2,
+      "symbol": "ContentMode",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/AspectRatio.swift",
+      "line": 3,
+      "symbol": "ContentMode.fit",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/AspectRatio.swift",
+      "line": 4,
+      "symbol": "ContentMode.fill",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/AspectRatio.swift",
+      "line": 66,
+      "symbol": "View.aspectRatio(_:contentMode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/AspectRatio.swift",
+      "line": 70,
+      "symbol": "View.aspectRatio(_:contentMode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/AspectRatio.swift",
+      "line": 74,
+      "symbol": "View.scaledToFit()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/AspectRatio.swift",
+      "line": 78,
+      "symbol": "View.scaledToFill()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/Background.swift",
+      "line": 38,
+      "symbol": "View.background(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/Blur.swift",
+      "line": 38,
+      "symbol": "View.blur(radius:opaque:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/Clipped.swift",
+      "line": 38,
+      "symbol": "View.clipped(antialiased:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/CornerRadius.swift",
+      "line": 38,
+      "symbol": "View.cornerRadius(_:antialiased:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/DrawingGroup.swift",
+      "line": 2,
+      "symbol": "ColorRenderingMode",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/DrawingGroup.swift",
+      "line": 3,
+      "symbol": "ColorRenderingMode.extendedLinear",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/DrawingGroup.swift",
+      "line": 4,
+      "symbol": "ColorRenderingMode.linear",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/DrawingGroup.swift",
+      "line": 5,
+      "symbol": "ColorRenderingMode.nonLinear",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/DrawingGroup.swift",
+      "line": 61,
+      "symbol": "View.drawingGroup(opaque:colorMode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/DynamicFrame.swift",
+      "line": 58,
+      "symbol": "View.frame(minWidth:idealWidth:maxWidth:minHeight:idealHeight:maxHeight:alignment:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/FontModifier.swift",
+      "line": 38,
+      "symbol": "View.font(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/ForegroundColor.swift",
+      "line": 38,
+      "symbol": "View.foregroundColor(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/Frame.swift",
+      "line": 43,
+      "symbol": "View.frame(width:height:alignment:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/LayoutPriority.swift",
+      "line": 37,
+      "symbol": "View.layoutPriority(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/LifecycleModifier.swift",
+      "line": 45,
+      "symbol": "View.onAppear(perform:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/LifecycleModifier.swift",
+      "line": 49,
+      "symbol": "View.onDisappear(perform:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/Mask.swift",
+      "line": 37,
+      "symbol": "View.mask(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/NavigationBarTitle.swift",
+      "line": 2,
+      "symbol": "NavigationBarTitleDisplayMode",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/NavigationBarTitle.swift",
+      "line": 3,
+      "symbol": "NavigationBarTitleDisplayMode.inline",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/NavigationBarTitle.swift",
+      "line": 4,
+      "symbol": "NavigationBarTitleDisplayMode.automatic",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/NavigationBarTitle.swift",
+      "line": 5,
+      "symbol": "NavigationBarTitleDisplayMode.large",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/NavigationBarTitle.swift",
+      "line": 80,
+      "symbol": "View.navigationBarTitle(_:displayMode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/Opacity.swift",
+      "line": 37,
+      "symbol": "View.opacity(_:antialiased:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/Overlay.swift",
+      "line": 39,
+      "symbol": "View.overlay(_:alignment:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/Padding.swift",
+      "line": 44,
+      "symbol": "View.padding(top:leading:bottom:trailing:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/Padding.swift",
+      "line": 49,
+      "symbol": "View.padding(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/Shadow.swift",
+      "line": 48,
+      "symbol": "View.shadow(color:radius:x:y:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/ViewModifiers/Sheet.swift",
+      "line": 45,
+      "symbol": "View.sheet(isPresented:content:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/AngularGradient.swift",
+      "line": 2,
+      "symbol": "AngularGradient",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/AngularGradient.swift",
+      "line": 13,
+      "symbol": "AngularGradient.init(gradient:center:startAngle:endAngle:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/AngularGradient.swift",
+      "line": 24,
+      "symbol": "AngularGradient.init(gradient:center:angle:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/AngularGradient.swift",
+      "line": 38,
+      "symbol": "AngularGradient",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/AngularGradient.swift",
+      "line": 50,
+      "symbol": "AngularGradient",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/AngularGradient.swift",
+      "line": 52,
+      "symbol": "AngularGradient.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/ArrayView.swift",
+      "line": 38,
+      "symbol": "ArrayView.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Button.swift",
+      "line": 2,
+      "symbol": "Button",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Button.swift",
+      "line": 11,
+      "symbol": "Button.init(_:action:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Button.swift",
+      "line": 20,
+      "symbol": "Button",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Button.swift",
+      "line": 32,
+      "symbol": "Button",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Button.swift",
+      "line": 34,
+      "symbol": "Button.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Capsule.swift",
+      "line": 2,
+      "symbol": "Capsule",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Capsule.swift",
+      "line": 10,
+      "symbol": "Capsule.init(style:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Capsule.swift",
+      "line": 18,
+      "symbol": "Capsule",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Capsule.swift",
+      "line": 30,
+      "symbol": "Capsule",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Capsule.swift",
+      "line": 32,
+      "symbol": "Capsule.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Circle.swift",
+      "line": 2,
+      "symbol": "Circle",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Circle.swift",
+      "line": 6,
+      "symbol": "Circle.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Circle.swift",
+      "line": 12,
+      "symbol": "Circle",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Circle.swift",
+      "line": 24,
+      "symbol": "Circle",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Circle.swift",
+      "line": 26,
+      "symbol": "Circle.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Color.swift",
+      "line": 2,
+      "symbol": "Color",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Color.swift",
+      "line": 19,
+      "symbol": "Color.init(red:green:blue:opacity:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Color.swift",
+      "line": 49,
+      "symbol": "Color",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Color.swift",
+      "line": 61,
+      "symbol": "Color",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Color.swift",
+      "line": 63,
+      "symbol": "Color.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/ColorPicker.swift",
+      "line": 2,
+      "symbol": "ColorPicker",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/ColorPicker.swift",
+      "line": 12,
+      "symbol": "ColorPicker.init(color:supportsOpacity:label:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/ColorPicker.swift",
+      "line": 26,
+      "symbol": "ColorPicker",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/ColorPicker.swift",
+      "line": 38,
+      "symbol": "ColorPicker",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/ColorPicker.swift",
+      "line": 59,
+      "symbol": "ColorPicker.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/ComposedView.swift",
+      "line": 39,
+      "symbol": "View.modified(using:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/DataView.swift",
+      "line": 2,
+      "symbol": "DataView",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/DataView.swift",
+      "line": 10,
+      "symbol": "DataView.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/DataView.swift",
+      "line": 18,
+      "symbol": "DataView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/DataView.swift",
+      "line": 53,
+      "symbol": "DataView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/DataView.swift",
+      "line": 55,
+      "symbol": "DataView.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Divider.swift",
+      "line": 2,
+      "symbol": "Divider",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Divider.swift",
+      "line": 6,
+      "symbol": "Divider.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Divider.swift",
+      "line": 12,
+      "symbol": "Divider",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Divider.swift",
+      "line": 24,
+      "symbol": "Divider",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Divider.swift",
+      "line": 26,
+      "symbol": "Divider.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/HGrid.swift",
+      "line": 2,
+      "symbol": "HGrid",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/HGrid.swift",
+      "line": 14,
+      "symbol": "HGrid.init(rows:alignment:spacing:pinnedViews:content:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/HGrid.swift",
+      "line": 32,
+      "symbol": "HGrid",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/HGrid.swift",
+      "line": 44,
+      "symbol": "HGrid",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/HGrid.swift",
+      "line": 66,
+      "symbol": "HGrid.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/HStack.swift",
+      "line": 2,
+      "symbol": "HStack",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/HStack.swift",
+      "line": 12,
+      "symbol": "HStack.init(alignment:spacing:content:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/HStack.swift",
+      "line": 26,
+      "symbol": "HStack",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/HStack.swift",
+      "line": 38,
+      "symbol": "HStack",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/HStack.swift",
+      "line": 40,
+      "symbol": "HStack.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/If.swift",
+      "line": 2,
+      "symbol": "If",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/If.swift",
+      "line": 20,
+      "symbol": "If.init(_:then:else:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/If.swift",
+      "line": 30,
+      "symbol": "If.init(_:then:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/If.swift",
+      "line": 39,
+      "symbol": "If.init(_:else:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/If.swift",
+      "line": 69,
+      "symbol": "If",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/If.swift",
+      "line": 81,
+      "symbol": "If",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/If.swift",
+      "line": 83,
+      "symbol": "If.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Image.swift",
+      "line": 2,
+      "symbol": "Image",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Image.swift",
+      "line": 26,
+      "symbol": "Image.init(systemName:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Image.swift",
+      "line": 32,
+      "symbol": "Image.init(external:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Image.swift",
+      "line": 38,
+      "symbol": "Image.init(named:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Image.swift",
+      "line": 46,
+      "symbol": "Image.resizable()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Image.swift",
+      "line": 54,
+      "symbol": "Image",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Image.swift",
+      "line": 153,
+      "symbol": "Image",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Image.swift",
+      "line": 155,
+      "symbol": "Image.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/LinearGradient.swift",
+      "line": 2,
+      "symbol": "LinearGradient",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/LinearGradient.swift",
+      "line": 12,
+      "symbol": "LinearGradient.init(gradient:startPoint:endPoint:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/LinearGradient.swift",
+      "line": 22,
+      "symbol": "LinearGradient",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/LinearGradient.swift",
+      "line": 34,
+      "symbol": "LinearGradient",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/LinearGradient.swift",
+      "line": 36,
+      "symbol": "LinearGradient.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Link.swift",
+      "line": 2,
+      "symbol": "Link",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Link.swift",
+      "line": 11,
+      "symbol": "Link.init(label:destination:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Link.swift",
+      "line": 20,
+      "symbol": "Link",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Link.swift",
+      "line": 32,
+      "symbol": "Link",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Link.swift",
+      "line": 47,
+      "symbol": "Link.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Local.swift",
+      "line": 2,
+      "symbol": "Local",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Local.swift",
+      "line": 10,
+      "symbol": "Local.init(key:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Local.swift",
+      "line": 18,
+      "symbol": "Local",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Local.swift",
+      "line": 30,
+      "symbol": "Local",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Local.swift",
+      "line": 32,
+      "symbol": "Local.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/NavigationLink.swift",
+      "line": 2,
+      "symbol": "NavigationLink",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/NavigationLink.swift",
+      "line": 12,
+      "symbol": "NavigationLink.init(destination:isActive:label:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/NavigationLink.swift",
+      "line": 26,
+      "symbol": "NavigationLink",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/NavigationLink.swift",
+      "line": 38,
+      "symbol": "NavigationLink",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/NavigationLink.swift",
+      "line": 40,
+      "symbol": "NavigationLink.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/NavigationView.swift",
+      "line": 2,
+      "symbol": "NavigationView",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/NavigationView.swift",
+      "line": 10,
+      "symbol": "NavigationView.init(content:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/NavigationView.swift",
+      "line": 20,
+      "symbol": "NavigationView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/NavigationView.swift",
+      "line": 32,
+      "symbol": "NavigationView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/NavigationView.swift",
+      "line": 34,
+      "symbol": "NavigationView.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Nil.swift",
+      "line": 6,
+      "symbol": "Optional.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Nil.swift",
+      "line": 53,
+      "symbol": "SwiftUI.EmptyView.erasedCodableBody",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Nil.swift",
+      "line": 57,
+      "symbol": "SwiftUI.EmptyView.eraseToAnyView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Nil.swift",
+      "line": 61,
+      "symbol": "SwiftUI.EmptyView.apply(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Nil.swift",
+      "line": 65,
+      "symbol": "SwiftUI.EmptyView.apply(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Path.swift",
+      "line": 2,
+      "symbol": "Path",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Path.swift",
+      "line": 25,
+      "symbol": "Path.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Path.swift",
+      "line": 29,
+      "symbol": "Path.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Path.swift",
+      "line": 37,
+      "symbol": "Path.move(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Path.swift",
+      "line": 41,
+      "symbol": "Path.addLine(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Path.swift",
+      "line": 45,
+      "symbol": "Path.addCurve(to:control1:control2:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Path.swift",
+      "line": 49,
+      "symbol": "Path.addQuadCurve(to:control:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Path.swift",
+      "line": 53,
+      "symbol": "Path.closeSubpath()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Path.swift",
+      "line": 61,
+      "symbol": "Path",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Path.swift",
+      "line": 73,
+      "symbol": "Path",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Path.swift",
+      "line": 75,
+      "symbol": "Path.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/ScrollView.swift",
+      "line": 2,
+      "symbol": "ScrollView",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/ScrollView.swift",
+      "line": 12,
+      "symbol": "ScrollView.init(_:showsIndicators:content:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/ScrollView.swift",
+      "line": 26,
+      "symbol": "ScrollView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/ScrollView.swift",
+      "line": 38,
+      "symbol": "ScrollView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/ScrollView.swift",
+      "line": 40,
+      "symbol": "ScrollView.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Section.swift",
+      "line": 2,
+      "symbol": "Section",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Section.swift",
+      "line": 12,
+      "symbol": "Section.init(content:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Section.swift",
+      "line": 20,
+      "symbol": "Section.init(header:content:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Section.swift",
+      "line": 29,
+      "symbol": "Section.init(footer:content:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Section.swift",
+      "line": 38,
+      "symbol": "Section.init(header:footer:content:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Section.swift",
+      "line": 52,
+      "symbol": "Section",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Section.swift",
+      "line": 64,
+      "symbol": "Section",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Section.swift",
+      "line": 67,
+      "symbol": "Section.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/SecureField.swift",
+      "line": 2,
+      "symbol": "SecureField",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/SecureField.swift",
+      "line": 12,
+      "symbol": "SecureField.init(_:text:onCommit:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/SecureField.swift",
+      "line": 17,
+      "symbol": "SecureField.init(_:text:onCommit:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/SecureField.swift",
+      "line": 28,
+      "symbol": "SecureField",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/SecureField.swift",
+      "line": 40,
+      "symbol": "SecureField",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/SecureField.swift",
+      "line": 42,
+      "symbol": "SecureField.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Slider.swift",
+      "line": 2,
+      "symbol": "Slider",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Slider.swift",
+      "line": 13,
+      "symbol": "Slider.init(value:in:onEditingChanged:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Slider.swift",
+      "line": 26,
+      "symbol": "Slider",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Slider.swift",
+      "line": 38,
+      "symbol": "Slider",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Slider.swift",
+      "line": 48,
+      "symbol": "Slider.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Spacer.swift",
+      "line": 2,
+      "symbol": "Spacer",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Spacer.swift",
+      "line": 10,
+      "symbol": "Spacer.init(minLength:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Spacer.swift",
+      "line": 14,
+      "symbol": "Spacer.init(minLength:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Spacer.swift",
+      "line": 22,
+      "symbol": "Spacer",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Spacer.swift",
+      "line": 34,
+      "symbol": "Spacer",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Spacer.swift",
+      "line": 36,
+      "symbol": "Spacer.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/TabView.swift",
+      "line": 2,
+      "symbol": "TabView",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/TabView.swift",
+      "line": 11,
+      "symbol": "TabView.init(selection:content:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/TabView.swift",
+      "line": 23,
+      "symbol": "TabView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/TabView.swift",
+      "line": 35,
+      "symbol": "TabView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/TabView.swift",
+      "line": 65,
+      "symbol": "TabView.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Text.swift",
+      "line": 2,
+      "symbol": "Text",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Text.swift",
+      "line": 10,
+      "symbol": "Text.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Text.swift",
+      "line": 14,
+      "symbol": "Text.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Text.swift",
+      "line": 22,
+      "symbol": "Text",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Text.swift",
+      "line": 34,
+      "symbol": "Text",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Text.swift",
+      "line": 36,
+      "symbol": "Text.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/TextEditor.swift",
+      "line": 2,
+      "symbol": "TextEditor",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/TextEditor.swift",
+      "line": 10,
+      "symbol": "TextEditor.init(text:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/TextEditor.swift",
+      "line": 18,
+      "symbol": "TextEditor",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/TextEditor.swift",
+      "line": 30,
+      "symbol": "TextEditor",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/TextEditor.swift",
+      "line": 48,
+      "symbol": "TextEditor.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/TextField.swift",
+      "line": 2,
+      "symbol": "TextField",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/TextField.swift",
+      "line": 13,
+      "symbol": "TextField.init(_:text:onCommit:onEditingChanged:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/TextField.swift",
+      "line": 23,
+      "symbol": "TextField.init(_:text:onCommit:onEditingChanged:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/TextField.swift",
+      "line": 35,
+      "symbol": "TextField",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/TextField.swift",
+      "line": 47,
+      "symbol": "TextField",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/TextField.swift",
+      "line": 49,
+      "symbol": "TextField.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Toggle.swift",
+      "line": 2,
+      "symbol": "Toggle",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Toggle.swift",
+      "line": 11,
+      "symbol": "Toggle.init(isOn:label:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Toggle.swift",
+      "line": 23,
+      "symbol": "Toggle",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Toggle.swift",
+      "line": 35,
+      "symbol": "Toggle",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/Toggle.swift",
+      "line": 37,
+      "symbol": "Toggle.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/VGrid.swift",
+      "line": 2,
+      "symbol": "VGrid",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/VGrid.swift",
+      "line": 14,
+      "symbol": "VGrid.init(columns:alignment:spacing:pinnedViews:content:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/VGrid.swift",
+      "line": 33,
+      "symbol": "VGrid",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/VGrid.swift",
+      "line": 45,
+      "symbol": "VGrid",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/VGrid.swift",
+      "line": 64,
+      "symbol": "VGrid.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/VStack.swift",
+      "line": 2,
+      "symbol": "VStack",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/VStack.swift",
+      "line": 12,
+      "symbol": "VStack.init(alignment:spacing:content:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/VStack.swift",
+      "line": 27,
+      "symbol": "VStack",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/VStack.swift",
+      "line": 39,
+      "symbol": "VStack",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/VStack.swift",
+      "line": 41,
+      "symbol": "VStack.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/ZStack.swift",
+      "line": 2,
+      "symbol": "ZStack",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/ZStack.swift",
+      "line": 11,
+      "symbol": "ZStack.init(alignment:content:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/ZStack.swift",
+      "line": 24,
+      "symbol": "ZStack",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/ZStack.swift",
+      "line": 36,
+      "symbol": "ZStack",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Presenter/Presenter/Sources/Presenter/Views/ZStack.swift",
+      "line": 38,
+      "symbol": "ZStack.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/runner/work/Presenter/Presenter"
+}

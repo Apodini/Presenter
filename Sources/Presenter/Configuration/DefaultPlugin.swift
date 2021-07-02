@@ -9,6 +9,7 @@ struct DefaultPlugin: Plugin {
             Button.self,
             Capsule.self,
             Circle.self,
+            CoderView.self,
             Color.self,
             ColorPicker.self,
             ComposedView.self,

@@ -24,7 +24,6 @@ public protocol WrapperView: View {
 
 extension WrapperView {
 
-
     public func eraseToAnyView() -> AnyView {
         body.eraseToAnyView()
     }

@@ -81,10 +81,6 @@ let package = Package(
         .library(
             name: "TracePresenter",
             targets: ["TracePresenter"]
-        ),
-        .executable(
-            name: "Example",
-            targets: ["Example", "Presenter"]
         )
     ],
     dependencies: [],
@@ -108,10 +104,6 @@ let package = Package(
         .testTarget(
             name: "PresenterTests",
             dependencies: ["Presenter", "ChartPresenter", "MetricPresenter", "TracePresenter"]
-        ),
-        .executableTarget(
-            name: "Example",
-            dependencies: ["Presenter"]
         )
     ]
 )

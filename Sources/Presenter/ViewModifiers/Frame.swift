@@ -22,7 +22,8 @@ extension Frame: CustomStringConvertible {
 
 extension Frame: SwiftUI.ViewModifier {
     func body(content: Content) -> some SwiftUI.View {
-        content.frame(width: width, height: height,
+        content.frame(width: width,
+                      height: height,
                       alignment: alignment?.swiftUIValue ?? .center)
     }
 }

@@ -41,17 +41,9 @@ private struct Modifier: ViewModifier, SwiftUI.ViewModifier {
     let alignment: SwiftUI.HorizontalAlignment
     let spacing: CGFloat?
 
-    internal init(alignment: SwiftUI.HorizontalAlignment, spacing: CGFloat?) {
+    init(alignment: SwiftUI.HorizontalAlignment, spacing: CGFloat?) {
         self.alignment = alignment
         self.spacing = spacing
-    }
-
-    init(from decoder: Decoder) throws {
-        fatalError() // TODO
-    }
-
-    func encode(to encoder: Encoder) throws {
-        // TODO
     }
 
     func body(content: Content) -> some SwiftUI.View {

@@ -152,7 +152,7 @@ only_rules:
     # Ensure definitions have a lower access control level than their enclosing parent
   - mark
     # MARK comment should be in valid format. e.g. '// MARK: ...' or '// MARK: - ...'
-  - missing_docs
+#  - missing_docs
     # Declarations should be documented.
   - modifier_order
     # Modifier order should be consistent.

@@ -8,8 +8,10 @@ public struct TextField: CodableView {
 
     // MARK: Initialization
 
-    public init(_ title: String, text: Binding<String>,
-                onCommit: Action? = nil, onEditingChanged: Action? = nil) {
+    public init(_ title: String,
+                text: Binding<String>,
+                onCommit: Action? = nil,
+                onEditingChanged: Action? = nil) {
         self.init(
             .static(title),
             text: text,
@@ -18,8 +20,10 @@ public struct TextField: CodableView {
         )
     }
 
-    public init(_ title: Value<String>, text: Binding<String>,
-                onCommit: Action? = nil, onEditingChanged: Action? = nil) {
+    public init(_ title: Value<String>,
+                text: Binding<String>,
+                onCommit: Action? = nil,
+                onEditingChanged: Action? = nil) {
         self.title = title
         self.text = text
         self.onCommit = onCommit.map(CoderAction.init)

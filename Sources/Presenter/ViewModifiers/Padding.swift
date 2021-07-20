@@ -33,8 +33,10 @@ extension Padding: SwiftUI.ViewModifier {
 // MARK: - View Extensions
 
 extension View {
-    public func padding(top: CGFloat? = nil, leading: CGFloat? = nil,
-                        bottom: CGFloat? = nil, trailing: CGFloat? = nil) -> View {
+    public func padding(top: CGFloat? = nil,
+                        leading: CGFloat? = nil,
+                        bottom: CGFloat? = nil,
+                        trailing: CGFloat? = nil) -> View {
         modifier(Padding(top: top, leading: leading, bottom: bottom, trailing: trailing))
     }
 

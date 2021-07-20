@@ -16,7 +16,7 @@ struct LoginAction: Action {
             return
         }
 
-        guard username.count > 0 && password.count > 0 else {
+        guard !username.isEmpty && !password.isEmpty else {
             model[.loginErrorMessage] = "Please enter username and password."
             model[.showLoginError] = true
             return

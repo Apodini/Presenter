@@ -3,8 +3,8 @@ internal struct Shadow: CodableViewModifier {
 
     let color: ColorCode?
     let radius: CGFloat
-    let x: CGFloat?
-    let y: CGFloat?
+    let x: CGFloat? // swiftlint:disable:this identifier_name
+    let y: CGFloat? // swiftlint:disable:this identifier_name
 }
 
 // MARK: - CustomStringConvertible
@@ -38,7 +38,12 @@ extension Shadow: SwiftUI.ViewModifier {
 // MARK: - View Extensions
 
 extension View {
-    public func shadow(color: Color? = nil, radius: CGFloat, x: CGFloat? = nil, y: CGFloat? = nil) -> View {
-        modifier(Shadow(color: color.map(ColorCode.init), radius: radius, x: x, y: y))
+    public func shadow(
+        color: Color? = nil,
+        radius: CGFloat,
+        x xValue: CGFloat? = nil,
+        y yValue: CGFloat? = nil
+    ) -> View {
+        modifier(Shadow(color: color.map(ColorCode.init), radius: radius, x: xValue, y: yValue))
     }
 }

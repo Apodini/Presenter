@@ -56,8 +56,12 @@ extension View {
                       alignment: Alignment = .center) -> View {
         modifier(
             DynamicFrame(
-                minWidth: minWidth, idealWidth: idealWidth, maxWidth: maxWidth,
-                minHeight: minHeight, idealHeight: idealHeight, maxHeight: maxHeight,
+                minWidth: minWidth,
+                idealWidth: idealWidth,
+                maxWidth: maxWidth,
+                minHeight: minHeight,
+                idealHeight: idealHeight,
+                maxHeight: maxHeight,
                 alignment: alignment
             )
         )

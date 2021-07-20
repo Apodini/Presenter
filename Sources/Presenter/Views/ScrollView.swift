@@ -2,14 +2,14 @@ public struct ScrollView: CodableWrapperView {
     // MARK: Stored Properties
 
     private let axis: AxisSet?
-    private let showsIndicators: Bool?
+    private let showsIndicators: Bool? // swiftlint:disable:this discouraged_optional_boolean
     private let content: CoderView
 
     // MARK: Initialization
 
     public init(
         _ axis: AxisSet? = nil,
-        showsIndicators: Bool? = nil,
+        showsIndicators: Bool? = nil, // swiftlint:disable:this discouraged_optional_boolean
         @ViewBuilder content: () -> View
     ) {
         self.axis = axis

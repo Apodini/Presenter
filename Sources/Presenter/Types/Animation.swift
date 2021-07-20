@@ -5,7 +5,7 @@ public struct Animation: Codable {
     private var delay: Double?
     private var speed: Double?
     private var repeatCount: Int?
-    private var autoreverses: Bool?
+    private var autoreverses: Bool? // swiftlint:disable:this discouraged_optional_boolean
 
     // MARK: Static Functions
 
@@ -15,11 +15,15 @@ public struct Animation: Codable {
         )
     }
 
-    public static func interpolatingSpring(mass: Double? = nil, stiffness: Double,
-                                           damping: Double, initialVelocity: Double? = nil) -> Animation {
+    public static func interpolatingSpring(mass: Double? = nil,
+                                           stiffness: Double,
+                                           damping: Double,
+                                           initialVelocity: Double? = nil) -> Animation {
         Animation(kind:
-            .interpolatingSpring(mass: mass, stiffness: stiffness,
-                                 damping: damping, initialVelocity: initialVelocity)
+            .interpolatingSpring(mass: mass,
+                                 stiffness: stiffness,
+                                 damping: damping,
+                                 initialVelocity: initialVelocity)
         )
     }
 
@@ -59,8 +63,11 @@ public struct Animation: Codable {
         Animation(kind: .linear(duration: nil))
     }
 
-    public static func timingCurve(c0x: Double, c0y: Double,
-                                   c1x: Double, c1y: Double, duration: Double? = nil) -> Animation {
+    public static func timingCurve(c0x: Double,
+                                   c0y: Double,
+                                   c1x: Double,
+                                   c1y: Double,
+                                   duration: Double? = nil) -> Animation {
         Animation(kind: .timingCurve(c0x: c0x, c0y: c0y, c1x: c1x, c1y: c1y, duration: duration))
     }
 
@@ -71,8 +78,11 @@ public struct Animation: Codable {
     // MARK: Methods
 
     public func delay(_ interval: Double) -> Animation {
-        Animation(kind: kind, delay: (delay ?? 0) + interval, speed: speed,
-                  repeatCount: repeatCount, autoreverses: autoreverses)
+        Animation(kind: kind,
+                  delay: (delay ?? 0) + interval,
+                  speed: speed,
+                  repeatCount: repeatCount,
+                  autoreverses: autoreverses)
     }
 
     public func repeatCount(_ count: Int, autoreverses: Bool = true) -> Animation {
@@ -94,13 +104,13 @@ extension Animation: CustomStringConvertible {
             return "nil"
         }
 
-        let repeating: String = repeatCount.flatMap { count -> String? in
-            if count < 0 {
+        let repeating: String = repeatCount.flatMap { repeatCount -> String? in
+            if repeatCount < 0 {
                 return ".repeatForever(autoreverses: \(autoreverses ?? true))"
-            } else if count == 0 {
+            } else if repeatCount == 0 {
                 return nil
             } else {
-                return ".repeatCount(\(count), autoreverses: \(autoreverses ?? true))"
+                return ".repeatCount(\(repeatCount), autoreverses: \(autoreverses ?? true))"
             }
         } ?? ""
 
@@ -127,8 +137,9 @@ extension Animation {
         case easeOut(duration: Double?)
         case easeInOut(duration: Double?)
         case linear(duration: Double?)
-        case timingCurve(c0x: Double, c0y: Double, c1x: Double, c1y: Double, duration: Double?)
         case none
+        case timingCurve(c0x: Double, c0y: Double, c1x: Double, c1y: Double, duration: Double?)
+        // swiftlint:disable:previous enum_case_associated_values_count
 
         // MARK: Nested Types
 
@@ -191,8 +202,10 @@ extension Animation {
                 let c0y = try container.decode(Double.self, forKey: .c0y)
                 let c1x = try container.decode(Double.self, forKey: .c1x)
                 let c1y = try container.decode(Double.self, forKey: .c1y)
-                self = .timingCurve(c0x: c0x, c0y: c0y,
-                                    c1x: c1x, c1y: c1y,
+                self = .timingCurve(c0x: c0x,
+                                    c0y: c0y,
+                                    c1x: c1x,
+                                    c1y: c1y,
                                     duration: duration)
             case .none:
                 self = .none
@@ -329,8 +342,8 @@ extension  Animation.Kind {
             return duration.map { .easeInOut(duration: $0) } ?? .easeInOut
         case .linear(duration: let duration):
             return duration.map { .linear(duration: $0) } ?? .linear
-        case .timingCurve(c0x: let c0x, c0y: let c0y, c1x: let c1x, c1y: let c1y, duration: let duration):
-        return .timingCurve(c0x, c0y, c1x, c1y, duration: duration ?? 0.35)
+        case let .timingCurve(c0x: c0x, c0y: c0y, c1x: c1x, c1y: c1y, duration: duration):
+            return .timingCurve(c0x, c0y, c1x, c1y, duration: duration ?? 0.35)
         }
     }
 }

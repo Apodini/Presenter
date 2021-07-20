@@ -3,8 +3,6 @@
 import XCTest
 import Presenter
 
-typealias _Model = Model
-
 struct TestAction: Action {
     func perform(on model: Model) {
         model.set("login-title", to: "Success")
@@ -51,8 +49,12 @@ final class PresenterTests: XCTestCase {
         let serverView = HStack(spacing: 8) {
             Text("Hallo")
                 .padding(8)
-                .frame(minWidth: 10, idealWidth: 30, maxWidth: 50,
-                       minHeight: 100, idealHeight: 110, maxHeight: 120,
+                .frame(minWidth: 10,
+                       idealWidth: 30,
+                       maxWidth: 50,
+                       minHeight: 100,
+                       idealHeight: 110,
+                       maxHeight: 120,
                        alignment: .center)
 
             Text("Check")

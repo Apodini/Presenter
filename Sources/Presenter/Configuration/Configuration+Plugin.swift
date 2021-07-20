@@ -6,7 +6,9 @@ extension Presenter {
     // MARK: Plugins
 
     internal static func usePlugins() {
-        guard !didImportPlugins else { return }
+        guard !didImportPlugins else {
+            return
+        }
         didImportPlugins = true
         use(plugin: DefaultPlugin())
     }

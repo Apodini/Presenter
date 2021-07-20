@@ -1,4 +1,4 @@
-public struct If: CodableWrapperView {
+public struct If: CodableWrapperView { // swiftlint:disable:this type_name
     // MARK: Nested Types
 
     private enum CodingKeys: String, CodingKey {

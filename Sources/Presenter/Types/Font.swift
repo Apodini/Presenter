@@ -42,7 +42,7 @@ public struct Font: Codable {
     private var size: CGFloat?
     private var weight: Weight?
     private var design: Design?
-    private var styling: [Styling]?
+    private var styling: [Styling]? // swiftlint:disable:this discouraged_optional_collection
 
     // MARK: Factory Functions - Style
 

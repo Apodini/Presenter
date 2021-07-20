@@ -7,7 +7,9 @@ extension SizePreferenceKey {
 
     static func reduce(value: inout CGSize, nextValue: () -> CGSize) {
         let next = nextValue()
-        guard next != .zero && next != value else { return }
+        guard next != .zero && next != value else {
+            return
+        }
         value = next
     }
 }

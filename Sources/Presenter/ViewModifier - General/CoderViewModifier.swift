@@ -65,6 +65,7 @@ extension CoderViewModifier {
 
     // MARK: Static Properties
 
+    // swiftlint:disable:next discouraged_optional_collection
     private static var _registeredTypes: [String: Coder]?
 
     private static var registeredTypes: [String: Coder] {

@@ -5,7 +5,7 @@ struct ArrayView: CodableView {
 
     // MARK: Initialization
 
-    public init(content: [View]) {
+    init(content: [View]) {
         self.content = content.flatMap { contentView -> [CoderView] in
             if let arrayView = contentView as? ArrayView {
                 return arrayView.content

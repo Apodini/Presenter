@@ -7,12 +7,14 @@ public struct SecureField: CodableView {
 
     // MARK: Initialization
 
-    public init(_ title: String, text: Binding<String>,
+    public init(_ title: String,
+                text: Binding<String>,
                 onCommit: Action? = nil) {
         self.init(.static(title), text: text, onCommit: onCommit)
     }
 
-    public init(_ title: Value<String>, text: Binding<String>,
+    public init(_ title: Value<String>,
+                text: Binding<String>,
                 onCommit: Action? = nil) {
         self.title = title
         self.text = text

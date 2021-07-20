@@ -41,14 +41,14 @@ extension VGrid {
 
     public var body: View {
         if #available(iOS 14.0, tvOS 14.0, watchOS 7.0, *) {
-            content.modifier(
+            return content.modifier(
                 Modifier(columns: columns.map(\.swiftUIValue),
                          alignment: alignment?.swiftUIValue ?? .center,
                          spacing: spacing,
                          pinnedViews: pinnedViews.swiftUIValue)
             )
         } else {
-            Nil()
+            return Nil()
         }
     }
 

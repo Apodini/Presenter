@@ -41,7 +41,7 @@ extension HGrid {
 
     public var body: View {
         if #available(iOS 14.0, tvOS 14.0, watchOS 7.0, *) {
-            content.modifier(
+            return content.modifier(
                 Modifier(
                     rows: rows.map(\.swiftUIValue),
                     alignment: alignment?.swiftUIValue ?? .center,
@@ -50,7 +50,7 @@ extension HGrid {
                 )
             )
         } else {
-            Nil()
+            return Nil()
         }
     }
 

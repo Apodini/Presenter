@@ -2,7 +2,7 @@ internal struct CornerRadius: CodableViewModifier {
     // MARK: Stored Properties
 
     let value: CGFloat
-    let antialiased: Bool?
+    let antialiased: Bool? // swiftlint:disable:this discouraged_optional_boolean
 }
 
 // MARK: - CustomStringConvertible
@@ -28,7 +28,10 @@ extension CornerRadius: SwiftUI.ViewModifier {
 // MARK: - View Extensions
 
 extension View {
-    public func cornerRadius(_ value: CGFloat, antialiased: Bool? = nil) -> View {
+    public func cornerRadius(
+        _ value: CGFloat,
+        antialiased: Bool? = nil // swiftlint:disable:this discouraged_optional_boolean
+    ) -> View {
         modifier(CornerRadius(value: value, antialiased: antialiased))
     }
 }

@@ -1,5 +1,5 @@
 @resultBuilder
-public struct ViewBuilder {
+public enum ViewBuilder {
     // MARK: Static Functions
 
     public static func buildBlock<V: View>(_ item: V) -> View {

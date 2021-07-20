@@ -1,7 +1,7 @@
 internal struct Clipped: CodableViewModifier {
     // MARK: Stored Properties
 
-    let antialiased: Bool?
+    let antialiased: Bool? // swiftlint:disable:this discouraged_optional_boolean
 }
 
 // MARK: - CustomStringConvertible
@@ -27,7 +27,9 @@ extension Clipped: SwiftUI.ViewModifier {
 // MARK: - View Extensions
 
 extension View {
-    public func clipped(antialiased: Bool? = nil) -> View {
+    public func clipped(
+        antialiased: Bool? = nil // swiftlint:disable:this discouraged_optional_boolean
+    ) -> View {
         modifier(Clipped(antialiased: antialiased))
     }
 }

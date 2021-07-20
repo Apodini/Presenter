@@ -27,7 +27,7 @@ extension Opacity: SwiftUI.ViewModifier {
 // MARK: - View Extensions
 
 extension View {
-    public func opacity(_ value: Double, antialiased: Bool? = nil) -> View {
+    public func opacity(_ value: Double) -> View {
         modifier(Opacity(value: value))
     }
 }

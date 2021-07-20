@@ -49,10 +49,10 @@ public struct Graph: CodableView {
     // MARK: Initialization
 
     public init(
-        topLabels: [Graph.Label]? = nil,
-        trailingLabels: [Graph.Label]? = nil,
-        bottomLabels: [Graph.Label]? = nil,
-        leadingLabels: [Graph.Label]? = nil,
+        topLabels: [Graph.Label]? = nil, // swiftlint:disable:this discouraged_optional_collection
+        trailingLabels: [Graph.Label]? = nil, // swiftlint:disable:this discouraged_optional_collection
+        bottomLabels: [Graph.Label]? = nil, // swiftlint:disable:this discouraged_optional_collection
+        leadingLabels: [Graph.Label]? = nil, // swiftlint:disable:this discouraged_optional_collection
         data: [Graph.DataSet],
         gridWidth: CGFloat
     ) {

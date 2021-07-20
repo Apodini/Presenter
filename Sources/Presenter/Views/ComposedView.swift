@@ -9,7 +9,7 @@ struct ComposedView: CodableWrapperView {
 
 extension ComposedView: CustomStringConvertible {
     public var description: String {
-        "\(content)" + modifiers.reduce("") { $0 + ".\($1)" }
+        "\(content)" + modifiers.reduce(into: "") { $0 += ".\($1)" }
     }
 }
 

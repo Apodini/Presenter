@@ -80,7 +80,10 @@ private struct ImageView: SwiftUI.View {
     // MARK: Helpers
 
     private func load() {
-        guard !didStartLoading else { return }
+        guard !didStartLoading else {
+            return
+        }
+
         didStartLoading = true
 
         switch image.kind {

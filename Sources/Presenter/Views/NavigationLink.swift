@@ -40,7 +40,7 @@ private struct Modifier1: ViewModifier {
     let label: CoderView
     let isActive: Binding<Bool>
 
-    public func body<Content: SwiftUI.View>(for content: Content) -> View {
+    func body<Content: SwiftUI.View>(for content: Content) -> View {
         label.modifier(Modifier2(destination: content, isActive: isActive))
     }
 }

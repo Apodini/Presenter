@@ -7,7 +7,7 @@ public enum ColorRenderingMode: String, Codable {
 internal struct DrawingGroup: CodableViewModifier {
     // MARK: Stored Properties
 
-    let opaque: Bool?
+    let opaque: Bool? // swiftlint:disable:this discouraged_optional_boolean
     let colorMode: ColorRenderingMode?
 }
 
@@ -48,7 +48,8 @@ extension ColorRenderingMode {
 // MARK: - View Extensions
 
 extension View {
-    public func drawingGroup(opaque: Bool? = nil, colorMode: ColorRenderingMode? = nil) -> View {
+    public func drawingGroup(opaque: Bool? = nil, // swiftlint:disable:this discouraged_optional_boolean
+                             colorMode: ColorRenderingMode? = nil) -> View {
         modifier(DrawingGroup(opaque: opaque, colorMode: colorMode))
     }
 }

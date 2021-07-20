@@ -20,9 +20,10 @@ public protocol WrapperView: View {
 
 }
 
+#if canImport(SwiftUI)
+
 extension WrapperView {
 
-    #if canImport(SwiftUI)
 
     public func eraseToAnyView() -> AnyView {
         body.eraseToAnyView()
@@ -32,9 +33,9 @@ extension WrapperView {
         body.apply(modifier)
     }
 
-    #endif
-
 }
+
+#endif
 
 public protocol UserView: WrapperView {
 
@@ -50,6 +51,8 @@ extension UserView {
 
 }
 
+#if canImport(SwiftUI)
+
 extension View where Self: SwiftUI.View {
 
     public func eraseToAnyView() -> AnyView {
@@ -61,3 +64,5 @@ extension View where Self: SwiftUI.View {
     }
 
 }
+
+#endif

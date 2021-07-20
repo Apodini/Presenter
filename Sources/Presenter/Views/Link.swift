@@ -42,7 +42,7 @@ private struct Modifier: ViewModifier, SwiftUI.ViewModifier {
     let destination: String
 
     func body(content: Content) -> some SwiftUI.View {
-        if #available(iOS 14.0, *), let url = URL(string: destination) {
+        if #available(iOS 14.0, macOS 11.0, *), let url = URL(string: destination) {
             SwiftUI.Link(destination: url) { content }
         } else {
             content

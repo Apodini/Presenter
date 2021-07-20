@@ -21,7 +21,7 @@ struct LoginView: UserView {
             Button(Text("Login"), action: LoginAction())
         }
         .padding(16)
-        .background(Color(red: 1, green: 1, blue: 1))
+        .background(Color(red: 0.6, green: 0.6, blue: 0.6))
         .cornerRadius(8)
         .shadow(radius: 8)
         .padding(16)

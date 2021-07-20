@@ -59,7 +59,7 @@ private struct Modifier: ViewModifier, SwiftUI.ViewModifier {
     let supportsOpacity: Bool
 
     func body(content: Content) -> some SwiftUI.View {
-        if #available(iOS 14.0, *) {
+        if #available(iOS 14.0, macOS 11.0, *) {
             ModelView { model in
                 SwiftUI.ColorPicker(
                     selection: model.binding(for: color) { $0.body },

@@ -1,17 +1,22 @@
 
-extension Optional: InternalView, View, _View, NamedType where Wrapped: _CodableView {
+extension Optional: View, NamedType, WrapperView where Wrapped: CodableView {
 
     #if canImport(SwiftUI)
 
-    public var view: _View {
-        self ?? Nil()
+    public var body: View {
+        switch self {
+        case let .some(view):
+            return view
+        case .none:
+            return Nil()
+        }
     }
 
     #endif
 
 }
 
-struct Nil: InternalView, Codable {
+struct Nil: CodableView {
 
     // MARK: Initialization
 
@@ -36,34 +41,14 @@ struct Nil: InternalView, Codable {
         try container.encodeNil()
     }
 
-    #if canImport(SwiftUI)
-
-    public var view: _View {
-        EmptyView()
-    }
-
-    #endif
-
 }
 
 #if canImport(SwiftUI)
 
-extension SwiftUI.EmptyView: _View {
+extension Nil: SwiftUI.View {
 
-    public var erasedCodableBody: _CodableView? {
-        nil
-    }
-
-    public func eraseToAnyView() -> AnyView {
-        AnyView(self)
-    }
-
-    public func apply<M: ViewModifier>(_ m: M) -> _View {
-        modifier(m)
-    }
-
-    public func apply(_ modifier: AnyViewModifying) -> _View {
-        modifier.apply(to: self)
+    public var body: some SwiftUI.View {
+        EmptyView()
     }
 
 }

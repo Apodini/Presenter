@@ -1,5 +1,5 @@
 
-internal struct CornerRadius: AnyViewModifying {
+internal struct CornerRadius: CodableViewModifier {
 
     // MARK: Stored Properties
 
@@ -22,7 +22,7 @@ extension CornerRadius: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension CornerRadius: ViewModifier {
+extension CornerRadius: SwiftUI.ViewModifier {
 
     func body(content: Content) -> some SwiftUI.View {
         content.cornerRadius(value, antialiased: antialiased ?? true)
@@ -35,8 +35,8 @@ extension CornerRadius: ViewModifier {
 
 extension View {
 
-    public func cornerRadius(_ value: CGFloat, antialiased: Bool? = nil) -> some View {
-        modified(using: CornerRadius(value: value, antialiased: antialiased))
+    public func cornerRadius(_ value: CGFloat, antialiased: Bool? = nil) -> View {
+        modifier(CornerRadius(value: value, antialiased: antialiased))
     }
 
 }

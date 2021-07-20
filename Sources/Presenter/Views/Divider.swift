@@ -1,5 +1,5 @@
 
-public struct Divider: SwiftUIView {
+public struct Divider: CodableView {
 
     // MARK: Initialization
 
@@ -21,9 +21,9 @@ extension Divider: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension Divider {
+extension Divider: SwiftUI.View {
 
-    public var view: some SwiftUI.View {
+    public var body: some SwiftUI.View {
         SwiftUI.Divider()
     }
 

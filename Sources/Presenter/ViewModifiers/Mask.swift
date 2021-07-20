@@ -1,5 +1,5 @@
 
-internal struct Mask: AnyViewModifying {
+internal struct Mask: CodableViewModifier {
 
     // MARK: Stored Properties
 
@@ -21,11 +21,22 @@ extension Mask: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension Mask: ViewModifier {
+extension Mask {
+
+    public func body<Content: SwiftUI.View>(for content: Content) -> View {
+        mask.modifier(Modifier(foreground: content))
+    }
+
+}
+
+private struct Modifier<Foreground: SwiftUI.View>: ViewModifier, SwiftUI.ViewModifier {
+
+    let foreground: Foreground
 
     func body(content: Content) -> some SwiftUI.View {
-        content.mask(mask.eraseToAnyView())
+        foreground.mask(content)
     }
+
 }
 
 #endif
@@ -34,8 +45,8 @@ extension Mask: ViewModifier {
 
 extension View {
 
-    public func mask<M: View>(_ mask: M) -> some View {
-        modified(using: Mask(mask: CoderView(mask)))
+    public func mask(_ mask: View) -> View {
+        modifier(Mask(mask: CoderView(mask)))
     }
 
 }

@@ -1,5 +1,5 @@
 
-public struct Spacer: SwiftUIView {
+public struct Spacer: CodableView {
 
     // MARK: Stored Properties
 
@@ -31,9 +31,9 @@ extension Spacer: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension Spacer {
+extension Spacer: SwiftUI.View {
 
-    public var view: some SwiftUI.View {
+    public var body: some SwiftUI.View {
         ModelView { model in
             SwiftUI.Spacer(
                 minLength: self.minLength.get(from: model)

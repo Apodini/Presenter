@@ -1,5 +1,5 @@
 
-struct MetricCard: AnyViewModifying {
+struct MetricCard: CodableViewModifier {
 
     // MARK: Stored Properties
 
@@ -10,7 +10,7 @@ struct MetricCard: AnyViewModifying {
 
 #if canImport(SwiftUI)
 
-extension MetricCard: ViewModifier {
+extension MetricCard: SwiftUI.ViewModifier {
 
     func body(content: Content) -> some SwiftUI.View {
         SwiftUI.VStack(alignment: .leading) {
@@ -43,8 +43,8 @@ extension MetricCard: ViewModifier {
 
 extension View {
 
-    public func metricCard(title: String, subtitle: String) -> some View {
-        modified(using: MetricCard(title: title, subtitle: subtitle))
+    public func metricCard(title: String, subtitle: String) -> View {
+        modifier(MetricCard(title: title, subtitle: subtitle))
     }
 
 }

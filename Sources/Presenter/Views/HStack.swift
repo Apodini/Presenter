@@ -1,5 +1,5 @@
 
-public struct HStack: InternalView, Codable {
+public struct HStack: CodableWrapperView {
 
     // MARK: Stored Properties
 
@@ -9,10 +9,10 @@ public struct HStack: InternalView, Codable {
 
     // MARK: Initialization
 
-    public init<Content: View>(
+    public init(
         alignment: VerticalAlignment? = nil,
         spacing: CGFloat? = nil,
-        @ViewBuilder content: () -> Content
+        @ViewBuilder content: () -> View
     ) {
         self.alignment = alignment
         self.spacing = spacing
@@ -37,14 +37,14 @@ extension HStack: CustomStringConvertible {
 
 extension HStack {
 
-    public var view: _View {
+    public var body: View {
         content
-            .apply(Modifier(alignment: alignment?.swiftUIValue ?? .center, spacing: spacing))
+            .modifier(Modifier(alignment: alignment?.swiftUIValue ?? .center, spacing: spacing))
     }
 
 }
 
-private struct Modifier: ViewModifier {
+private struct Modifier: ViewModifier, SwiftUI.ViewModifier {
 
     let alignment: SwiftUI.VerticalAlignment
     let spacing: CGFloat?

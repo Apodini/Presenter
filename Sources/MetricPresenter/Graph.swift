@@ -1,5 +1,5 @@
 
-public struct Graph: SwiftUIView {
+public struct Graph: CodableView {
 
     // MARK: Nested Types
 
@@ -103,9 +103,9 @@ extension Graph.DataSet {
 
 }
 
-extension Graph {
+extension Graph: SwiftUI.View {
 
-    public var view: some SwiftUI.View {
+    public var body: some SwiftUI.View {
         content
         .graphGrid(
             vertical: verticalGridValues,

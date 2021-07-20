@@ -3,11 +3,12 @@ import Presenter
 
 typealias PresenterModel = Model
 
-struct ContentView: View {
+struct ContentView: UserView {
+
     @State("text", default: "") var text
     
-    
-    var body: some View {
+    var body: View {
         TextField("hallo", text: $text)
     }
+
 }

@@ -1,5 +1,5 @@
 
-internal struct LifecycleModifier: AnyViewModifying {
+internal struct LifecycleModifier: CodableViewModifier {
 
     // MARK: Stored Properties
 
@@ -24,7 +24,7 @@ extension LifecycleModifier: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension LifecycleModifier: ViewModifier {
+extension LifecycleModifier: SwiftUI.ViewModifier {
 
     func body(content: Content) -> some SwiftUI.View {
         ModelView { model in
@@ -42,12 +42,12 @@ extension LifecycleModifier: ViewModifier {
 
 extension View {
 
-    public func onAppear(perform action: Action) -> some View {
-        modified(using: LifecycleModifier(onAppear: CoderAction(action), onDisappear: nil))
+    public func onAppear(perform action: Action) -> View {
+        modifier(LifecycleModifier(onAppear: CoderAction(action), onDisappear: nil))
     }
 
-    public func onDisappear(perform action: Action) -> some View {
-        modified(using: LifecycleModifier(onAppear: nil, onDisappear: CoderAction(action)))
+    public func onDisappear(perform action: Action) -> View {
+        modifier(LifecycleModifier(onAppear: nil, onDisappear: CoderAction(action)))
     }
 
 }

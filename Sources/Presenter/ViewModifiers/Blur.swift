@@ -1,5 +1,5 @@
 
-internal struct Blur: AnyViewModifying {
+internal struct Blur: CodableViewModifier {
 
     // MARK: Stored Properties
 
@@ -22,7 +22,7 @@ extension Blur: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension Blur: ViewModifier {
+extension Blur: SwiftUI.ViewModifier {
 
     func body(content: Content) -> some SwiftUI.View {
         content.blur(radius: radius, opaque: opaque ?? false)
@@ -35,8 +35,8 @@ extension Blur: ViewModifier {
 
 extension View {
 
-    public func blur(radius: CGFloat, opaque: Bool? = nil) -> some View {
-        modified(using: Blur(radius: radius, opaque: opaque))
+    public func blur(radius: CGFloat, opaque: Bool? = nil) -> View {
+        modifier(Blur(radius: radius, opaque: opaque))
     }
 
 }

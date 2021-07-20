@@ -9,6 +9,13 @@ extension Chart {
             case type
         }
 
+        private enum StyleKind: String, Codable {
+            case line
+            case area
+            case stackedArea
+            case column
+        }
+
         // MARK: Cases
 
         case line(LineStyle)
@@ -46,13 +53,13 @@ extension Chart {
             }
             switch kind {
             case .line:
-                self = .line(try LineStyle(from: decoder))
+                self = try .line(LineStyle(from: decoder))
             case .area:
-                self = .area(try AreaStyle(from: decoder))
+                self = try .area(AreaStyle(from: decoder))
             case .column:
-                self = .column(try ColumnStyle(from: decoder))
+                self = try .column(ColumnStyle(from: decoder))
             case .stackedArea:
-                self = .stackedArea(try StackedAreaStyle(from: decoder))
+                self = try .stackedArea(StackedAreaStyle(from: decoder))
             }
         }
 
@@ -74,13 +81,6 @@ extension Chart {
             }
         }
 
-    }
-
-    private enum StyleKind: String, Codable {
-        case line
-        case area
-        case stackedArea
-        case column
     }
 
 }

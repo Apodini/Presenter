@@ -1,5 +1,5 @@
 
-internal struct AnimationModifier: AnyViewModifying {
+internal struct AnimationModifier: CodableViewModifier {
 
     // MARK: Stored Properties
 
@@ -21,7 +21,7 @@ extension AnimationModifier: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension AnimationModifier: ViewModifier {
+extension AnimationModifier: SwiftUI.ViewModifier {
 
     func body(content: Content) -> some SwiftUI.View {
         content.animation(animation.animation)
@@ -35,8 +35,8 @@ extension AnimationModifier: ViewModifier {
 
 extension View {
 
-    public func animation(_ animation: Animation?) -> some View {
-        modified(using: AnimationModifier(animation: animation ?? .none))
+    public func animation(_ animation: Animation?) -> View {
+        modifier(AnimationModifier(animation: animation ?? .none))
     }
 
 }

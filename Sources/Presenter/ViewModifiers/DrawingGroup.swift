@@ -5,7 +5,7 @@ public enum ColorRenderingMode: String, Codable {
     case nonLinear
 }
 
-internal struct DrawingGroup: AnyViewModifying {
+internal struct DrawingGroup: CodableViewModifier {
 
     // MARK: Stored Properties
 
@@ -28,7 +28,7 @@ extension DrawingGroup: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension DrawingGroup: ViewModifier {
+extension DrawingGroup: SwiftUI.ViewModifier {
 
     func body(content: Content) -> some SwiftUI.View {
         content.drawingGroup(opaque: opaque ?? false,
@@ -58,8 +58,8 @@ extension ColorRenderingMode {
 
 extension View {
 
-    public func drawingGroup(opaque: Bool? = nil, colorMode: ColorRenderingMode? = nil) -> some View {
-        modified(using: DrawingGroup(opaque: opaque, colorMode: colorMode))
+    public func drawingGroup(opaque: Bool? = nil, colorMode: ColorRenderingMode? = nil) -> View {
+        modifier(DrawingGroup(opaque: opaque, colorMode: colorMode))
     }
 
 }

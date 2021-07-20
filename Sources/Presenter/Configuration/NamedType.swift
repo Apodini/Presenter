@@ -1,6 +1,4 @@
 
-import Foundation
-
 public protocol NamedType {
     static var type: String { get }
 }

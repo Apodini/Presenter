@@ -5,7 +5,7 @@ public enum NavigationBarTitleDisplayMode: String, Codable {
     case large
 }
 
-internal struct NavigationBarTitle: AnyViewModifying {
+internal struct NavigationBarTitle: CodableViewModifier {
 
     // MARK: Stored Properties
 
@@ -28,7 +28,7 @@ extension NavigationBarTitle: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension NavigationBarTitle: ViewModifier {
+extension NavigationBarTitle: SwiftUI.ViewModifier {
 
     #if os(tvOS) || os(watchOS) || os(macOS)
 
@@ -78,8 +78,8 @@ extension NavigationBarTitleDisplayMode {
 extension View {
 
     public func navigationBarTitle(_ title: Value<String>,
-                                   displayMode: NavigationBarTitleDisplayMode? = nil) -> some View {
-        modified(using: NavigationBarTitle(title: title, displayMode: displayMode))
+                                   displayMode: NavigationBarTitleDisplayMode? = nil) -> View {
+        modifier(NavigationBarTitle(title: title, displayMode: displayMode))
     }
 
 }

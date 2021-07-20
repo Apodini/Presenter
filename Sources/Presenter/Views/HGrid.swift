@@ -1,5 +1,5 @@
 
-public struct HGrid: SwiftUIView {
+public struct HGrid: CodableWrapperView {
 
     // MARK: Stored Properties
 
@@ -11,12 +11,12 @@ public struct HGrid: SwiftUIView {
 
     // MARK: Initialization
 
-    public init<Content: View>(
+    public init(
         rows: [GridItem],
         alignment: VerticalAlignment? = nil,
         spacing: CGFloat? = nil,
         pinnedViews: PinnedScrollableViews,
-        @ViewBuilder content: () -> Content
+        @ViewBuilder content: () -> View
     ) {
         self.rows = rows
         self.alignment = alignment
@@ -45,26 +45,25 @@ extension HGrid {
 
     #if !os(macOS) && !targetEnvironment(macCatalyst)
 
-    @SwiftUI.ViewBuilder
-    public var view: some SwiftUI.View {
+    public var body: View {
         if #available(iOS 14.0, tvOS 14.0, watchOS 7.0, *) {
-            content.apply(
+            return content.modifier(
                 Modifier(
                     rows: rows.map(\.swiftUIValue),
                     alignment: alignment?.swiftUIValue ?? .center,
                     spacing: spacing,
                     pinnedViews: pinnedViews.swiftUIValue
                 )
-            ).eraseToAnyView()
+            )
         } else {
-            SwiftUI.EmptyView()
+            return Nil()
         }
     }
 
     #else
 
-    public var view: some SwiftUI.View  {
-        SwiftUI.EmptyView()
+    public var body: View  {
+        Nil()
     }
 
     #endif
@@ -72,7 +71,7 @@ extension HGrid {
 }
 
 @available(iOS 14.0, macOS 11.0, *)
-private struct Modifier: ViewModifier {
+private struct Modifier: ViewModifier, SwiftUI.ViewModifier {
 
     let rows: [SwiftUI.GridItem]
     let alignment: SwiftUI.VerticalAlignment

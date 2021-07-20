@@ -1,5 +1,5 @@
 
-public struct VStack: InternalView, Codable {
+public struct VStack: CodableWrapperView {
 
     // MARK: Stored Properties
 
@@ -9,10 +9,10 @@ public struct VStack: InternalView, Codable {
 
     // MARK: Initialization
 
-    public init<Content: View>(
+    public init(
         alignment: HorizontalAlignment? = nil,
         spacing: CGFloat? = nil,
-        @ViewBuilder content: () -> Content
+        @ViewBuilder content: () -> View
     ) {
 
         self.alignment = alignment
@@ -38,17 +38,30 @@ extension VStack: CustomStringConvertible {
 
 extension VStack {
 
-    public var view: _View {
+    public var body: View {
         content
-            .apply(Modifier(alignment: alignment?.swiftUIValue ?? .center, spacing: spacing))
+            .modifier(Modifier(alignment: alignment?.swiftUIValue ?? .center, spacing: spacing))
     }
 
 }
 
-private struct Modifier: ViewModifier {
+private struct Modifier: ViewModifier, SwiftUI.ViewModifier {
 
     let alignment: SwiftUI.HorizontalAlignment
     let spacing: CGFloat?
+
+    internal init(alignment: SwiftUI.HorizontalAlignment, spacing: CGFloat?) {
+        self.alignment = alignment
+        self.spacing = spacing
+    }
+
+    init(from decoder: Decoder) throws {
+        fatalError() // TODO
+    }
+
+    func encode(to encoder: Encoder) throws {
+        // TODO
+    }
 
     func body(content: Content) -> some SwiftUI.View {
         SwiftUI.VStack(alignment: alignment, spacing: spacing) {

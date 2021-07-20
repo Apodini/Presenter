@@ -1,5 +1,5 @@
 
-public struct Link: SwiftUIView {
+public struct Link: CodableWrapperView {
 
     // MARK: Stored Properties
 
@@ -8,7 +8,7 @@ public struct Link: SwiftUIView {
 
     // MARK: Initialization
 
-    public init<Label: View>(label: Label, destination: String) {
+    public init(label: View, destination: String) {
         self.label = CoderView(label)
         self.destination = destination
     }
@@ -31,24 +31,23 @@ extension Link: CustomStringConvertible {
 
 extension Link {
 
-    #if !os(macOS) && !targetEnvironment(macCatalyst)
+    public var body: View {
+        label.modifier(Modifier(destination: destination))
+    }
 
-    @SwiftUI.ViewBuilder
-    public var view: some SwiftUI.View {
-        if #available(iOS 14.0, tvOS 14.0, watchOS 7.0, *), let url = URL(string: destination) {
-            SwiftUI.Link(destination: url, label: label.eraseToAnyView)
+}
+
+private struct Modifier: ViewModifier, SwiftUI.ViewModifier {
+
+    let destination: String
+
+    func body(content: Content) -> some SwiftUI.View {
+        if #available(iOS 14.0, *), let url = URL(string: destination) {
+            SwiftUI.Link(destination: url) { content }
         } else {
-            label.eraseToAnyView()
+            content
         }
     }
-
-    #else
-
-    public var view: some SwiftUI.View {
-        label.eraseToAnyView()
-    }
-
-    #endif
 
 }
 

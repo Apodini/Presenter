@@ -1,5 +1,5 @@
 
-public struct Toggle: SwiftUIView {
+public struct Toggle: CodableView {
 
     // MARK: Stored Properties
 
@@ -8,9 +8,9 @@ public struct Toggle: SwiftUIView {
 
     // MARK: Initialization
 
-    public init<Label: View>(
+    public init(
         isOn: Binding<Bool>,
-        label: Label
+        label: View
     ) {
         self.isOn = isOn
         self.label = CoderView(label)
@@ -32,9 +32,9 @@ extension Toggle: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension Toggle {
+extension Toggle: SwiftUI.View {
 
-    public var view: some SwiftUI.View {
+    public var body: some SwiftUI.View {
         ModelView { model in
             SwiftUI.Toggle(
                 isOn: model.binding(for: self.isOn),

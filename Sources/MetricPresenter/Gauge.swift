@@ -1,5 +1,5 @@
 
-public struct Gauge: View {
+public struct Gauge: CodableWrapperView {
 
     // MARK: Stored Properties
 
@@ -11,12 +11,12 @@ public struct Gauge: View {
 
     // MARK: Initialization
 
-    public init<Content: View>(
+    public init(
         value: CGFloat,
         thickness: CGFloat = 6,
         scale: CGFloat = 1.777,
         colors: [ColorCode],
-        @ViewBuilder content: () -> Content
+        @ViewBuilder content: () -> View
     ) {
         self.value = value
         self.thickness = thickness
@@ -27,9 +27,9 @@ public struct Gauge: View {
 
     // MARK: Views
 
-    public var body: some View {
+    public var body: View {
         content
-            .modified(using:
+            .modifier(
                 GaugeModifier(
                     value: value,
                     thickness: thickness,
@@ -41,7 +41,7 @@ public struct Gauge: View {
 
 }
 
-struct GaugeModifier: AnyViewModifying {
+struct GaugeModifier: CodableViewModifier {
 
     var value: CGFloat
     var thickness: CGFloat
@@ -63,7 +63,7 @@ private struct GaugeView<Content: SwiftUI.View>: SwiftUI.View {
 
     var gradient: SwiftUI.AngularGradient {
         .init(
-            gradient: .init(colors: gauge.colors.map { $0.color.view }),
+            gradient: .init(colors: gauge.colors.map { $0.color.body }),
             center: .center,
             startAngle: .degrees(0),
             endAngle: .degrees(270)
@@ -110,7 +110,7 @@ private struct GaugeView<Content: SwiftUI.View>: SwiftUI.View {
 
 }
 
-extension GaugeModifier: ViewModifier {
+extension GaugeModifier: SwiftUI.ViewModifier {
 
     func body(content: Content) -> some SwiftUI.View {
         GaugeView(gauge: self, content: content)

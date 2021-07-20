@@ -19,7 +19,7 @@ extension Graph {
 
 }
 
-extension Graph.Labeling: ViewModifier {
+extension Graph.Labeling: SwiftUI.ViewModifier {
 
     func body(content: Content) -> some SwiftUI.View {
         GeometryReader { geometry in

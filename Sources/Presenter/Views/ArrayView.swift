@@ -1,5 +1,5 @@
 
-struct ArrayView: SwiftUIView {
+struct ArrayView: CodableView {
 
     // MARK: Stored Properties
 
@@ -7,7 +7,7 @@ struct ArrayView: SwiftUIView {
 
     // MARK: Initialization
 
-    public init(content: [_CodableView]) {
+    public init(content: [View]) {
         self.content = content.flatMap { contentView -> [CoderView] in
             if let arrayView = contentView as? ArrayView {
                 return arrayView.content
@@ -33,9 +33,9 @@ extension ArrayView: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension ArrayView {
+extension ArrayView: SwiftUI.View {
 
-    public var view: some SwiftUI.View {
+    public var body: some SwiftUI.View {
         ForEach(content.indices) { index in
             self.content[index].eraseToAnyView()
         }

@@ -1,5 +1,5 @@
 
-public struct Slider: SwiftUIView {
+public struct Slider: CodableView {
 
     // MARK: Stored Properties
 
@@ -35,17 +35,17 @@ extension Slider: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension Slider {
+extension Slider: SwiftUI.View {
 
     #if os(tvOS)
 
-    public var view: AnyView {
-        Nil().eraseToAnyView()
+    public var body: some SwiftUI.View {
+        SwiftUI.EmptyView()
     }
 
     #else
 
-    public var view: some SwiftUI.View {
+    public var body: some SwiftUI.View {
         ModelView { model in
             SwiftUI.Slider(
                 value: model.binding(for: self.value),

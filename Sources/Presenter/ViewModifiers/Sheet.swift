@@ -1,5 +1,5 @@
 
-internal struct Sheet: AnyViewModifying {
+internal struct Sheet: CodableViewModifier {
 
     // MARK: Stored Properties
 
@@ -22,15 +22,26 @@ extension Sheet: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension Sheet: ViewModifier {
+extension Sheet {
+
+    func body<Caller: SwiftUI.View>(for caller: Caller) -> View {
+        content.modifier(Modifier(caller: caller, isPresented: isPresented))
+    }
+
+}
+
+private struct Modifier<Caller: SwiftUI.View>: ViewModifier, SwiftUI.ViewModifier {
+
+    let caller: Caller
+    let isPresented: Binding<Bool>
 
     func body(content: Content) -> some SwiftUI.View {
         ModelView { model in
-            content
-            .sheet(isPresented: model.binding(for: self.isPresented)) {
-                self.content.eraseToAnyView()
-                .environmentObject(model)
-            }
+            caller
+                .sheet(isPresented: model.binding(for: self.isPresented)) {
+                    content
+                        .environmentObject(model)
+                }
         }
     }
 
@@ -42,8 +53,8 @@ extension Sheet: ViewModifier {
 
 extension View {
 
-    public func sheet<Content: View>(isPresented: Binding<Bool>, content: Content) -> some View {
-        modified(using: Sheet(isPresented: isPresented, content: CoderView(content)))
+    public func sheet(isPresented: Binding<Bool>, content: View) -> View {
+        modifier(Sheet(isPresented: isPresented, content: CoderView(content)))
     }
 
 }

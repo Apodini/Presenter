@@ -1,5 +1,5 @@
 
-public struct NavigationView: InternalView, Codable {
+public struct NavigationView: CodableWrapperView {
 
     // MARK: Stored Properties
 
@@ -7,8 +7,8 @@ public struct NavigationView: InternalView, Codable {
 
     // MARK: Initialization
 
-    public init<Content: View>(
-        @ViewBuilder content: () -> Content
+    public init(
+        @ViewBuilder content: () -> View
     ) {
         self.content = CoderView(content())
     }
@@ -31,13 +31,13 @@ extension NavigationView: CustomStringConvertible {
 
 extension NavigationView {
 
-    public var view: _View {
-        content.apply(Modifier())
+    public var body: View {
+        content.modifier(Modifier())
     }
 
 }
 
-private struct Modifier: ViewModifier, AnyViewModifying {
+private struct Modifier: ViewModifier, SwiftUI.ViewModifier {
 
     func body(content: Content) -> some SwiftUI.View {
         SwiftUI.NavigationView {

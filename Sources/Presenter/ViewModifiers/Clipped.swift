@@ -1,5 +1,5 @@
 
-internal struct Clipped: AnyViewModifying {
+internal struct Clipped: CodableViewModifier {
 
     // MARK: Stored Properties
 
@@ -21,7 +21,7 @@ extension Clipped: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension Clipped: ViewModifier {
+extension Clipped: SwiftUI.ViewModifier {
 
     func body(content: Content) -> some SwiftUI.View {
         content.clipped(antialiased: antialiased ?? false)
@@ -35,8 +35,8 @@ extension Clipped: ViewModifier {
 
 extension View {
 
-    public func clipped(antialiased: Bool? = nil) -> some View {
-        modified(using: Clipped(antialiased: antialiased))
+    public func clipped(antialiased: Bool? = nil) -> View {
+        modifier(Clipped(antialiased: antialiased))
     }
 
 }

@@ -1,5 +1,5 @@
 
-public struct Capsule: SwiftUIView {
+public struct Capsule: CodableView {
 
     // MARK: Stored Properties
 
@@ -27,9 +27,9 @@ extension Capsule: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension Capsule {
+extension Capsule: SwiftUI.View {
 
-    public var view: some SwiftUI.View {
+    public var body: some SwiftUI.View {
         SwiftUI.Capsule(style: style.swiftUIValue)
     }
 

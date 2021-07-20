@@ -1,5 +1,5 @@
 
-public struct ZStack: InternalView, Codable {
+public struct ZStack: CodableWrapperView {
 
     // MARK: Stored Properties
 
@@ -8,9 +8,9 @@ public struct ZStack: InternalView, Codable {
 
     // MARK: Initialization
 
-    public init<Content: View>(
+    public init(
         alignment: Alignment? = nil,
-        @ViewBuilder content: () -> Content
+        @ViewBuilder content: () -> View
     ) {
 
         self.alignment = alignment
@@ -35,13 +35,13 @@ extension ZStack: CustomStringConvertible {
 
 extension ZStack {
 
-    public var view: _View {
-        content.apply(Modifier(alignment: alignment?.swiftUIValue ?? .center))
+    public var body: View {
+        content.modifier(Modifier(alignment: alignment?.swiftUIValue ?? .center))
     }
 
 }
 
-private struct Modifier: ViewModifier {
+private struct Modifier: ViewModifier, SwiftUI.ViewModifier {
 
     let alignment: SwiftUI.Alignment
 

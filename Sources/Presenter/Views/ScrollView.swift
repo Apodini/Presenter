@@ -1,5 +1,5 @@
 
-public struct ScrollView: InternalView, Codable {
+public struct ScrollView: CodableWrapperView {
 
     // MARK: Stored Properties
 
@@ -9,10 +9,10 @@ public struct ScrollView: InternalView, Codable {
 
     // MARK: Initialization
 
-    public init<Content: View>(
+    public init(
         _ axis: AxisSet? = nil,
         showsIndicators: Bool? = nil,
-        @ViewBuilder content: () -> Content
+        @ViewBuilder content: () -> View
     ) {
         self.axis = axis
         self.showsIndicators = showsIndicators
@@ -37,8 +37,8 @@ extension ScrollView: CustomStringConvertible {
 
 extension ScrollView {
 
-    public var view: _View {
-        content.apply(
+    public var body: View {
+        content.modifier(
             Modifier(axis: axis?.swiftUIValue ?? .vertical,
                      showsIndicators: showsIndicators ?? true)
         )
@@ -46,7 +46,7 @@ extension ScrollView {
 
 }
 
-private struct Modifier: ViewModifier {
+private struct Modifier: ViewModifier, SwiftUI.ViewModifier {
 
     let axis: SwiftUI.Axis.Set
     let showsIndicators: Bool

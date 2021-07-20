@@ -3,23 +3,27 @@
 
 extension Chart.Style {
 
-    func chart(for data: [[Double]]) -> AnyView {
+    @SwiftUI.ViewBuilder
+    func chart(for data: [[Double]]) -> some SwiftUI.View {
         switch self {
         case let .line(style):
-            return chart(data: data, style: style.chartsValue)
+            Charts.Chart(data: data)
+                .chartStyle(style.chartsValue)
         case let .area(style):
-            return chart(data: data, style: style.chartsValue)
+            Charts.Chart(data: data)
+                .chartStyle(style.chartsValue)
         case let .stackedArea(style):
-            return chart(data: data, style: style.chartsValue)
+            Charts.Chart(data: data)
+                .chartStyle(style.chartsValue)
         case let .column(style):
-            return chart(data: data, style: style.chartsValue)
+            Charts.Chart(data: data)
+                .chartStyle(style.chartsValue)
         }
     }
 
-    private func chart<Style: ChartStyle>(data: [[Double]], style: Style) -> AnyView {
+    private func chart<Style: ChartStyle>(data: [[Double]], style: Style) -> some SwiftUI.View {
         Charts.Chart(data: data)
-        .chartStyle(style)
-        .eraseToAnyView()
+            .chartStyle(style)
     }
 
 }
@@ -68,14 +72,6 @@ extension Chart.LineType {
         case .quadCurve:
             return .quadCurve
         }
-    }
-
-}
-
-extension SwiftUI.View {
-
-    fileprivate func eraseToAnyView() -> AnyView {
-        AnyView(self)
     }
 
 }

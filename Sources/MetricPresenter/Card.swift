@@ -1,5 +1,5 @@
 
-struct Card: AnyViewModifying {
+struct Card: CodableViewModifier {
 
     // MARK: Stored Properties
 
@@ -17,7 +17,7 @@ extension Card: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension Card: ViewModifier {
+extension Card: SwiftUI.ViewModifier {
 
     #if os(macOS)
 
@@ -53,8 +53,8 @@ extension SwiftUI.View {
 
 extension View {
 
-    public func card(cornerRadius: CGFloat? = nil) -> some View {
-        modified(using: Card(radius: cornerRadius))
+    public func card(cornerRadius: CGFloat? = nil) -> View {
+        modifier(Card(radius: cornerRadius))
     }
 
 }

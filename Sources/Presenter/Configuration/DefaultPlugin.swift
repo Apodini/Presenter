@@ -3,7 +3,7 @@ import Foundation
 
 struct DefaultPlugin: Plugin {
 
-    var views: [_CodableView.Type] {
+    var views: [CodableView.Type] {
         [
             AngularGradient.self,
             Button.self,
@@ -42,7 +42,7 @@ struct DefaultPlugin: Plugin {
         ]
     }
 
-    var viewModifiers: [AnyViewModifying.Type] {
+    var viewModifiers: [CodableViewModifier.Type] {
         [
             AccentColor.self,
             AnimationModifier.self,

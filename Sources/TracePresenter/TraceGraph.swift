@@ -1,5 +1,5 @@
 
-public struct TraceGraph: SwiftUIView {
+public struct TraceGraph: CodableView {
 
     // MARK: Stored Properties
 
@@ -62,9 +62,9 @@ extension TraceGraph {
 
 #if canImport(SwiftUI)
 
-extension TraceGraph {
+extension TraceGraph: SwiftUI.View {
 
-    public var view: some SwiftUI.View {
+    public var body: some SwiftUI.View {
         SwiftUI.VStack {
             SwiftUI.ForEach(spans.indices) { index in
                 SpanRow(span: spans[index])

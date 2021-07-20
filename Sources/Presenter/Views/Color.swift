@@ -1,5 +1,5 @@
 
-public struct Color: SwiftUIView {
+public struct Color: CodableView {
 
     // MARK: Nested Types
 
@@ -49,7 +49,7 @@ public struct Color: SwiftUIView {
 extension Color: CustomStringConvertible {
 
     public var description: String {
-        "Color(\(ColorCode(self))"
+        "Color(\(ColorCode(self)))"
     }
 
 }
@@ -58,9 +58,9 @@ extension Color: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension Color {
+extension Color: SwiftUI.View {
 
-    public var view: SwiftUI.Color {
+    public var body: SwiftUI.Color {
         SwiftUI.Color(red: red, green: green, blue: blue, opacity: opacity)
     }
 

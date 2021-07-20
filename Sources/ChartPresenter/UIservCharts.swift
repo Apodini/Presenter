@@ -3,7 +3,7 @@ public struct ChartPresenter: Plugin {
 
     public init() {}
 
-    public var views: [_CodableView.Type] {
+    public var views: [CodableView.Type] {
         [
             Chart.self,
         ]

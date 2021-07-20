@@ -1,5 +1,5 @@
 
-public struct Text: SwiftUIView {
+public struct Text: CodableView {
 
     // MARK: Stored Properties
 
@@ -31,9 +31,9 @@ extension Text: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension Text {
+extension Text: SwiftUI.View {
 
-    public var view: some SwiftUI.View {
+    public var body: some SwiftUI.View {
         ModelView { model in
             SwiftUI.Text(self.text.get(from: model))
         }

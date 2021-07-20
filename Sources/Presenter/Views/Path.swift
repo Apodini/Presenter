@@ -1,5 +1,5 @@
 
-public struct Path: SwiftUIView {
+public struct Path: CodableView {
 
     // MARK: Nested Types
 
@@ -70,9 +70,9 @@ extension Path: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension Path {
+extension Path: SwiftUI.View {
 
-    public var view: some SwiftUI.View {
+    public var body: some SwiftUI.View {
         SwiftUI.Path { path in
             for element in elements {
                 switch element.kind {

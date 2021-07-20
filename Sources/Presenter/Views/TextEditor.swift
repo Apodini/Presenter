@@ -1,5 +1,5 @@
 
-public struct TextEditor: SwiftUIView {
+public struct TextEditor: CodableView {
 
     // MARK: Stored Properties
 
@@ -27,12 +27,12 @@ extension TextEditor: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension TextEditor {
+extension TextEditor: SwiftUI.View {
 
     #if !os(watchOS) && !os(macOS) && !os(tvOS) && !targetEnvironment(macCatalyst)
 
     @SwiftUI.ViewBuilder
-    public var view: some SwiftUI.View {
+    public var body: some SwiftUI.View {
         if #available(iOS 14.0, *) {
             ModelView { model in
                 SwiftUI.TextEditor(text: model.binding(for: text))
@@ -45,7 +45,7 @@ extension TextEditor {
 
     #else
 
-    public var view: some SwiftUI.View {
+    public var body: some SwiftUI.View {
         SwiftUI.EmptyView()
     }
 

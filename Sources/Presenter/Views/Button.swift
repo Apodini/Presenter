@@ -1,5 +1,5 @@
 
-public struct Button: SwiftUIView {
+public struct Button: CodableWrapperView {
 
     // MARK: Stored Properties
 
@@ -8,7 +8,7 @@ public struct Button: SwiftUIView {
 
     // MARK: Initialization
 
-    public init<Label: View>(_ label: Label, action: Action) {
+    public init(_ label: View, action: Action) {
         self.label = CoderView(label)
         self.action = CoderAction(action)
     }
@@ -31,13 +31,13 @@ extension Button: CustomStringConvertible {
 
 extension Button {
 
-    public var view: some SwiftUI.View {
-        label.apply(Modifier1(action: action)).eraseToAnyView()
+    public var body: View {
+        label.modifier(Modifier(action: action))
     }
 
 }
 
-private struct Modifier1: ViewModifier {
+private struct Modifier: ViewModifier, SwiftUI.ViewModifier {
 
     let action: CoderAction
 

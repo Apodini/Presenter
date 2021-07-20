@@ -1,5 +1,5 @@
 
-public struct CoderView: Codable {
+public struct CoderView: CodableView {
 
     // MARK: Nested Types
 
@@ -10,32 +10,34 @@ public struct CoderView: Codable {
 
     private enum Error: Swift.Error {
         case unregisteredType(String)
-        case unexpectedType(_View.Type, expected: _View.Type)
+        case unexpectedType(View.Type, expected: View.Type)
     }
 
     // MARK: Stored Properties
 
-    public let element: _View
+    public let body: View
 
     // MARK: Initialization
 
-    public init(_ element: _CodableView) {
-        if let body = element.erasedCodableBody,
-           Self.registeredTypes[Swift.type(of: element).type] == nil {
-            self.init(body)
+    public init(_ element: View) {
+        if let coderView = element as? CoderView {
+            self.init(coderView.body)
+        } else if Self.registeredTypes[Swift.type(of: element).type] == nil,
+           let userView = element as? UserView {
+            self.init(userView.body)
         } else {
             self.init(last: element)
         }
     }
 
-    private init(last element: _CodableView) {
-        self.element = element
+    private init(last element: View) {
+        self.body = element
     }
 
     public init(from decoder: Decoder) throws {
         if let singleValueContainer = try? decoder.singleValueContainer() {
             guard !singleValueContainer.decodeNil() else {
-                self.element = Nil()
+                self.body = Nil()
                 return
             }
         }
@@ -45,7 +47,7 @@ public struct CoderView: Codable {
             while !unkeyedContainer.isAtEnd {
                 content.append(try unkeyedContainer.decode(CoderView.self))
             }
-            self.element = ArrayView(content: content)
+            self.body = ArrayView(content: content)
             return
         }
 
@@ -60,18 +62,18 @@ public struct CoderView: Codable {
 
         if container.contains(.modifiers) {
             let modifiers = try container.decode([CoderViewModifier].self, forKey: .modifiers)
-            self.element = ComposedView(content: CoderView(element as! _CodableView), modifiers: modifiers)
+            self.body = ComposedView(content: CoderView(element), modifiers: modifiers)
         } else {
-            self.element = element
+            self.body = element
         }
     }
 
     // MARK: Methods
 
     public func encode(to encoder: Encoder) throws {
-        let typeDescription = Swift.type(of: element).type
+        let typeDescription = Swift.type(of: body).type
 
-        if let arrayView = element as? ArrayView {
+        if let arrayView = body as? ArrayView {
             var container = encoder.unkeyedContainer()
             for content in arrayView.content {
                 try container.encode(content)
@@ -88,12 +90,12 @@ public struct CoderView: Codable {
             try container.encode(typeDescription, forKey: .type)
         }
 
-        if let composedView = element as? ComposedView {
+        if let composedView = body as? ComposedView {
             var container = encoder.container(keyedBy: CodingKeys.self)
             try container.encode(composedView.modifiers, forKey: .modifiers)
             try composedView.content.encode(to: encoder)
         } else {
-            try coder.encode(element, encoder)
+            try coder.encode(body, encoder)
         }
     }
 
@@ -107,8 +109,8 @@ extension CoderView {
 
     private struct Coder {
         var isOptional: Bool
-        var decode: (Decoder) throws -> _View
-        var encode: (_View, Encoder) throws -> Void
+        var decode: (Decoder) throws -> View
+        var encode: (View, Encoder) throws -> Void
     }
 
     // MARK: Static Properties
@@ -131,26 +133,26 @@ extension CoderView {
 
     // MARK: Static Functions
 
-    internal static func register<View: _CodableView>(_: View.Type) {
-        let isOptional = View.type.hasPrefix("Optional<")
+    internal static func register<V: CodableView>(_: V.Type) {
+        let isOptional = V.type.hasPrefix("Optional<")
         if !isOptional {
-            register(Optional<View>.self)
+            register(Optional<V>.self)
         }
         let coder = Coder(
             isOptional: isOptional,
-            decode: { decoder in try View(from: decoder) },
+            decode: { decoder in try V(from: decoder) },
             encode: { view, encoder in
-                guard let viewView = view as? View else {
-                    throw Error.unexpectedType(Swift.type(of: view), expected: View.self)
+                guard let viewView = view as? V else {
+                    throw Error.unexpectedType(Swift.type(of: view), expected: V.self)
                 }
                 try viewView.encode(to: encoder)
             }
         )
-        registeredTypes.updateValue(coder, forKey: View.type)
+        registeredTypes.updateValue(coder, forKey: V.type)
     }
 
-    internal static func unregister<View: _CodableView>(_: View.Type) {
-        registeredTypes.removeValue(forKey: View.type)
+    internal static func unregister<V: CodableView>(_: V.Type) {
+        registeredTypes.removeValue(forKey: V.type)
     }
 
 }
@@ -160,21 +162,23 @@ extension CoderView {
 extension CoderView: CustomStringConvertible {
 
     public var description: String {
-        "\(element)"
+        "\(body)"
     }
 
 }
 
-// MARK: - InternalView
+#if canImport(SwiftUI)
 
-extension CoderView: InternalView {
+extension CoderView {
 
-    #if canImport(SwiftUI)
-
-    public var view: _View {
-        element
+    public func eraseToAnyView() -> AnyView {
+        body.eraseToAnyView()
     }
 
-    #endif
+    public func apply<Modifier: ViewModifier>(_ modifier: Modifier) -> View {
+        body.apply(modifier)
+    }
 
 }
+
+#endif

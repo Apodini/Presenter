@@ -1,5 +1,5 @@
 
-public struct DataView: SwiftUIView {
+public struct DataView: CodableView {
 
     // MARK: Stored Properties
 
@@ -43,16 +43,23 @@ private struct _DataView: SwiftUI.View {
     }
 
     private func decode() -> some SwiftUI.View {
-        didTryDecoding = true
-        view = try? Presenter.decode(from: data).eraseToAnyView()
+        DispatchQueue.main.async {
+            self.didTryDecoding = true
+            do {
+                let decodedView = try Presenter.decode(from: data)
+                self.view = decodedView.eraseToAnyView()
+            } catch {
+                self.view = AnyView(SwiftUI.Text(error.localizedDescription))
+            }
+        }
         return view
     }
 
 }
 
-extension DataView {
+extension DataView: SwiftUI.View {
 
-    public var view: some SwiftUI.View {
+    public var body: some SwiftUI.View {
         _DataView(data: data)
     }
 

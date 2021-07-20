@@ -2,29 +2,11 @@
 
 import PackageDescription
 
-
 #if os(macOS) || os(iOS) || os(watchOS) || os(tvOS)
-let exampleTarget: [Target] = [
-    .executableTarget(
-        name: "Example",
-        dependencies: ["Presenter"]
-    )
-]
-let exampleProduct: [Product] = [
-    .executable(
-        name: "Example",
-        targets: ["Example", "Presenter"]
-    )
-]
-#else
-let exampleTarget: [Target] = []
-let exampleProduct: [Product] = []
-#endif
-
 
 let package = Package(
     name: "Presenter",
-    platforms: [.macOS(.v10_15), .watchOS(.v6), .tvOS(.v13), .iOS(.v13)],
+    platforms: [.iOS(.v13), .macOS(.v10_15), .tvOS(.v13), .watchOS(.v6)],
     products: [
         .library(
             name: "Presenter",
@@ -41,8 +23,71 @@ let package = Package(
         .library(
             name: "TracePresenter",
             targets: ["TracePresenter"]
+        ),
+        .executable(
+            name: "Example",
+            targets: ["Example", "Presenter"]
         )
-    ] + exampleProduct,
+    ],
+    dependencies: [
+        .package(name: "Charts", url: "https://github.com/spacenation/swiftui-charts.git", from: "1.0.0"),
+    ],
+    targets: [
+        .target(
+            name: "Presenter",
+            dependencies: []
+        ),
+        .target(
+            name: "ChartPresenter",
+            dependencies: ["Presenter", "Charts"]
+        ),
+        .target(
+            name: "MetricPresenter",
+            dependencies: ["ChartPresenter"]
+        ),
+        .target(
+            name: "TracePresenter",
+            dependencies: ["Presenter"]
+        ),
+        .testTarget(
+            name: "PresenterTests",
+            dependencies: ["Presenter", "ChartPresenter", "MetricPresenter", "TracePresenter"]
+        ),
+        .executableTarget(
+            name: "Example",
+            dependencies: ["Presenter"]
+        )
+    ]
+)
+
+#else
+
+let package = Package(
+    name: "Presenter",
+    platforms: [.iOS(.v13), .macOS(.v10_15), .tvOS(.v13), .watchOS(.v6)],
+    products: [
+        .library(
+            name: "Presenter",
+            targets: ["Presenter"]
+        ),
+        .library(
+            name: "ChartPresenter",
+            targets: ["ChartPresenter"]
+        ),
+        .library(
+            name: "MetricPresenter",
+            targets: ["MetricPresenter"]
+        ),
+        .library(
+            name: "TracePresenter",
+            targets: ["TracePresenter"]
+        ),
+        .executable(
+            name: "Example",
+            targets: ["Example", "Presenter"]
+        )
+    ],
+    dependencies: [],
     targets: [
         .target(
             name: "Presenter",
@@ -63,6 +108,12 @@ let package = Package(
         .testTarget(
             name: "PresenterTests",
             dependencies: ["Presenter", "ChartPresenter", "MetricPresenter", "TracePresenter"]
+        ),
+        .executableTarget(
+            name: "Example",
+            dependencies: ["Presenter"]
         )
-    ] + exampleTarget
+    ]
 )
+
+#endif

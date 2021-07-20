@@ -1,5 +1,5 @@
 
-internal struct Opacity: AnyViewModifying {
+internal struct Opacity: CodableViewModifier {
 
     // MARK: Stored Properties
 
@@ -21,7 +21,7 @@ extension Opacity: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension Opacity: ViewModifier {
+extension Opacity: SwiftUI.ViewModifier {
 
     func body(content: Content) -> some SwiftUI.View {
         content.opacity(value)
@@ -34,8 +34,8 @@ extension Opacity: ViewModifier {
 
 extension View {
 
-    public func opacity(_ value: Double, antialiased: Bool? = nil) -> some View {
-        modified(using: Opacity(value: value))
+    public func opacity(_ value: Double, antialiased: Bool? = nil) -> View {
+        modifier(Opacity(value: value))
     }
 
 }

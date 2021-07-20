@@ -18,7 +18,7 @@ public struct CopyAction: Action {
     #if canImport(SwiftUI)
 
     public func perform(on model: Model) {
-        model.state[to] = model.state[from]
+        model.set(to, to: model.get(from))
     }
 
     #endif

@@ -39,19 +39,20 @@ public struct JavaScriptAction: Action {
         }
 
         context.exceptionHandler = { context, value in
-            model.state[errorKey] = value?.toObject()
+            model.set(errorKey, to: value?.toObject())
         }
 
         for (key, name) in zip(inputKeys, inputNames) {
-            context.setObject(model.state[key], forKeyedSubscript: name as NSString)
+            context.setObject(model.get(key), forKeyedSubscript: name as NSString)
         }
 
         let functionName = "$_xyz_abc_javascript_action_main_function_cba_xyz_$_$"
         context.evaluateScript("function " + functionName + "() {\n" + script + "\n}")
-        model.state[resultKey] = context
+        let result = context
             .objectForKeyedSubscript(functionName)
             .call(withArguments: [])
             .toObject()
+        model.set(resultKey, to: result)
 
         #else
 

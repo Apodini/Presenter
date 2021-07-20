@@ -1,5 +1,5 @@
 
-internal struct DynamicFrame: AnyViewModifying {
+internal struct DynamicFrame: CodableViewModifier {
 
     // MARK: Stored Properties
 
@@ -35,7 +35,7 @@ extension DynamicFrame: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension DynamicFrame: ViewModifier {
+extension DynamicFrame: SwiftUI.ViewModifier {
 
     func body(content: Content) -> some SwiftUI.View {
         content.frame(minWidth: minWidth,
@@ -61,8 +61,8 @@ extension View {
                       minHeight: CGFloat? = nil,
                       idealHeight: CGFloat? = nil,
                       maxHeight: CGFloat? = nil,
-                      alignment: Alignment? = nil) -> some View {
-        modified(using:
+                      alignment: Alignment = .center) -> View {
+        modifier(
             DynamicFrame(
                 minWidth: minWidth, idealWidth: idealWidth, maxWidth: maxWidth,
                 minHeight: minHeight, idealHeight: idealHeight, maxHeight: maxHeight,

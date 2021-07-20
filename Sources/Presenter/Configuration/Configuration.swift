@@ -6,7 +6,7 @@ public enum Presenter {
     public static func decode(
         from data: Data,
         decoder: JSONDecoder = .init()
-    ) throws -> some View {
+    ) throws -> View {
 
         try decoder.decode(CoderView.self, from: data)
     }
@@ -16,7 +16,7 @@ public enum Presenter {
     public static func decode<Decoder: TopLevelDecoder>(
         from data: Decoder.Input,
         decoder: Decoder
-    ) throws -> some View {
+    ) throws -> View {
 
         try decoder.decode(CoderView.self, from: data)
     }
@@ -25,8 +25,8 @@ public enum Presenter {
 
     // MARK: Encoding
 
-    public static func encode<V: View>(
-        _ view: V,
+    public static func encode(
+        _ view: View,
         encoder: JSONEncoder = .init()
     ) throws -> Data {
 
@@ -35,8 +35,8 @@ public enum Presenter {
 
     #if canImport(Combine)
 
-    public static func encode<V: View, Encoder: TopLevelEncoder>(
-        _ view: V,
+    public static func encode<Encoder: TopLevelEncoder>(
+        _ view: View,
         encoder: Encoder
     ) throws -> Encoder.Output {
 

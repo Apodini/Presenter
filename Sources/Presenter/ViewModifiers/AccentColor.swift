@@ -1,5 +1,5 @@
 
-internal struct AccentColor: AnyViewModifying {
+internal struct AccentColor: CodableViewModifier {
 
     // MARK: Stored Properties
 
@@ -21,7 +21,7 @@ extension AccentColor: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension AccentColor: ViewModifier {
+extension AccentColor: SwiftUI.ViewModifier {
 
     #if os(macOS)
 
@@ -32,7 +32,7 @@ extension AccentColor: ViewModifier {
     #else
 
     func body(content: Content) -> some SwiftUI.View {
-        content.accentColor(color.color.view)
+        content.accentColor(color.color.body)
     }
 
     #endif
@@ -44,8 +44,8 @@ extension AccentColor: ViewModifier {
 
 extension View {
 
-    public func accentColor(_ color: Color) -> some View {
-        modified(using: AccentColor(color: ColorCode(color)))
+    public func accentColor(_ color: Color) -> View {
+        modifier(AccentColor(color: ColorCode(color)))
     }
 
 }

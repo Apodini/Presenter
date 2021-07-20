@@ -1,5 +1,5 @@
 
-public struct AngularGradient: SwiftUIView {
+public struct AngularGradient: CodableView {
 
     // MARK: Stored Properties
 
@@ -47,9 +47,9 @@ extension AngularGradient: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension AngularGradient {
+extension AngularGradient: SwiftUI.View {
 
-    public var view: some SwiftUI.View {
+    public var body: some SwiftUI.View {
         SwiftUI.AngularGradient(
             gradient: gradient.swiftUIValue,
             center: center.unitPoint,

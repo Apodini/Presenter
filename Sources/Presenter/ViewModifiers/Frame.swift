@@ -1,5 +1,5 @@
 
-internal struct Frame: AnyViewModifying {
+internal struct Frame: CodableViewModifier {
 
     // MARK: Stored Properties
 
@@ -25,7 +25,7 @@ extension Frame: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension Frame: ViewModifier {
+extension Frame: SwiftUI.ViewModifier {
 
     func body(content: Content) -> some SwiftUI.View {
         content.frame(width: width, height: height,
@@ -40,8 +40,10 @@ extension Frame: ViewModifier {
 
 extension View {
 
-    public func frame(width: CGFloat? = nil, height: CGFloat? = nil, alignment: Alignment? = nil) -> some View {
-        modified(using: Frame(height: height, width: width, alignment: alignment))
+    public func frame(width: CGFloat? = nil,
+                      height: CGFloat? = nil,
+                      alignment: Alignment? = nil) -> View {
+        modifier(Frame(height: height, width: width, alignment: alignment))
     }
 
 }

@@ -1,5 +1,5 @@
 
-public struct VGrid: InternalView, Codable {
+public struct VGrid: CodableWrapperView {
 
     // MARK: Stored Properties
 
@@ -11,12 +11,12 @@ public struct VGrid: InternalView, Codable {
 
     // MARK: Initialization
 
-    public init<Content: View>(
+    public init(
         columns: [GridItem],
         alignment: HorizontalAlignment? = nil,
         spacing: CGFloat? = nil,
         pinnedViews: PinnedScrollableViews,
-        @ViewBuilder content: () -> Content
+        @ViewBuilder content: () -> View
      ) {
 
         self.columns = columns
@@ -46,23 +46,23 @@ extension VGrid {
 
     #if !os(macOS) && !targetEnvironment(macCatalyst)
 
-    public var view: _View {
+    public var body: View {
         if #available(iOS 14.0, tvOS 14.0, watchOS 7.0, *) {
-            return content.apply(
+            return content.modifier(
                 Modifier(columns: columns.map(\.swiftUIValue),
                          alignment: alignment?.swiftUIValue ?? .center,
                          spacing: spacing,
                          pinnedViews: pinnedViews.swiftUIValue)
             )
         } else {
-            return SwiftUI.EmptyView()
+            return Nil()
         }
     }
 
     #else
 
-    public var view: _View {
-        SwiftUI.EmptyView()
+    public var body: View {
+        Nil()
     }
 
     #endif
@@ -70,7 +70,7 @@ extension VGrid {
 }
 
 @available(iOS 14.0, macOS 11.0, *)
-private struct Modifier: ViewModifier {
+private struct Modifier: ViewModifier, SwiftUI.ViewModifier {
 
     let columns: [SwiftUI.GridItem]
     let alignment: SwiftUI.HorizontalAlignment

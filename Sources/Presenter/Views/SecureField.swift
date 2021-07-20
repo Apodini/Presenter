@@ -1,5 +1,5 @@
 
-public struct SecureField: SwiftUIView {
+public struct SecureField: CodableView {
 
     // MARK: Stored Properties
 
@@ -37,9 +37,9 @@ extension SecureField: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension SecureField {
+extension SecureField: SwiftUI.View {
 
-    public var view: some SwiftUI.View {
+    public var body: some SwiftUI.View {
         ModelView { model in
             SwiftUI.SecureField(
                 self.title.get(from: model),

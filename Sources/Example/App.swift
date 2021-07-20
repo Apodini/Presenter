@@ -19,11 +19,3 @@ struct ExampleApp: App {
     }
 
 }
-
-
-struct ContentView_Provider: PreviewProvider {
-    static var previews: some SwiftUI.View {
-        ContentView().eraseToAnyView()
-    }
-}
-

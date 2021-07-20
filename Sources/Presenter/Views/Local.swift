@@ -1,5 +1,5 @@
 
-public struct Local: SwiftUIView {
+public struct Local: CodableView {
 
     // MARK: Stored Properties
 
@@ -27,17 +27,17 @@ extension Local: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension Local {
+extension Local: SwiftUI.View {
 
-    public var view: some SwiftUI.View {
+    public var body: some SwiftUI.View {
         ModelView { model in
-            view(for: model.state[self.key])
+            view(for: model.get(key))
         }
     }
 
     @SwiftUI.ViewBuilder
     private func view(for value: Any?) -> some SwiftUI.View {
-        if let view = value as? _View {
+        if let view = value as? View {
             view.eraseToAnyView()
         } else if let view = value as? AnyView {
             view

@@ -61,7 +61,7 @@ extension Gradient {
 extension Gradient.Stop {
 
     var swiftUIValue: SwiftUI.Gradient.Stop {
-        .init(color: color.view, location: location)
+        .init(color: color.body, location: location)
     }
 
 }

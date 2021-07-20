@@ -1,5 +1,5 @@
 
-internal struct FontModifier: AnyViewModifying {
+internal struct FontModifier: CodableViewModifier {
 
     // MARK: Stored Properties
 
@@ -21,7 +21,7 @@ extension FontModifier: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension FontModifier: ViewModifier {
+extension FontModifier: SwiftUI.ViewModifier {
 
     func body(content: Content) -> some SwiftUI.View {
         content.font(font?.swiftUIValue)
@@ -35,8 +35,8 @@ extension FontModifier: ViewModifier {
 
 extension View {
 
-    public func font(_ font: Font?) -> some View {
-        modified(using: FontModifier(font: font))
+    public func font(_ font: Font?) -> View {
+        modifier(FontModifier(font: font))
     }
 
 }

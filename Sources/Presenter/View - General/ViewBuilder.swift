@@ -4,27 +4,27 @@ public struct ViewBuilder {
 
     // MARK: Static Functions
 
-    public static func buildBlock<V: View>(_ item: V) -> some View {
+    public static func buildBlock<V: View>(_ item: V) -> View {
         item
     }
 
-    public static func buildBlock(_ items: _CodableView...) -> some View {
+    public static func buildBlock(_ items: View...) -> View {
         ArrayView(content: items)
     }
 
-    public static func buildBlock(_ items: [_CodableView]) -> some View {
+    public static func buildBlock(_ items: [View]) -> View {
         ArrayView(content: items)
     }
 
-    public static func buildEither<V: View>(first: V) -> V {
+    public static func buildEither(first: View) -> View {
         first
     }
 
-    public static func buildEither<V: View>(second: V) -> V {
+    public static func buildEither(second: View) -> View {
         second
     }
 
-    static func buildIf<V: View>(_ content: V?) -> V? {
+    static func buildIf(_ content: View?) -> View? {
         content
     }
 

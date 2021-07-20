@@ -1,5 +1,5 @@
 
-public struct LinearGradient: SwiftUIView {
+public struct LinearGradient: CodableView {
 
     // MARK: Stored Properties
 
@@ -31,9 +31,9 @@ extension LinearGradient: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension LinearGradient {
+extension LinearGradient: SwiftUI.View {
 
-    public var view: some SwiftUI.View {
+    public var body: some SwiftUI.View {
         SwiftUI.LinearGradient(
             gradient: gradient.swiftUIValue,
             startPoint: startPoint.unitPoint,

@@ -11,7 +11,7 @@ public struct Value<Content: Codable>: Codable {
     #if canImport(SwiftUI)
 
     public func get(from model: Model) -> Content {
-        key.flatMap { model.state[$0] as? Content } ?? self.default
+        key.flatMap { model.get($0) as? Content } ?? self.default
     }
 
     #endif

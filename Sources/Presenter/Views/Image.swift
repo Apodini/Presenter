@@ -1,5 +1,5 @@
 
-public struct Image: SwiftUIView {
+public struct Image: CodableView {
 
     // MARK: Nested Types
 
@@ -150,9 +150,9 @@ extension ImageView {
 
 #endif
 
-extension Image {
+extension Image: SwiftUI.View {
 
-    public var view: some SwiftUI.View {
+    public var body: some SwiftUI.View {
         ImageView(image: self)
     }
 

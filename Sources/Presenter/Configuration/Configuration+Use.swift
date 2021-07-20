@@ -3,21 +3,21 @@ extension Presenter {
 
     // MARK: View
 
-    public static func use<View: _CodableView>(view: View.Type) {
-        CoderView.register(View.self)
+    public static func use<V: CodableView>(view: V.Type) {
+        CoderView.register(V.self)
     }
 
-    public static func remove<View: _CodableView>(view: View.Type) {
-        CoderView.unregister(View.self)
+    public static func remove<V: CodableView>(view: V.Type) {
+        CoderView.unregister(V.self)
     }
 
     // MARK: View Modifier
 
-    public static func use<Modifier: AnyViewModifying>(modifier: Modifier.Type) {
+    public static func use<Modifier: CodableViewModifier>(modifier: Modifier.Type) {
         CoderViewModifier.register(Modifier.self)
     }
 
-    public static func remove<Modifier: AnyViewModifying>(modifier: Modifier.Type) {
+    public static func remove<Modifier: CodableViewModifier>(modifier: Modifier.Type) {
         CoderViewModifier.unregister(Modifier.self)
     }
 

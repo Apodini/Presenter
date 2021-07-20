@@ -1,5 +1,5 @@
 
-public struct Circle: SwiftUIView {
+public struct Circle: CodableView {
 
     // MARK: Initialization
 
@@ -21,9 +21,9 @@ extension Circle: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension Circle {
+extension Circle: SwiftUI.View {
 
-    public var view: some SwiftUI.View {
+    public var body: some SwiftUI.View {
         SwiftUI.Circle()
     }
 

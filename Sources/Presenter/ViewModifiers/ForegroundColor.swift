@@ -1,5 +1,5 @@
 
-internal struct ForegroundColor: AnyViewModifying {
+internal struct ForegroundColor: CodableViewModifier {
 
     // MARK: Stored Properties
 
@@ -21,10 +21,10 @@ extension ForegroundColor: CustomStringConvertible {
 
 #if canImport(SwiftUI)
 
-extension ForegroundColor: ViewModifier {
+extension ForegroundColor: SwiftUI.ViewModifier {
 
     func body(content: Content) -> some SwiftUI.View {
-        content.foregroundColor(color.color.view)
+        content.foregroundColor(color.color.body)
     }
 
 }
@@ -35,8 +35,8 @@ extension ForegroundColor: ViewModifier {
 
 extension View {
 
-    public func foregroundColor(_ color: Color) -> some View {
-        modified(using: ForegroundColor(color: ColorCode(color)))
+    public func foregroundColor(_ color: Color) -> View {
+        modifier(ForegroundColor(color: ColorCode(color)))
     }
 
 }

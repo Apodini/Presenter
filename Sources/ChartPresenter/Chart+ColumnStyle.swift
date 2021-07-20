@@ -1,8 +1,5 @@
-
 extension Chart {
-
     public struct ColumnStyle: Codable {
-
         public internal(set) var column: CoderView
         public internal(set) var spacing: CGFloat
 
@@ -10,7 +7,5 @@ extension Chart {
             self.column = CoderView(column)
             self.spacing = spacing
         }
-
     }
-
 }

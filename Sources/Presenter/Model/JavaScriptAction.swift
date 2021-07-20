@@ -1,10 +1,8 @@
-
 #if canImport(JavaScriptCore)
 import JavaScriptCore
 #endif
 
 public struct JavaScriptAction: Action {
-
     // MARK: Stored Properties
 
     private var inputKeys: [String]
@@ -31,14 +29,13 @@ public struct JavaScriptAction: Action {
     #if canImport(SwiftUI)
 
     public func perform(on model: Model) {
-
         #if canImport(JavaScriptCore)
 
         guard let context = JSContext() else {
             return assertionFailure()
         }
 
-        context.exceptionHandler = { context, value in
+        context.exceptionHandler = { _, value in
             model.set(errorKey, to: value?.toObject())
         }
 
@@ -59,17 +56,13 @@ public struct JavaScriptAction: Action {
         // Not possible as of now - but is only relevant for watchOS
 
         #endif
-
     }
 
     #endif
-
 }
 
 extension JavaScriptAction {
-
     public struct ScriptInput: ExpressibleByStringLiteral {
-
         // MARK: Stored Properties
 
         public var stateKey: String
@@ -86,7 +79,5 @@ extension JavaScriptAction {
             self.stateKey = value
             self.variableName = value
         }
-
     }
-
 }

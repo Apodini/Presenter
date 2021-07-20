@@ -1,6 +1,4 @@
-
 public struct Local: CodableView {
-
     // MARK: Stored Properties
 
     private let key: String
@@ -10,17 +8,14 @@ public struct Local: CodableView {
     public init(key: String) {
         self.key = key
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension Local: CustomStringConvertible {
-
     public var description: String {
         "Local(key: \(key))"
     }
-
 }
 
 // MARK: - View
@@ -28,7 +23,6 @@ extension Local: CustomStringConvertible {
 #if canImport(SwiftUI)
 
 extension Local: SwiftUI.View {
-
     public var body: some SwiftUI.View {
         ModelView { model in
             view(for: model.get(key))
@@ -43,7 +37,6 @@ extension Local: SwiftUI.View {
             view
         }
     }
-
 }
 
 #endif

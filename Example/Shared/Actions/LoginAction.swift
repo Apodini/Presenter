@@ -8,7 +8,6 @@
 import Presenter
 
 struct LoginAction: Action {
-
     func perform(on model: Model) {
         guard let username = model[.username],
               let password = model[.password] else {
@@ -28,5 +27,4 @@ struct LoginAction: Action {
         model[.authenticationToken] = prefix + ":" + suffix
         model[.isAuthenticated] = true
     }
-
 }

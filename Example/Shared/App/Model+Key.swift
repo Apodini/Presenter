@@ -8,7 +8,6 @@
 import Presenter
 
 extension Model.Key {
-
     static var username: Model.Key<String> {
         .init(rawValue: "login-username")
     }
@@ -40,19 +39,15 @@ extension Model.Key {
     static var allRecipeIdentifiers: Model.Key<[String]> {
         .init(rawValue: "recipe-all-ids")
     }
-
 }
 
 extension State {
-
     init(_ key: Model.Key<Content>, default defaultValue: Content) {
         self.init(key.rawValue, default: defaultValue)
     }
-
 }
 
 extension Model {
-
     struct Key<Value> {
         let rawValue: String
     }
@@ -61,5 +56,4 @@ extension Model {
         get { get(key.rawValue) as? Value }
         set { set(key.rawValue, to: newValue) }
     }
-
 }

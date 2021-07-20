@@ -10,7 +10,6 @@ import SwiftUI
 
 @main
 struct ExampleApp: App {
-
     // MARK: Stored Properties
 
     @SwiftUI.StateObject private var model = Model()
@@ -52,5 +51,4 @@ struct ExampleApp: App {
         }
         return nil
     }
-
 }

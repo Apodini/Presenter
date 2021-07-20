@@ -1,24 +1,18 @@
-
 struct Card: CodableViewModifier {
-
     // MARK: Stored Properties
 
     var radius: CGFloat?
-
 }
 
 extension Card: CustomStringConvertible {
-
     var description: String {
         "card(cornerRadius: \(radius?.description ?? "nil"))"
     }
-
 }
 
 #if canImport(SwiftUI)
 
 extension Card: SwiftUI.ViewModifier {
-
     #if os(macOS)
 
     func body(content: Content) -> some SwiftUI.View {
@@ -38,23 +32,18 @@ extension Card: SwiftUI.ViewModifier {
     }
 
     #endif
-
 }
 
 extension SwiftUI.View {
-
     public func card(cornerRadius: CGFloat? = nil) -> some SwiftUI.View {
         modifier(Card(radius: cornerRadius))
     }
-
 }
 
 #endif
 
 extension View {
-
     public func card(cornerRadius: CGFloat? = nil) -> View {
         modifier(Card(radius: cornerRadius))
     }
-
 }

@@ -1,6 +1,4 @@
-
 public struct UnitPoint: Codable {
-
     // MARK: Stored Properties
 
     public var x: CGFloat
@@ -25,17 +23,14 @@ public struct UnitPoint: Codable {
     public static let topTrailing = UnitPoint(x: 1, y: 0)
     public static let trailing = UnitPoint(x: 1, y: 0.5)
     public static let zero = UnitPoint(x: 0, y: 0)
-
 }
 
 #if canImport(SwiftUI)
 
 extension UnitPoint {
-
     var unitPoint: SwiftUI.UnitPoint {
         .init(x: x, y: y)
     }
-
 }
 
 #endif

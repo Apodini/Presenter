@@ -1,8 +1,6 @@
-
 import Foundation
 
 struct DefaultPlugin: Plugin {
-
     var views: [CodableView.Type] {
         [
             AngularGradient.self,
@@ -38,7 +36,7 @@ struct DefaultPlugin: Plugin {
             Toggle.self,
             VGrid.self,
             VStack.self,
-            ZStack.self,
+            ZStack.self
         ]
     }
 
@@ -63,7 +61,7 @@ struct DefaultPlugin: Plugin {
             Opacity.self,
             Padding.self,
             Shadow.self,
-            Sheet.self,
+            Sheet.self
         ]
     }
 
@@ -86,8 +84,7 @@ struct DefaultPlugin: Plugin {
             SetAction<UInt8>.self,
             SetAction<UInt16>.self,
             SetAction<UInt32>.self,
-            SetAction<UInt64>.self,
+            SetAction<UInt64>.self
         ]
     }
-
 }

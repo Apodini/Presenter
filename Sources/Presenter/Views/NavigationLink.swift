@@ -1,6 +1,4 @@
-
 public struct NavigationLink: CodableWrapperView {
-
     // MARK: Stored Properties
 
     private let destination: CoderView
@@ -18,17 +16,14 @@ public struct NavigationLink: CodableWrapperView {
         self.isActive = isActive
         self.label = CoderView(label)
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension NavigationLink: CustomStringConvertible {
-
     public var description: String {
         "NavigationLink(destination: \(destination), isActive: \(isActive), label: \(label))"
     }
-
 }
 
 // MARK: - View
@@ -36,26 +31,21 @@ extension NavigationLink: CustomStringConvertible {
 #if canImport(SwiftUI)
 
 extension NavigationLink {
-
     public var body: View {
         destination.modifier(Modifier1(label: label, isActive: isActive))
     }
-
 }
 
 private struct Modifier1: ViewModifier {
-
     let label: CoderView
     let isActive: Binding<Bool>
 
     public func body<Content: SwiftUI.View>(for content: Content) -> View {
         label.modifier(Modifier2(destination: content, isActive: isActive))
     }
-
 }
 
 private struct Modifier2<Destination: SwiftUI.View>: ViewModifier, SwiftUI.ViewModifier {
-
     var destination: Destination
     let isActive: Binding<Bool>
 
@@ -80,7 +70,6 @@ private struct Modifier2<Destination: SwiftUI.View>: ViewModifier, SwiftUI.ViewM
             }
         }
     }
-
 }
 
 #endif

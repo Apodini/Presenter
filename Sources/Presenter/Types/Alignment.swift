@@ -1,4 +1,3 @@
-
 public enum HorizontalAlignment: String, Codable {
     case center, leading, trailing
 }
@@ -16,7 +15,6 @@ public enum Alignment: String, Codable {
 #if canImport(SwiftUI)
 
 extension HorizontalAlignment {
-
     var swiftUIValue: SwiftUI.HorizontalAlignment {
         switch self {
         case .center:
@@ -27,11 +25,9 @@ extension HorizontalAlignment {
             return .trailing
         }
     }
-
 }
 
 extension VerticalAlignment {
-
     var swiftUIValue: SwiftUI.VerticalAlignment {
         switch self {
         case .center:
@@ -42,11 +38,9 @@ extension VerticalAlignment {
             return .bottom
         }
     }
-
 }
 
 extension Alignment {
-
     var swiftUIValue: SwiftUI.Alignment {
         switch self {
         case .center:
@@ -69,7 +63,6 @@ extension Alignment {
             return .bottomTrailing
         }
     }
-
 }
 
 #endif

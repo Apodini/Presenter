@@ -1,10 +1,7 @@
-
 #if canImport(SwiftUI)
 
 extension Graph {
-
     struct Labeling {
-
         // MARK: Stored Properties
 
         var top: [Graph.Label]
@@ -14,13 +11,10 @@ extension Graph {
 
         var spacing: CGFloat
         var borderWidth: CGFloat
-
     }
-
 }
 
 extension Graph.Labeling: SwiftUI.ViewModifier {
-
     func body(content: Content) -> some SwiftUI.View {
         GeometryReader { geometry in
             SwiftUI.HStack(spacing: 0) {
@@ -62,11 +56,9 @@ extension Graph.Labeling: SwiftUI.ViewModifier {
             }
         }
     }
-
 }
 
 extension SwiftUI.View {
-
     public func graphLabeling(
         top: [Graph.Label] = [],
         trailing: [Graph.Label] = [],
@@ -75,7 +67,6 @@ extension SwiftUI.View {
         spacing: CGFloat = 6,
         borderWidth: CGFloat = 36
     ) -> some SwiftUI.View {
-
         modifier(
             Graph.Labeling(
                 top: top,
@@ -87,7 +78,6 @@ extension SwiftUI.View {
             )
         )
     }
-
 }
 
 #endif

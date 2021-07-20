@@ -1,6 +1,4 @@
-
 public struct Gauge: CodableWrapperView {
-
     // MARK: Stored Properties
 
     private let value: CGFloat
@@ -38,22 +36,18 @@ public struct Gauge: CodableWrapperView {
                 )
             )
     }
-
 }
 
 struct GaugeModifier: CodableViewModifier {
-
     var value: CGFloat
     var thickness: CGFloat
     var scale: CGFloat
     var colors: [ColorCode]
-
 }
 
 #if canImport(SwiftUI)
 
 private struct GaugeView<Content: SwiftUI.View>: SwiftUI.View {
-
     // MARK: Stored Properties
 
     let gauge: GaugeModifier
@@ -107,15 +101,12 @@ private struct GaugeView<Content: SwiftUI.View>: SwiftUI.View {
         }
         .foregroundColor(SwiftUI.Color.black)
     }
-
 }
 
 extension GaugeModifier: SwiftUI.ViewModifier {
-
     func body(content: Content) -> some SwiftUI.View {
         GaugeView(gauge: self, content: content)
     }
-
 }
 
 private struct GaugeSizePreferenceKey: SizePreferenceKey {}

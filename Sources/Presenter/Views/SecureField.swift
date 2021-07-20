@@ -1,6 +1,4 @@
-
 public struct SecureField: CodableView {
-
     // MARK: Stored Properties
 
     private let title: Value<String>
@@ -20,17 +18,14 @@ public struct SecureField: CodableView {
         self.text = text
         self.onCommit = onCommit.map(CoderAction.init)
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension SecureField: CustomStringConvertible {
-
     public var description: String {
         "SecureField(\"\(title)\", text: \(text))"
     }
-
 }
 
 // MARK: - View
@@ -38,7 +33,6 @@ extension SecureField: CustomStringConvertible {
 #if canImport(SwiftUI)
 
 extension SecureField: SwiftUI.View {
-
     public var body: some SwiftUI.View {
         ModelView { model in
             SwiftUI.SecureField(
@@ -48,7 +42,6 @@ extension SecureField: SwiftUI.View {
             )
         }
     }
-
 }
 
 #endif

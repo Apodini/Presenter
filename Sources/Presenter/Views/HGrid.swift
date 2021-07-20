@@ -1,6 +1,4 @@
-
 public struct HGrid: CodableWrapperView {
-
     // MARK: Stored Properties
 
     private let rows: [GridItem]
@@ -24,17 +22,14 @@ public struct HGrid: CodableWrapperView {
         self.pinnedViews = pinnedViews
         self.content = CoderView(content())
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension HGrid: CustomStringConvertible {
-
     public var description: String {
         "HGrid(rows: \(rows), alignment: \(alignment.map { "\($0)" } ?? "nil"), spacing: \(spacing.map(\.description) ?? "nil"), pinnedViews: \(pinnedViews), content: \(content))"
     }
-
 }
 
 // MARK: - View
@@ -42,12 +37,11 @@ extension HGrid: CustomStringConvertible {
 #if canImport(SwiftUI)
 
 extension HGrid {
-
     #if !os(macOS) && !targetEnvironment(macCatalyst)
 
     public var body: View {
         if #available(iOS 14.0, tvOS 14.0, watchOS 7.0, *) {
-            return content.modifier(
+            content.modifier(
                 Modifier(
                     rows: rows.map(\.swiftUIValue),
                     alignment: alignment?.swiftUIValue ?? .center,
@@ -56,23 +50,21 @@ extension HGrid {
                 )
             )
         } else {
-            return Nil()
+            Nil()
         }
     }
 
     #else
 
-    public var body: View  {
+    public var body: View {
         Nil()
     }
 
     #endif
-
 }
 
 @available(iOS 14.0, macOS 11.0, *)
 private struct Modifier: ViewModifier, SwiftUI.ViewModifier {
-
     let rows: [SwiftUI.GridItem]
     let alignment: SwiftUI.VerticalAlignment
     let spacing: CGFloat?
@@ -87,8 +79,6 @@ private struct Modifier: ViewModifier, SwiftUI.ViewModifier {
             content: { content }
         )
     }
-
 }
 
 #endif
-

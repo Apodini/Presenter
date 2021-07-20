@@ -1,21 +1,16 @@
-
 struct ComposedView: CodableWrapperView {
-
     // MARK: Stored Properties
 
     let content: CoderView
     let modifiers: [CoderViewModifier]
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension ComposedView: CustomStringConvertible {
-
     public var description: String {
         "\(content)" + modifiers.reduce("") { $0 + ".\($1)" }
     }
-
 }
 
 // MARK: - View
@@ -23,11 +18,9 @@ extension ComposedView: CustomStringConvertible {
 #if canImport(SwiftUI)
 
 extension ComposedView {
-
     public var body: View {
         modifiers.reduce(content as View) { $0.apply($1) }
     }
-
 }
 
 #endif
@@ -35,7 +28,6 @@ extension ComposedView {
 // MARK: - View Extensions
 
 extension View {
-
     public func modifier<Modifier: ViewModifier>(_ modifier: Modifier) -> View {
         if let composition = self as? ComposedView {
             return ComposedView(content: composition.content,
@@ -44,5 +36,4 @@ extension View {
         return ComposedView(content: CoderView(self),
                             modifiers: [CoderViewModifier(modifier)])
     }
-
 }

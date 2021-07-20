@@ -1,6 +1,4 @@
-
 public protocol Plugin {
-
     func willAdd()
     func didAdd()
 
@@ -11,11 +9,9 @@ public protocol Plugin {
     var viewModifiers: [CodableViewModifier.Type] { get }
     var actions: [Action.Type] { get }
     var plugins: [Plugin] { get }
-
 }
 
 extension Plugin {
-
     public func willAdd() {}
     public func didAdd() {}
 
@@ -26,5 +22,4 @@ extension Plugin {
     public var viewModifiers: [CodableViewModifier.Type] { [] }
     public var actions: [Action.Type] { [] }
     public var plugins: [Plugin] { [] }
-
 }

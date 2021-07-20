@@ -1,22 +1,18 @@
-
 public enum ContentMode: String, Codable {
     case fit
     case fill
 }
 
 internal struct AspectRatio: CodableViewModifier {
-
     // MARK: Stored Properties
 
     var ratio: CGFloat?
     var contentMode: ContentMode
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension AspectRatio: CustomStringConvertible {
-
     var description: String {
         if let ratio = ratio {
             return "aspectRatio(\(ratio), contentMode: \(contentMode))"
@@ -29,7 +25,6 @@ extension AspectRatio: CustomStringConvertible {
             return "scaledToFill()"
         }
     }
-
 }
 
 // MARK: - ViewModifier
@@ -37,15 +32,12 @@ extension AspectRatio: CustomStringConvertible {
 #if canImport(SwiftUI)
 
 extension AspectRatio: SwiftUI.ViewModifier {
-
     func body(content: Content) -> some SwiftUI.View {
         content.aspectRatio(ratio, contentMode: contentMode.swiftUIValue)
     }
-
 }
 
 extension ContentMode {
-
     fileprivate var swiftUIValue: SwiftUI.ContentMode {
         switch self {
         case .fill:
@@ -54,7 +46,6 @@ extension ContentMode {
             return .fit
         }
     }
-
 }
 
 #endif
@@ -62,7 +53,6 @@ extension ContentMode {
 // MARK: - View Extensions
 
 extension View {
-
     public func aspectRatio(_ ratio: CGSize, contentMode: ContentMode) -> View {
         modifier(AspectRatio(ratio: ratio.width / ratio.height, contentMode: contentMode))
     }
@@ -78,5 +68,4 @@ extension View {
     public func scaledToFill() -> View {
         modifier(AspectRatio(ratio: nil, contentMode: .fill))
     }
-
 }

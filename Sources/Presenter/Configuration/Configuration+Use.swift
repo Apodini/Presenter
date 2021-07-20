@@ -1,6 +1,4 @@
-
 extension Presenter {
-
     // MARK: View
 
     public static func use<V: CodableView>(view: V.Type) {
@@ -30,5 +28,4 @@ extension Presenter {
     public static func remove<A: Action>(action: A.Type) {
         CoderAction.unregister(A.self)
     }
-
 }

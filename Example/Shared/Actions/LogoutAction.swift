@@ -7,12 +7,10 @@
 import Presenter
 
 struct LogoutAction: Action {
-
     func perform(on model: Model) {
         model[.username] = nil
         model[.password] = nil
         model[.authenticationToken] = nil
         model[.isAuthenticated] = false
     }
-
 }

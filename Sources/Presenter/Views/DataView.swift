@@ -1,6 +1,4 @@
-
 public struct DataView: CodableView {
-
     // MARK: Stored Properties
 
     let data: Data
@@ -10,17 +8,14 @@ public struct DataView: CodableView {
     public init(_ data: Data) {
         self.data = data
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension DataView: CustomStringConvertible {
-
     public var description: String {
         "DataView(\(String(data: data, encoding: .utf8) ?? "nil"))"
     }
-
 }
 
 // MARK: - View
@@ -28,7 +23,6 @@ extension DataView: CustomStringConvertible {
 #if canImport(SwiftUI)
 
 private struct _DataView: SwiftUI.View {
-
     let data: Data
 
     @SwiftUI.State private var view: AnyView?
@@ -54,15 +48,12 @@ private struct _DataView: SwiftUI.View {
         }
         return view
     }
-
 }
 
 extension DataView: SwiftUI.View {
-
     public var body: some SwiftUI.View {
         _DataView(data: data)
     }
-
 }
 
 #endif

@@ -1,6 +1,4 @@
-
 public struct TextField: CodableView {
-
     // MARK: Stored Properties
 
     private let title: Value<String>
@@ -27,17 +25,14 @@ public struct TextField: CodableView {
         self.onCommit = onCommit.map(CoderAction.init)
         self.onEditingChanged = onEditingChanged.map(CoderAction.init)
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension TextField: CustomStringConvertible {
-
     public var description: String {
         "TextField(\"\(title)\", text: \(text))"
     }
-
 }
 
 // MARK: - View
@@ -45,7 +40,6 @@ extension TextField: CustomStringConvertible {
 #if canImport(SwiftUI)
 
 extension TextField: SwiftUI.View {
-
     public var body: some SwiftUI.View {
         ModelView { model in
             SwiftUI.TextField(
@@ -56,7 +50,6 @@ extension TextField: SwiftUI.View {
             )
         }
     }
-
 }
 
 #endif

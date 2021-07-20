@@ -1,17 +1,13 @@
-
 struct MetricCard: CodableViewModifier {
-
     // MARK: Stored Properties
 
     var title: String
     var subtitle: String
-
 }
 
 #if canImport(SwiftUI)
 
 extension MetricCard: SwiftUI.ViewModifier {
-
     func body(content: Content) -> some SwiftUI.View {
         SwiftUI.VStack(alignment: .leading) {
             SwiftUI.Text(title)
@@ -36,15 +32,12 @@ extension MetricCard: SwiftUI.ViewModifier {
         .card()
         .padding(8)
     }
-
 }
 
 #endif
 
 extension View {
-
     public func metricCard(title: String, subtitle: String) -> View {
         modifier(MetricCard(title: title, subtitle: subtitle))
     }
-
 }

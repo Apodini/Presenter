@@ -1,6 +1,4 @@
-
 public struct ColorCode: Codable {
-
     // MARK: Nested Types
 
     private enum Error: Swift.Error {
@@ -54,13 +52,11 @@ public struct ColorCode: Codable {
         var container = encoder.singleValueContainer()
         try container.encode(description)
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension ColorCode: CustomStringConvertible {
-
     public var description: String {
         fullHex()
     }
@@ -76,5 +72,4 @@ extension ColorCode: CustomStringConvertible {
         let value = Int(color * Double(UInt8.max))
         return String(format: "%02x", value)
     }
-
 }

@@ -1,7 +1,5 @@
-
 @resultBuilder
 public struct ViewBuilder {
-
     // MARK: Static Functions
 
     public static func buildBlock<V: View>(_ item: V) -> View {
@@ -27,5 +25,4 @@ public struct ViewBuilder {
     static func buildIf(_ content: View?) -> View? {
         content
     }
-
 }

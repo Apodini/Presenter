@@ -1,6 +1,4 @@
-
 public struct TabView: CodableView {
-
     // MARK: Stored Properties
 
     private let selection: Binding<String>?
@@ -15,17 +13,14 @@ public struct TabView: CodableView {
         self.selection = selection
         self.content = CoderView(content)
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension TabView: CustomStringConvertible {
-
     public var description: String {
         "TabView(selection: \(selection.map { "\($0)" } ?? "nil"), content: \(content))"
     }
-
 }
 
 // MARK: - View
@@ -33,7 +28,6 @@ extension TabView: CustomStringConvertible {
 #if canImport(SwiftUI)
 
 extension TabView: SwiftUI.View {
-
     #if !os(macOS) && !targetEnvironment(macCatalyst) && !os(watchOS)
 
     public var body: some SwiftUI.View {
@@ -67,7 +61,6 @@ extension TabView: SwiftUI.View {
     }
 
     #endif
-
 }
 
 #endif

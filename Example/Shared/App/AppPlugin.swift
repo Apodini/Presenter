@@ -10,11 +10,10 @@ import MetricPresenter
 import TracePresenter
 
 struct AppPlugin: Plugin {
-
     var plugins: [Plugin] {
         [
             MetricPresenter(),
-            TracePresenter(),
+            TracePresenter()
         ]
     }
 
@@ -22,8 +21,7 @@ struct AppPlugin: Plugin {
         [
             LoadAction.self,
             LoginAction.self,
-            LogoutAction.self,
+            LogoutAction.self
         ]
     }
-
 }

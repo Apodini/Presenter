@@ -1,6 +1,4 @@
-
 public struct TraceGraph: CodableView {
-
     // MARK: Stored Properties
 
     public var spans: [Span]
@@ -26,13 +24,10 @@ public struct TraceGraph: CodableView {
             currentIndex += 1
         }
     }
-
 }
 
 extension TraceGraph {
-
     public struct Span: Codable {
-
         public let service: String
         public let operation: String
 
@@ -55,15 +50,12 @@ extension TraceGraph {
             self.parentService = parentService
             self.parentOperation = parentOperation
         }
-
     }
-
 }
 
 #if canImport(SwiftUI)
 
 extension TraceGraph: SwiftUI.View {
-
     public var body: some SwiftUI.View {
         SwiftUI.VStack {
             SwiftUI.ForEach(spans.indices) { index in
@@ -74,7 +66,6 @@ extension TraceGraph: SwiftUI.View {
     }
 
     private struct SpanRow: SwiftUI.View {
-
         let span: Span
 
         var body: some SwiftUI.View {
@@ -86,9 +77,7 @@ extension TraceGraph: SwiftUI.View {
                 .offset(x: span.start)
             }
         }
-
     }
-
 }
 
 #endif

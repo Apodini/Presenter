@@ -1,6 +1,4 @@
-
 public struct CopyAction: Action {
-
     // MARK: Stored Properties
 
     private var from: String
@@ -22,5 +20,4 @@ public struct CopyAction: Action {
     }
 
     #endif
-
 }

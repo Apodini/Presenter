@@ -1,6 +1,4 @@
-
 extension Chart {
-
     public struct AreaStyle: Codable {
         public internal(set) var lineType: LineType
         public internal(set) var fill: CoderView
@@ -10,5 +8,4 @@ extension Chart {
             self.fill = CoderView(fill)
         }
     }
-
 }

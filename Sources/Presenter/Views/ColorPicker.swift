@@ -1,6 +1,4 @@
-
 public struct ColorPicker: CodableWrapperView {
-
     // MARK: Stored Properties
 
     private let color: Binding<Color>
@@ -18,17 +16,14 @@ public struct ColorPicker: CodableWrapperView {
         self.supportsOpacity = supportsOpacity
         self.label = CoderView(label())
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension ColorPicker: CustomStringConvertible {
-
     public var description: String {
         "ColorPicker(color: \(color), supportsOpacity: \(supportsOpacity), label: \(label))"
     }
-
 }
 
 // MARK: - View
@@ -36,7 +31,6 @@ extension ColorPicker: CustomStringConvertible {
 #if canImport(SwiftUI)
 
 extension ColorPicker {
-
     #if !os(macOS) && !os(tvOS) && !os(watchOS) && !targetEnvironment(macCatalyst)
 
     public var body: View {
@@ -50,11 +44,9 @@ extension ColorPicker {
     }
 
     #endif
-
 }
 
 private struct Modifier: ViewModifier, SwiftUI.ViewModifier {
-
     let color: Binding<Color>
     let supportsOpacity: Bool
 
@@ -69,7 +61,6 @@ private struct Modifier: ViewModifier, SwiftUI.ViewModifier {
             }
         }
     }
-
 }
 
 #endif

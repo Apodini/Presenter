@@ -1,8 +1,5 @@
-
 extension Chart {
-
     public enum Style: Codable {
-
         // MARK: Nested Types
 
         private enum CodingKeys: String, CodingKey {
@@ -80,7 +77,5 @@ extension Chart {
                 try style.encode(to: encoder)
             }
         }
-
     }
-
 }

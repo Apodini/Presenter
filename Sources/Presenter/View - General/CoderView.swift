@@ -1,6 +1,4 @@
-
 public struct CoderView: CodableView {
-
     // MARK: Nested Types
 
     private enum CodingKeys: String, CodingKey {
@@ -98,13 +96,11 @@ public struct CoderView: CodableView {
             try coder.encode(body, encoder)
         }
     }
-
 }
 
 // MARK: - View Registration
 
 extension CoderView {
-
     // MARK: Nested Types
 
     private struct Coder {
@@ -154,23 +150,19 @@ extension CoderView {
     internal static func unregister<V: CodableView>(_: V.Type) {
         registeredTypes.removeValue(forKey: V.type)
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension CoderView: CustomStringConvertible {
-
     public var description: String {
         "\(body)"
     }
-
 }
 
 #if canImport(SwiftUI)
 
 extension CoderView {
-
     public func eraseToAnyView() -> AnyView {
         body.eraseToAnyView()
     }
@@ -178,7 +170,6 @@ extension CoderView {
     public func apply<Modifier: ViewModifier>(_ modifier: Modifier) -> View {
         body.apply(modifier)
     }
-
 }
 
 #endif

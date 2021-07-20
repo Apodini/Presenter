@@ -1,18 +1,14 @@
-
 #if canImport(SwiftUI)
 
 extension Graph {
-
     struct Grid {
         let axis: Axis
         let values: [CGFloat]
         let lineWidth: CGFloat
     }
-
 }
 
 extension Graph.Grid: SwiftUI.View {
-
     var body: some SwiftUI.View {
         GeometryReader { geometry in
             SwiftUI.ZStack(alignment: .topLeading) {
@@ -56,11 +52,9 @@ extension Graph.Grid: SwiftUI.View {
     private var maxHeight: CGFloat? {
         axis == .vertical ? .infinity : nil
     }
-
 }
 
 extension SwiftUI.View {
-
     public func graphGrid(vertical: [CGFloat] = [], horizontal: [CGFloat] = [], width: CGFloat = 8) -> some SwiftUI.View {
         SwiftUI.ZStack {
             Group {
@@ -71,7 +65,6 @@ extension SwiftUI.View {
             self
         }
     }
-
 }
 
 #endif

@@ -1,8 +1,6 @@
-
 import Foundation
 
 extension Presenter {
-
     private static var didImportPlugins = false
 
     // MARK: Plugins
@@ -30,11 +28,9 @@ extension Presenter {
         plugin.plugins.forEach { $0.remove() }
         plugin.didRemove()
     }
-
 }
 
 extension View where Self: Codable {
-
     fileprivate static func use() {
         Presenter.use(view: Self.self)
     }
@@ -42,11 +38,9 @@ extension View where Self: Codable {
     fileprivate static func remove() {
         Presenter.remove(view: Self.self)
     }
-
 }
 
 extension ViewModifier where Self: Codable {
-
     fileprivate static func use() {
         Presenter.use(modifier: Self.self)
     }
@@ -54,11 +48,9 @@ extension ViewModifier where Self: Codable {
     fileprivate static func remove() {
         Presenter.remove(modifier: Self.self)
     }
-
 }
 
 extension Action {
-
     fileprivate static func use() {
         Presenter.use(action: Self.self)
     }
@@ -66,11 +58,9 @@ extension Action {
     fileprivate static func remove() {
         Presenter.remove(action: Self.self)
     }
-
 }
 
 extension Plugin {
-
     fileprivate func use() {
         Presenter.use(plugin: self)
     }
@@ -78,5 +68,4 @@ extension Plugin {
     fileprivate func remove() {
         Presenter.remove(plugin: self)
     }
-
 }

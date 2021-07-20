@@ -1,6 +1,4 @@
-
 extension Optional: View, NamedType, WrapperView where Wrapped: CodableView {
-
     #if canImport(SwiftUI)
 
     public var body: View {
@@ -13,11 +11,9 @@ extension Optional: View, NamedType, WrapperView where Wrapped: CodableView {
     }
 
     #endif
-
 }
 
 struct Nil: CodableView {
-
     // MARK: Initialization
 
     init() {}
@@ -40,17 +36,14 @@ struct Nil: CodableView {
         var container = encoder.singleValueContainer()
         try container.encodeNil()
     }
-
 }
 
 #if canImport(SwiftUI)
 
 extension Nil: SwiftUI.View {
-
     public var body: some SwiftUI.View {
         EmptyView()
     }
-
 }
 
 #endif
@@ -58,9 +51,7 @@ extension Nil: SwiftUI.View {
 // MARK: - CustomStringConvertible
 
 extension Nil: CustomStringConvertible {
-
     var description: String {
         "nil"
     }
-
 }

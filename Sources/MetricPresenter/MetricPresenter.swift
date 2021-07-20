@@ -1,11 +1,9 @@
-
 public struct MetricPresenter: Plugin {
-
     public init() {}
 
     public var views: [CodableView.Type] {
         [
-            Graph.self,
+            Graph.self
         ]
     }
 
@@ -13,14 +11,13 @@ public struct MetricPresenter: Plugin {
         [
             GaugeModifier.self,
             MetricCard.self,
-            Card.self,
+            Card.self
         ]
     }
 
     public var plugins: [Plugin.Type] {
         [
-            ChartPresenter.self,
+            ChartPresenter.self
         ]
     }
-
 }

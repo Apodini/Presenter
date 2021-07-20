@@ -30,7 +30,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(name: "Charts", url: "https://github.com/spacenation/swiftui-charts.git", from: "1.0.0"),
+        .package(name: "Charts", url: "https://github.com/spacenation/swiftui-charts.git", from: "1.0.0")
     ],
     targets: [
         .target(

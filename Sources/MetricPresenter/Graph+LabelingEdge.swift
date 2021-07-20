@@ -1,8 +1,6 @@
-
 #if canImport(SwiftUI)
 
 extension Graph.Edge {
-
     var axis: Axis {
         switch self {
         case .top, .bottom:
@@ -22,22 +20,16 @@ extension Graph.Edge {
             return .leading
         }
     }
-
 }
 
 extension Graph {
-
     struct LabelingEdge {
-
         var labels: [Graph.Label]
         var edge: Graph.Edge
-
     }
-
 }
 
 extension Graph.LabelingEdge: SwiftUI.View {
-
     var body: some SwiftUI.View {
         GeometryReader { geometry in
             SwiftUI.ZStack(alignment: self.edge.alignment) {
@@ -58,7 +50,6 @@ extension Graph.LabelingEdge: SwiftUI.View {
             return CGSize(width: value * size.width, height: 0)
         }
     }
-
 }
 
 #endif

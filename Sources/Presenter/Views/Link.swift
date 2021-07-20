@@ -1,6 +1,4 @@
-
 public struct Link: CodableWrapperView {
-
     // MARK: Stored Properties
 
     private let label: CoderView
@@ -12,17 +10,14 @@ public struct Link: CodableWrapperView {
         self.label = CoderView(label)
         self.destination = destination
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension Link: CustomStringConvertible {
-
     public var description: String {
         "Link(\(label), destination: \(destination))"
     }
-
 }
 
 // MARK: - View
@@ -30,15 +25,12 @@ extension Link: CustomStringConvertible {
 #if canImport(SwiftUI)
 
 extension Link {
-
     public var body: View {
         label.modifier(Modifier(destination: destination))
     }
-
 }
 
 private struct Modifier: ViewModifier, SwiftUI.ViewModifier {
-
     let destination: String
 
     func body(content: Content) -> some SwiftUI.View {
@@ -48,7 +40,6 @@ private struct Modifier: ViewModifier, SwiftUI.ViewModifier {
             content
         }
     }
-
 }
 
 #endif

@@ -1,6 +1,4 @@
-
 public struct CoderViewModifier: CodableViewModifier {
-
     // MARK: Nested Types
 
     private enum CodingKeys: String, CodingKey {
@@ -45,23 +43,19 @@ public struct CoderViewModifier: CodableViewModifier {
         }
         try coder.encode(element, encoder)
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension CoderViewModifier: CustomStringConvertible {
-
     public var description: String {
         "\(element)"
     }
-
 }
 
 // MARK: - Registration
 
 extension CoderViewModifier {
-
     // MARK: Nested Types
 
     private struct Coder {
@@ -105,7 +99,6 @@ extension CoderViewModifier {
     public static func unregister<Modifier: CodableViewModifier>(_: Modifier.Type) {
         registeredTypes.removeValue(forKey: Modifier.type)
     }
-
 }
 
 // MARK: - AnyViewModifying
@@ -113,12 +106,9 @@ extension CoderViewModifier {
 #if canImport(SwiftUI)
 
 extension CoderViewModifier {
-
     public func body<Content: SwiftUI.View>(for content: Content) -> View {
         element.body(for: content)
     }
-
 }
 
 #endif
-

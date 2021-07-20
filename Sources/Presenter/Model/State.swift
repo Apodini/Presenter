@@ -1,7 +1,5 @@
-
 @propertyWrapper
 public struct State<Content: Codable>: Codable {
-
     // MARK: Stored Properties
 
     private let `default`: Content
@@ -23,5 +21,4 @@ public struct State<Content: Codable>: Codable {
         self.key = key
         self.default = value
     }
-
 }

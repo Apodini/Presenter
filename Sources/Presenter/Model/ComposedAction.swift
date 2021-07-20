@@ -1,6 +1,4 @@
-
 public struct ComposedAction: Action {
-
     // MARK: Stored Properties
 
     fileprivate var actions: [CoderAction]
@@ -20,5 +18,4 @@ public struct ComposedAction: Action {
     }
 
     #endif
-
 }

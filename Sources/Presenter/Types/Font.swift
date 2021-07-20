@@ -1,6 +1,4 @@
-
 public struct Font: Codable {
-
     // MARK: Nested Types
 
     public enum Style: String, Codable {
@@ -137,11 +135,9 @@ public struct Font: Codable {
         font.weight = weight
         return font
     }
-
 }
 
 extension Font: CustomStringConvertible {
-
     public var description: String {
         let styling = [weight.map { ".weight(\($0))" }].compactMap { $0 }
             + (self.styling ?? []).map { "." + $0.rawValue + "()" }
@@ -170,13 +166,11 @@ extension Font: CustomStringConvertible {
             }
         }
     }
-
 }
 
 #if canImport(SwiftUI)
 
 extension Font {
-
     public var swiftUIValue: SwiftUI.Font {
         (styling ?? [])
         .reduce(swiftUIValueWithoutStyling.weight(weight?.swiftUIValue ?? .regular)) { $1.apply(to: $0) }
@@ -194,11 +188,9 @@ extension Font {
                            design: design?.swiftUIValue ?? .default)
         }
     }
-
 }
 
 extension Font.Style {
-
     fileprivate var swiftUIValue: SwiftUI.Font.TextStyle {
         switch self {
         case .body:
@@ -219,11 +211,9 @@ extension Font.Style {
             return .title
         }
     }
-
 }
 
 extension Font.Weight {
-
     fileprivate var swiftUIValue: SwiftUI.Font.Weight {
         switch self {
         case .black:
@@ -246,11 +236,9 @@ extension Font.Weight {
             return .ultraLight
         }
     }
-
 }
 
 extension Font.Design {
-
     fileprivate var swiftUIValue: SwiftUI.Font.Design {
         switch self {
         case .default:
@@ -271,11 +259,9 @@ extension Font.Design {
             #endif
         }
     }
-
 }
 
 extension Font.Styling {
-
     fileprivate func apply(to font: SwiftUI.Font) -> SwiftUI.Font {
         switch self {
         case .italic:
@@ -292,7 +278,6 @@ extension Font.Styling {
             return font.uppercaseSmallCaps()
         }
     }
-
 }
 
 #endif

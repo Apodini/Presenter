@@ -1,4 +1,3 @@
-
 #if !os(watchOS) && canImport(XCTest) && canImport(UIKit)
 
 import XCTest
@@ -7,7 +6,6 @@ import TracePresenter
 import UIKit
 
 final class TracePresenterTests: XCTestCase {
-
     func testTracePresenter() {
         let view = TraceGraph(spans: [
             .init(
@@ -49,25 +47,22 @@ final class TracePresenterTests: XCTestCase {
                 end: 0.5,
                 parentService: "processing",
                 parentOperation: "locations"
-            ),
+            )
         ])!
 
         let image = view.eraseToAnyView().image(in: CGSize(width: 200, height: 200))
         print(image)
     }
-
 }
 
 extension SwiftUI.View {
-
     func image(in size: CGSize) -> UIImage {
         let view = UIHostingController(rootView: self).view!
         view.frame = CGRect(origin: .zero, size: size)
-        return UIGraphicsImageRenderer(size: size).image { context in
+        return UIGraphicsImageRenderer(size: size).image { _ in
             view.drawHierarchy(in: view.frame, afterScreenUpdates: true)
         }
     }
-
 }
 
 #endif

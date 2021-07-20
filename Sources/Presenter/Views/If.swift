@@ -1,6 +1,4 @@
-
 public struct If: CodableWrapperView {
-
     // MARK: Nested Types
 
     private enum CodingKeys: String, CodingKey {
@@ -61,17 +59,14 @@ public struct If: CodableWrapperView {
             try container.encode(falseView, forKey: .falseView)
         }
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension If: CustomStringConvertible {
-
     public var description: String {
         "If(\(condition), then: \(trueView), else: \(falseView))"
     }
-
 }
 
 // MARK: - View
@@ -79,26 +74,21 @@ extension If: CustomStringConvertible {
 #if canImport(SwiftUI)
 
 extension If {
-
     public var body: View {
         trueView.modifier(Modifier1(falseView: falseView, condition: condition))
     }
-
 }
 
 private struct Modifier1: ViewModifier {
-
     let falseView: CoderView
     let condition: Value<Bool>
 
     func body<Content: SwiftUI.View>(for content: Content) -> View {
         falseView.modifier(Modifier2(trueView: content, condition: condition))
     }
-
 }
 
 private struct Modifier2<TrueView: SwiftUI.View>: ViewModifier, SwiftUI.ViewModifier {
-
     let trueView: TrueView
     let condition: Value<Bool>
 
@@ -111,7 +101,6 @@ private struct Modifier2<TrueView: SwiftUI.View>: ViewModifier, SwiftUI.ViewModi
             }
         }
     }
-
 }
 
 #endif

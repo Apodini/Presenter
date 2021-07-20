@@ -1,4 +1,3 @@
-
 import Foundation
 
 if #available(OSX 11.0, iOS 14.0, *) {

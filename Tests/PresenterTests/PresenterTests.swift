@@ -1,4 +1,3 @@
-
 #if !os(watchOS) && canImport(XCTest) && canImport(SwiftUI)
 
 import XCTest
@@ -13,15 +12,12 @@ struct TestAction: Action {
 }
 
 extension Color {
-
     static var gray: Color {
         Color(red: 0.5, green: 0.5, blue: 0.5)
     }
-
 }
 
 struct MyCustomView: UserView {
-
     @State("text", default: "")
     var text
 
@@ -34,19 +30,15 @@ struct MyCustomView: UserView {
             MyCustomView2()
         }
     }
-
 }
 
 struct MyCustomView2: UserView {
-
     var body: View {
         Text("gallo")
     }
-
 }
 
 final class PresenterTests: XCTestCase {
-
     func testCustom() throws {
         let view = MyCustomView(text2: .at("test", default: ""))
         let data = try Presenter.encode(view)
@@ -138,7 +130,6 @@ final class PresenterTests: XCTestCase {
             XCTFail("\(error)")
         }
     }
-
 }
 
 #endif

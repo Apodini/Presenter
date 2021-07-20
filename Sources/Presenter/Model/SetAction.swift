@@ -1,6 +1,4 @@
-
 public struct SetAction<T: Codable>: Action {
-
     // MARK: Stored Properties
 
     private var key: String
@@ -22,5 +20,4 @@ public struct SetAction<T: Codable>: Action {
     }
 
     #endif
-
 }

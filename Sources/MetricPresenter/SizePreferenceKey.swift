@@ -1,10 +1,8 @@
-
 #if canImport(SwiftUI)
 
 protocol SizePreferenceKey: PreferenceKey where Value == CGSize {}
 
 extension SizePreferenceKey {
-
     static var defaultValue: CGSize { .zero }
 
     static func reduce(value: inout CGSize, nextValue: () -> CGSize) {
@@ -12,7 +10,6 @@ extension SizePreferenceKey {
         guard next != .zero && next != value else { return }
         value = next
     }
-
 }
 
 extension SwiftUI.View {

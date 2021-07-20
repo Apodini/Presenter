@@ -1,6 +1,4 @@
-
 struct ArrayView: CodableView {
-
     // MARK: Stored Properties
 
     let content: [CoderView]
@@ -16,17 +14,14 @@ struct ArrayView: CodableView {
             }
         }
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension ArrayView: CustomStringConvertible {
-
     public var description: String {
         content.description
     }
-
 }
 
 // MARK: - View
@@ -34,13 +29,11 @@ extension ArrayView: CustomStringConvertible {
 #if canImport(SwiftUI)
 
 extension ArrayView: SwiftUI.View {
-
     public var body: some SwiftUI.View {
         ForEach(content.indices) { index in
             self.content[index].eraseToAnyView()
         }
     }
-
 }
 
 #endif

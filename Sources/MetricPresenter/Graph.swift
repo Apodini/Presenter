@@ -1,10 +1,7 @@
-
 public struct Graph: CodableView {
-
     // MARK: Nested Types
 
     public struct Label: Codable {
-
         // MARK: Stored Properties
 
         public var text: String
@@ -16,7 +13,6 @@ public struct Graph: CodableView {
             self.text = text
             self.value = value
         }
-
     }
 
     public enum Edge: String, Codable {
@@ -27,7 +23,6 @@ public struct Graph: CodableView {
     }
 
     public struct DataSet: Codable {
-
         // MARK: Stored Properties
 
         public var title: String
@@ -43,7 +38,6 @@ public struct Graph: CodableView {
             self.data = data
             self.style = style
         }
-
     }
 
     // MARK: Stored Properties
@@ -62,7 +56,6 @@ public struct Graph: CodableView {
         data: [Graph.DataSet],
         gridWidth: CGFloat
     ) {
-
         self.labels = [
             .top: topLabels,
             .trailing: trailingLabels,
@@ -74,37 +67,29 @@ public struct Graph: CodableView {
         self.data = data
         self.gridWidth = gridWidth
     }
-
 }
 
 #if canImport(SwiftUI)
 
 extension Graph.Label: Identifiable {
-
     public var id: CGFloat {
         value
     }
-
 }
 
 extension Graph.DataSet: Identifiable {
-
     public var id: String {
         title
     }
-
 }
 
 extension Graph.DataSet {
-
     public var chart: Chart {
         Chart(data: data, style: style)
     }
-
 }
 
 extension Graph: SwiftUI.View {
-
     public var body: some SwiftUI.View {
         content
         .graphGrid(
@@ -135,7 +120,6 @@ extension Graph: SwiftUI.View {
             ForEach(data) { $0.chart.body }
         }
     }
-
 }
 
 #endif

@@ -1,6 +1,4 @@
-
 public struct TextEditor: CodableView {
-
     // MARK: Stored Properties
 
     private let text: Binding<String>
@@ -10,17 +8,14 @@ public struct TextEditor: CodableView {
     public init(text: Binding<String>) {
         self.text = text
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension TextEditor: CustomStringConvertible {
-
     public var description: String {
         "TextEditor(text: \(text))"
     }
-
 }
 
 // MARK: - View
@@ -28,7 +23,6 @@ extension TextEditor: CustomStringConvertible {
 #if canImport(SwiftUI)
 
 extension TextEditor: SwiftUI.View {
-
     #if !os(watchOS) && !os(macOS) && !os(tvOS) && !targetEnvironment(macCatalyst)
 
     @SwiftUI.ViewBuilder
@@ -40,7 +34,6 @@ extension TextEditor: SwiftUI.View {
         } else {
             SwiftUI.EmptyView()
         }
-
     }
 
     #else
@@ -50,7 +43,6 @@ extension TextEditor: SwiftUI.View {
     }
 
     #endif
-
 }
 
 #endif

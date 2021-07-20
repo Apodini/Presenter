@@ -1,6 +1,4 @@
-
 public struct Path: CodableView {
-
     // MARK: Nested Types
 
     private enum ElementKind: String, Codable {
@@ -53,17 +51,14 @@ public struct Path: CodableView {
     public mutating func closeSubpath() {
         elements.append(.init(kind: .closeSubpath, points: []))
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension Path: CustomStringConvertible {
-
     public var description: String {
         "Path(elements: \(elements))"
     }
-
 }
 
 // MARK: - View
@@ -71,7 +66,6 @@ extension Path: CustomStringConvertible {
 #if canImport(SwiftUI)
 
 extension Path: SwiftUI.View {
-
     public var body: some SwiftUI.View {
         SwiftUI.Path { path in
             for element in elements {
@@ -93,7 +87,6 @@ extension Path: SwiftUI.View {
             }
         }
     }
-
 }
 
 #endif

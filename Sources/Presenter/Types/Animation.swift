@@ -1,6 +1,4 @@
-
 public struct Animation: Codable {
-
     // MARK: Stored Properties
 
     private var kind: Kind
@@ -63,7 +61,6 @@ public struct Animation: Codable {
 
     public static func timingCurve(c0x: Double, c0y: Double,
                                    c1x: Double, c1y: Double, duration: Double? = nil) -> Animation {
-
         Animation(kind: .timingCurve(c0x: c0x, c0y: c0y, c1x: c1x, c1y: c1y, duration: duration))
     }
 
@@ -89,11 +86,9 @@ public struct Animation: Codable {
     public func speed(_ speed: Double) -> Animation {
         Animation(kind: kind, delay: delay, speed: speed, repeatCount: repeatCount, autoreverses: autoreverses)
     }
-
 }
 
 extension Animation: CustomStringConvertible {
-
     public var description: String {
         if case .none = kind {
             return "nil"
@@ -119,13 +114,10 @@ extension Animation: CustomStringConvertible {
             return "Animation.\(kind)" + operators
         }
     }
-
 }
 
 extension Animation {
-
     enum Kind: Codable {
-
         // MARK: Cases
 
         case spring(response: Double?, damping: Double?, blendDuration: Double?)
@@ -249,13 +241,10 @@ extension Animation {
                 try container.encode(Name.none, forKey: .name)
             }
         }
-
     }
-
 }
 
 extension Animation.Kind: CustomStringConvertible {
-
     var description: String {
         switch self {
         case let .spring(response, damping, blendDuration):
@@ -288,13 +277,11 @@ extension Animation.Kind: CustomStringConvertible {
             return "none"
         }
     }
-
 }
 
 #if canImport(SwiftUI)
 
 extension Animation {
-
     internal var animation: SwiftUI.Animation? {
         guard var animation = kind.animation else {
             return nil
@@ -316,11 +303,9 @@ extension Animation {
         }
         return animation
     }
-
 }
 
 extension  Animation.Kind {
-
     var animation: SwiftUI.Animation? {
         switch self {
         case .none:
@@ -348,7 +333,6 @@ extension  Animation.Kind {
         return .timingCurve(c0x, c0y, c1x, c1y, duration: duration ?? 0.35)
         }
     }
-
 }
 
 #endif

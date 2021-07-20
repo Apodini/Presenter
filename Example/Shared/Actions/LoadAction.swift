@@ -8,9 +8,7 @@
 import Presenter
 
 struct LoadAction: Action {
-
     func perform(on model: Model) {
         // TODO
     }
-
 }

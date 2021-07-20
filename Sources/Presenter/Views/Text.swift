@@ -1,6 +1,4 @@
-
 public struct Text: CodableView {
-
     // MARK: Stored Properties
 
     private let text: Value<String>
@@ -14,17 +12,14 @@ public struct Text: CodableView {
     public init(_ text: Value<String>) {
         self.text = text
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension Text: CustomStringConvertible {
-
     public var description: String {
         "Text(\(text))"
     }
-
 }
 
 // MARK: - View
@@ -32,13 +27,11 @@ extension Text: CustomStringConvertible {
 #if canImport(SwiftUI)
 
 extension Text: SwiftUI.View {
-
     public var body: some SwiftUI.View {
         ModelView { model in
             SwiftUI.Text(self.text.get(from: model))
         }
     }
-
 }
 
 #endif

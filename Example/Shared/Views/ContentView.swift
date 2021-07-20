@@ -11,7 +11,6 @@ typealias PresenterModel = Model
 typealias PresenterView = View
 
 struct ContentView: UserView {
-
     @State(.isAuthenticated, default: false) var isAuthenticated
 
     var body: View {
@@ -19,5 +18,4 @@ struct ContentView: UserView {
            then: HomeView(),
            else: LoginView())
     }
-
 }

@@ -1,8 +1,6 @@
-
 #if canImport(SwiftUI)
 
 public class Model: ObservableObject {
-
     // MARK: Stored Properties
 
     @Published private var state = [String: Any]()
@@ -43,7 +41,6 @@ public class Model: ObservableObject {
     public func set(_ key: String, to value: Any?) {
         state[key] = value
     }
-
 }
 
 #endif

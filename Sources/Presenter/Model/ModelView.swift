@@ -1,8 +1,6 @@
-
 #if canImport(SwiftUI)
 
 public struct ModelView<Body: SwiftUI.View>: SwiftUI.View {
-
     // MARK: Stored Properties
 
     @EnvironmentObject var model: Model
@@ -20,7 +18,6 @@ public struct ModelView<Body: SwiftUI.View>: SwiftUI.View {
     public var body: Body {
         create(model)
     }
-
 }
 
 #endif

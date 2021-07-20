@@ -1,6 +1,4 @@
-
 public struct Color: CodableView {
-
     // MARK: Nested Types
 
     private enum CodingKeys: String, CodingKey {
@@ -41,17 +39,14 @@ public struct Color: CodableView {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(ColorCode(self).description, forKey: .code)
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension Color: CustomStringConvertible {
-
     public var description: String {
         "Color(\(ColorCode(self)))"
     }
-
 }
 
 // MARK: - View
@@ -59,11 +54,9 @@ extension Color: CustomStringConvertible {
 #if canImport(SwiftUI)
 
 extension Color: SwiftUI.View {
-
     public var body: SwiftUI.Color {
         SwiftUI.Color(red: red, green: green, blue: blue, opacity: opacity)
     }
-
 }
 
 #endif

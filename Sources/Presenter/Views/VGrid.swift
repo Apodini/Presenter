@@ -1,6 +1,4 @@
-
 public struct VGrid: CodableWrapperView {
-
     // MARK: Stored Properties
 
     private let columns: [GridItem]
@@ -18,24 +16,20 @@ public struct VGrid: CodableWrapperView {
         pinnedViews: PinnedScrollableViews,
         @ViewBuilder content: () -> View
      ) {
-
         self.columns = columns
         self.alignment = alignment
         self.spacing = spacing
         self.pinnedViews = pinnedViews
         self.content = CoderView(content())
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension VGrid: CustomStringConvertible {
-
     public var description: String {
         "VGrid(columns: \(columns), alignment: \(alignment.map { "\($0)" } ?? "nil"), spacing: \(spacing.map(\.description) ?? "nil"), pinnedViews: \(pinnedViews), content: \(content))"
     }
-
 }
 
 // MARK: - View
@@ -43,19 +37,18 @@ extension VGrid: CustomStringConvertible {
 #if canImport(SwiftUI)
 
 extension VGrid {
-
     #if !os(macOS) && !targetEnvironment(macCatalyst)
 
     public var body: View {
         if #available(iOS 14.0, tvOS 14.0, watchOS 7.0, *) {
-            return content.modifier(
+            content.modifier(
                 Modifier(columns: columns.map(\.swiftUIValue),
                          alignment: alignment?.swiftUIValue ?? .center,
                          spacing: spacing,
                          pinnedViews: pinnedViews.swiftUIValue)
             )
         } else {
-            return Nil()
+            Nil()
         }
     }
 
@@ -66,12 +59,10 @@ extension VGrid {
     }
 
     #endif
-
 }
 
 @available(iOS 14.0, macOS 11.0, *)
 private struct Modifier: ViewModifier, SwiftUI.ViewModifier {
-
     let columns: [SwiftUI.GridItem]
     let alignment: SwiftUI.HorizontalAlignment
     let spacing: CGFloat?
@@ -86,8 +77,6 @@ private struct Modifier: ViewModifier, SwiftUI.ViewModifier {
             content: { content }
         )
     }
-
 }
 
 #endif
-

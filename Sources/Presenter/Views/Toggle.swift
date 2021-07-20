@@ -1,6 +1,4 @@
-
 public struct Toggle: CodableView {
-
     // MARK: Stored Properties
 
     private let isOn: Binding<Bool>
@@ -15,17 +13,14 @@ public struct Toggle: CodableView {
         self.isOn = isOn
         self.label = CoderView(label)
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension Toggle: CustomStringConvertible {
-
     public var description: String {
         "Toggle(isOn: \(isOn), label: \(label))"
     }
-
 }
 
 // MARK: - View
@@ -33,7 +28,6 @@ extension Toggle: CustomStringConvertible {
 #if canImport(SwiftUI)
 
 extension Toggle: SwiftUI.View {
-
     public var body: some SwiftUI.View {
         ModelView { model in
             SwiftUI.Toggle(
@@ -42,7 +36,6 @@ extension Toggle: SwiftUI.View {
             )
         }
     }
-
 }
 
 #endif

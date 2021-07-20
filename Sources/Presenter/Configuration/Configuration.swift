@@ -1,13 +1,10 @@
-
 public enum Presenter {
-
     // MARK: Decoding
 
     public static func decode(
         from data: Data,
         decoder: JSONDecoder = .init()
     ) throws -> View {
-
         try decoder.decode(CoderView.self, from: data)
     }
 
@@ -17,7 +14,6 @@ public enum Presenter {
         from data: Decoder.Input,
         decoder: Decoder
     ) throws -> View {
-
         try decoder.decode(CoderView.self, from: data)
     }
 
@@ -29,7 +25,6 @@ public enum Presenter {
         _ view: View,
         encoder: JSONEncoder = .init()
     ) throws -> Data {
-
         try encoder.encode(CoderView(view))
     }
 
@@ -39,10 +34,8 @@ public enum Presenter {
         _ view: View,
         encoder: Encoder
     ) throws -> Encoder.Output {
-
         try encoder.encode(CoderView(view))
     }
 
     #endif
-
 }

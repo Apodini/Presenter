@@ -8,7 +8,6 @@
 import Presenter
 
 struct LoginView: UserView {
-
     @State(.username, default: "") var username
     @State(.password, default: "") var password
     @State(.showLoginError, default: false) var showLoginError
@@ -27,5 +26,4 @@ struct LoginView: UserView {
         .padding(16)
         .sheet(isPresented: $showLoginError, content: Text(loginErrorMessage))
     }
-
 }

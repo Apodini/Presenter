@@ -1,8 +1,6 @@
-
 #if canImport(SwiftUI) && canImport(Combine)
 
 public struct ServedView<Placeholder: SwiftUI.View>: SwiftUI.View {
-
     // MARK: Nested Types
 
     public enum PlaceholderState {
@@ -37,7 +35,6 @@ public struct ServedView<Placeholder: SwiftUI.View>: SwiftUI.View {
         model: Model,
         @SwiftUI.ViewBuilder placeholder: @escaping (PlaceholderState) -> Placeholder
     ) {
-
         guard let url = url else {
             self.init(
                 dataPublisher: nil as AnyPublisher<Data, Error>?,
@@ -74,7 +71,6 @@ public struct ServedView<Placeholder: SwiftUI.View>: SwiftUI.View {
         model: Model,
         @SwiftUI.ViewBuilder placeholder: @escaping (PlaceholderState) -> Placeholder
     ) where P.Output == Data {
-
         let viewPublisher = dataPublisher?
             .tryMap { try Presenter.decode(from: $0).eraseToAnyView() }
 
@@ -90,7 +86,6 @@ public struct ServedView<Placeholder: SwiftUI.View>: SwiftUI.View {
         model: Model,
         @SwiftUI.ViewBuilder placeholder: @escaping (PlaceholderState) -> Placeholder
     ) where P.Output == AnyView {
-
         self.publisher = viewPublisher?
             .mapError { $0 as Error }
             .eraseToAnyPublisher()
@@ -142,7 +137,6 @@ public struct ServedView<Placeholder: SwiftUI.View>: SwiftUI.View {
                 .store(in: &cancellables)
         }
     }
-
 }
 
 #endif

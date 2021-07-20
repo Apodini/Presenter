@@ -1,10 +1,7 @@
-
 public struct Gradient: Codable {
-
     // MARK: Nested Types
 
     public struct Stop: Codable {
-
         // MARK: Stored Properties
 
         public var colorCode: ColorCode
@@ -27,7 +24,6 @@ public struct Gradient: Codable {
             self.colorCode = ColorCode(color)
             self.location = location
         }
-
     }
 
     // MARK: Stored Properties
@@ -45,25 +41,20 @@ public struct Gradient: Codable {
     public init(stops: [Stop]) {
         self.stops = stops
     }
-
 }
 
 #if canImport(SwiftUI)
 
 extension Gradient {
-
     var swiftUIValue: SwiftUI.Gradient {
         .init(stops: stops.map(\.swiftUIValue))
     }
-
 }
 
 extension Gradient.Stop {
-
     var swiftUIValue: SwiftUI.Gradient.Stop {
         .init(color: color.body, location: location)
     }
-
 }
 
 #endif

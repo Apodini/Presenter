@@ -10,53 +10,21 @@ let package = Package(
     products: [
         .library(
             name: "Presenter",
-            targets: ["Presenter"]
-        ),
-        .library(
-            name: "ChartPresenter",
-            targets: ["ChartPresenter"]
-        ),
-        .library(
-            name: "MetricPresenter",
-            targets: ["MetricPresenter"]
-        ),
-        .library(
-            name: "TracePresenter",
-            targets: ["TracePresenter"]
-        ),
+            targets: ["Presenter"]),
         .executable(
             name: "Example",
-            targets: ["Example", "Presenter"]
-        )
-    ],
-    dependencies: [
-        .package(name: "Charts", url: "https://github.com/spacenation/swiftui-charts.git", from: "1.0.0")
+            targets: ["Example"])
     ],
     targets: [
         .target(
             name: "Presenter",
-            dependencies: []
-        ),
-        .target(
-            name: "ChartPresenter",
-            dependencies: ["Presenter", "Charts"]
-        ),
-        .target(
-            name: "MetricPresenter",
-            dependencies: ["ChartPresenter"]
-        ),
-        .target(
-            name: "TracePresenter",
-            dependencies: ["Presenter"]
-        ),
-        .testTarget(
-            name: "PresenterTests",
-            dependencies: ["Presenter", "ChartPresenter", "MetricPresenter", "TracePresenter"]
-        ),
+            dependencies: []),
         .executableTarget(
             name: "Example",
-            dependencies: ["Presenter"]
-        )
+            dependencies: ["Presenter"]),
+        .testTarget(
+            name: "PresenterTests",
+            dependencies: ["Presenter"]),
     ]
 )
 
@@ -68,43 +36,16 @@ let package = Package(
     products: [
         .library(
             name: "Presenter",
-            targets: ["Presenter"]
-        ),
-        .library(
-            name: "ChartPresenter",
-            targets: ["ChartPresenter"]
-        ),
-        .library(
-            name: "MetricPresenter",
-            targets: ["MetricPresenter"]
-        ),
-        .library(
-            name: "TracePresenter",
-            targets: ["TracePresenter"]
-        )
+            targets: ["Presenter"]),
     ],
     dependencies: [],
     targets: [
         .target(
             name: "Presenter",
-            dependencies: []
-        ),
-        .target(
-            name: "ChartPresenter",
-            dependencies: ["Presenter"]
-        ),
-        .target(
-            name: "MetricPresenter",
-            dependencies: ["ChartPresenter"]
-        ),
-        .target(
-            name: "TracePresenter",
-            dependencies: ["Presenter"]
-        ),
+            dependencies: []),
         .testTarget(
             name: "PresenterTests",
-            dependencies: ["Presenter", "ChartPresenter", "MetricPresenter", "TracePresenter"]
-        )
+            dependencies: ["Presenter"]),
     ]
 )
 

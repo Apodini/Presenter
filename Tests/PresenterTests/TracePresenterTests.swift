@@ -1,4 +1,4 @@
-#if !os(watchOS) && canImport(XCTest) && canImport(UIKit)
+#if !os(watchOS) && canImport(XCTest) && canImport(UIKit) && canImport(TracePresenter)
 
 import XCTest
 import Presenter

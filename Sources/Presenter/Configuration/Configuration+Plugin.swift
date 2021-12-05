@@ -32,7 +32,7 @@ extension Presenter {
     }
 }
 
-extension View where Self: Codable {
+extension View where Self: Decodable {
     fileprivate static func use() {
         Presenter.use(view: Self.self)
     }

@@ -1,5 +1,5 @@
 
-public struct Chart: SwiftUIView {
+public struct Chart: View {
 
     // MARK: Stored Properties
 
@@ -42,9 +42,9 @@ extension Chart: SwiftUI.View {
 
 #elseif canImport(SwiftUI)
 
-extension Chart {
+extension Chart: SwiftUI.View {
 
-    public var view: some SwiftUI.View {
+    public var body: some SwiftUI.View {
         EmptyView()
     }
 

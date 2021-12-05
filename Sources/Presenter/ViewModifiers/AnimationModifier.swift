@@ -1,32 +1,25 @@
-
-internal struct AnimationModifier: AnyViewModifying {
-
+internal struct AnimationModifier: CodableViewModifier {
     // MARK: Stored Properties
 
     let animation: Animation
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension AnimationModifier: CustomStringConvertible {
-
     var description: String {
         "animation(\(animation))"
     }
-
 }
 
 // MARK: - ViewModifier
 
 #if canImport(SwiftUI)
 
-extension AnimationModifier: ViewModifier {
-
+extension AnimationModifier: SwiftUI.ViewModifier {
     func body(content: Content) -> some SwiftUI.View {
         content.animation(animation.animation)
     }
-
 }
 
 #endif
@@ -34,9 +27,7 @@ extension AnimationModifier: ViewModifier {
 // MARK: - View Extensions
 
 extension View {
-
-    public func animation(_ animation: Animation?) -> some View {
-        modified(using: AnimationModifier(animation: animation ?? .none))
+    public func animation(_ animation: Animation?) -> View {
+        modifier(AnimationModifier(animation: animation ?? .none))
     }
-
 }

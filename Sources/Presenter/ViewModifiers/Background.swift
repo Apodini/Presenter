@@ -1,42 +1,41 @@
-
-internal struct Background: AnyViewModifying {
-
+internal struct Background: CodableViewModifier {
     // MARK: Stored Properties
 
-    let view: CoderView
-
+    let background: CoderView
 }
 
 // MARK: - CustomStringConvertible
 
 extension Background: CustomStringConvertible {
-
     var description: String {
-        "background(\(view))"
+        "background(\(background))"
     }
-
 }
 
 // MARK: - ViewModifier
 
 #if canImport(SwiftUI)
 
-extension Background: ViewModifier {
+extension Background {
+    public func body<Content: SwiftUI.View>(for content: Content) -> View {
+        background.modifier(Modifier(foreground: content))
+    }
+}
+
+private struct Modifier<Foreground: SwiftUI.View>: ViewModifier, SwiftUI.ViewModifier {
+    let foreground: Foreground
 
     func body(content: Content) -> some SwiftUI.View {
-        content.background(view.eraseToAnyView())
+        foreground.background(content)
     }
-
 }
 
 #endif
 
 // MARK: - View Extensions
 
-extension View where Self: Codable {
-
-    public func background<V: View>(_ view: V) -> some View {
-        modified(using: Background(view: CoderView(view)))
+extension View {
+    public func background(_ view: View) -> View {
+        modifier(Background(background: CoderView(view)))
     }
-
 }

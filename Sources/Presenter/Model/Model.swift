@@ -1,11 +1,9 @@
-
 #if canImport(SwiftUI)
 
-public final class Model: ObservableObject {
-
+public class Model: ObservableObject {
     // MARK: Stored Properties
 
-    @Published public var state: [String: Any] = [:]
+    @Published private var state = [String: Any]()
 
     // MARK: Initialization
 
@@ -36,14 +34,13 @@ public final class Model: ObservableObject {
         { _ in action?.perform(on: self) }
     }
 
-    func get(key: String, for object: AnyObject) -> Any? {
-        state["\(ObjectIdentifier(object))_\(key)"]
+    public func get(_ key: String) -> Any? {
+        state[key]
     }
 
-    func set(_ any: Any?, key: String, for object: AnyObject) {
-        state["\(ObjectIdentifier(object))_\(key)"] = any
+    public func set(_ key: String, to value: Any?) {
+        state[key] = value
     }
-
 }
 
 #endif

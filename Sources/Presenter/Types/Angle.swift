@@ -1,6 +1,4 @@
-
 public struct Angle {
-
     // MARK: Stored Properties
 
     public var radians: Double
@@ -31,11 +29,9 @@ public struct Angle {
     public static var zero: Angle {
         .init(radians: 0)
     }
-
 }
 
 extension Angle: Codable {
-
     public init(from decoder: Decoder) throws {
         self.init(radians: try .init(from: decoder))
     }
@@ -43,17 +39,14 @@ extension Angle: Codable {
     public func encode(to encoder: Encoder) throws {
         try radians.encode(to: encoder)
     }
-
 }
 
 #if canImport(SwiftUI)
 
 extension Angle {
-
     var swiftUIValue: SwiftUI.Angle {
         .init(radians: radians)
     }
-
 }
 
 #endif

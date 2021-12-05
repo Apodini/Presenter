@@ -1,6 +1,4 @@
-
-public struct Slider: SwiftUIView {
-
+public struct Slider: CodableView {
     // MARK: Stored Properties
 
     private let value: Binding<CGFloat>
@@ -18,34 +16,30 @@ public struct Slider: SwiftUIView {
         self.maxValue = range.upperBound
         self.onEditingChanged = onEditingChanged.map(CoderAction.init)
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension Slider: CustomStringConvertible {
-
     public var description: String {
         "Slider(value: \(value), in: \(minValue...maxValue))"
     }
-
 }
 
 // MARK: - View
 
 #if canImport(SwiftUI)
 
-extension Slider {
-
+extension Slider: SwiftUI.View {
     #if os(tvOS)
 
-    public var view: AnyView {
-        Nil().eraseToAnyView()
+    public var body: some SwiftUI.View {
+        SwiftUI.EmptyView()
     }
 
     #else
 
-    public var view: some SwiftUI.View {
+    public var body: some SwiftUI.View {
         ModelView { model in
             SwiftUI.Slider(
                 value: model.binding(for: self.value),
@@ -56,7 +50,6 @@ extension Slider {
     }
 
     #endif
-
 }
 
 #endif

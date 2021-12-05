@@ -1,68 +1,38 @@
-// swift-tools-version:5.4
+// swift-tools-version:5.5
 
 import PackageDescription
 
-
-#if os(macOS) || os(iOS) || os(watchOS) || os(tvOS)
-let exampleTarget: [Target] = [
-    .executableTarget(
-        name: "Example",
-        dependencies: ["Presenter"]
-    )
-]
-let exampleProduct: [Product] = [
-    .executable(
-        name: "Example",
-        targets: ["Example", "Presenter"]
-    )
-]
-#else
-let exampleTarget: [Target] = []
-let exampleProduct: [Product] = []
-#endif
-
-
 let package = Package(
     name: "Presenter",
-    platforms: [.macOS(.v10_15), .watchOS(.v6), .tvOS(.v13), .iOS(.v13)],
+    platforms: [.iOS(.v13), .macOS(.v10_15), .tvOS(.v13), .watchOS(.v6)],
     products: [
         .library(
             name: "Presenter",
-            targets: ["Presenter"]
-        ),
+            targets: ["Presenter"]),
         .library(
             name: "ChartPresenter",
-            targets: ["ChartPresenter"]
-        ),
-        .library(
-            name: "MetricPresenter",
-            targets: ["MetricPresenter"]
-        ),
-        .library(
-            name: "TracePresenter",
-            targets: ["TracePresenter"]
-        )
-    ] + exampleProduct,
+            targets: ["ChartPresenter"]),
+        .executable(
+            name: "Example",
+            targets: ["Example"]),
+    ],
+    dependencies: [
+        .package(url: "https://github.com/spacenation/swiftui-charts", from: "1.0.0"),
+    ],
     targets: [
         .target(
             name: "Presenter",
-            dependencies: []
-        ),
+            dependencies: []),
         .target(
             name: "ChartPresenter",
-            dependencies: ["Presenter"]
-        ),
-        .target(
-            name: "MetricPresenter",
-            dependencies: ["ChartPresenter"]
-        ),
-        .target(
-            name: "TracePresenter",
-            dependencies: ["Presenter"]
-        ),
+            dependencies: [
+                .product(name: "Charts", package: "swiftui-charts", condition: .when(platforms: [.macOS, .macCatalyst, .iOS, .watchOS, .tvOS])),
+                .target(name: "Presenter"),
+            ]),
+        .executableTarget(
+            name: "Example",
+            dependencies: ["Presenter"]),
         .testTarget(
             name: "PresenterTests",
-            dependencies: ["Presenter", "ChartPresenter", "MetricPresenter", "TracePresenter"]
-        )
-    ] + exampleTarget
-)
+            dependencies: ["Presenter"]),
+    ])

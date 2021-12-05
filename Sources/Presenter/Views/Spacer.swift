@@ -1,6 +1,4 @@
-
-public struct Spacer: SwiftUIView {
-
+public struct Spacer: CodableView {
     // MARK: Stored Properties
 
     private let minLength: Value<CGFloat?>
@@ -14,33 +12,28 @@ public struct Spacer: SwiftUIView {
     public init(minLength: Value<CGFloat?>) {
         self.minLength = minLength
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension Spacer: CustomStringConvertible {
-
     public var description: String {
         "Spacer(minLength: \(minLength))"
     }
-
 }
 
 // MARK: - View
 
 #if canImport(SwiftUI)
 
-extension Spacer {
-
-    public var view: some SwiftUI.View {
+extension Spacer: SwiftUI.View {
+    public var body: some SwiftUI.View {
         ModelView { model in
             SwiftUI.Spacer(
                 minLength: self.minLength.get(from: model)
             )
         }
     }
-
 }
 
 #endif

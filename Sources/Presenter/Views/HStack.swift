@@ -1,6 +1,4 @@
-
-public struct HStack: InternalView, Codable {
-
+public struct HStack: CodableWrapperView {
     // MARK: Stored Properties
 
     private let alignment: VerticalAlignment?
@@ -9,26 +7,23 @@ public struct HStack: InternalView, Codable {
 
     // MARK: Initialization
 
-    public init<Content: View>(
+    public init(
         alignment: VerticalAlignment? = nil,
         spacing: CGFloat? = nil,
-        @ViewBuilder content: () -> Content
+        @ViewBuilder content: () -> View
     ) {
         self.alignment = alignment
         self.spacing = spacing
         self.content = CoderView(content())
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension HStack: CustomStringConvertible {
-
     public var description: String {
         "HStack(alignment: .\((alignment ?? .center).rawValue), spacing: \(spacing.map { $0.description } ?? "nil"), content: \(content))"
     }
-
 }
 
 // MARK: - View
@@ -36,16 +31,13 @@ extension HStack: CustomStringConvertible {
 #if canImport(SwiftUI)
 
 extension HStack {
-
-    public var view: _View {
+    public var body: View {
         content
-            .apply(Modifier(alignment: alignment?.swiftUIValue ?? .center, spacing: spacing))
+            .modifier(Modifier(alignment: alignment?.swiftUIValue ?? .center, spacing: spacing))
     }
-
 }
 
-private struct Modifier: ViewModifier {
-
+private struct Modifier: ViewModifier, SwiftUI.ViewModifier {
     let alignment: SwiftUI.VerticalAlignment
     let spacing: CGFloat?
 
@@ -54,8 +46,6 @@ private struct Modifier: ViewModifier {
             content
         }
     }
-
 }
 
 #endif
-

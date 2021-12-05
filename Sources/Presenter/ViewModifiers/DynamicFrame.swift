@@ -1,6 +1,4 @@
-
-internal struct DynamicFrame: AnyViewModifying {
-
+internal struct DynamicFrame: CodableViewModifier {
     // MARK: Stored Properties
 
     let minWidth: CGFloat?
@@ -12,13 +10,11 @@ internal struct DynamicFrame: AnyViewModifying {
     let maxHeight: CGFloat?
 
     let alignment: Alignment?
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension DynamicFrame: CustomStringConvertible {
-
     var description: String {
         let values: [(String, Any?)] = [
             ("minWidth", minWidth), ("idealWidth", idealWidth), ("maxWidth", maxWidth),
@@ -28,15 +24,13 @@ extension DynamicFrame: CustomStringConvertible {
         let nonOptionalValues = values.filter { $0.1 != nil }
         return "frame(\(nonOptionalValues.map { "\($0.0): \($0.1!)" }.joined(separator: ", ")))"
     }
-
 }
 
 // MARK: - ViewModifier
 
 #if canImport(SwiftUI)
 
-extension DynamicFrame: ViewModifier {
-
+extension DynamicFrame: SwiftUI.ViewModifier {
     func body(content: Content) -> some SwiftUI.View {
         content.frame(minWidth: minWidth,
                       idealWidth: idealWidth,
@@ -46,7 +40,6 @@ extension DynamicFrame: ViewModifier {
                       maxHeight: maxHeight,
                       alignment: alignment?.swiftUIValue ?? .center)
     }
-
 }
 
 #endif
@@ -54,21 +47,23 @@ extension DynamicFrame: ViewModifier {
 // MARK: - View Extensions
 
 extension View {
-
     public func frame(minWidth: CGFloat? = nil,
                       idealWidth: CGFloat? = nil,
                       maxWidth: CGFloat? = nil,
                       minHeight: CGFloat? = nil,
                       idealHeight: CGFloat? = nil,
                       maxHeight: CGFloat? = nil,
-                      alignment: Alignment? = nil) -> some View {
-        modified(using:
+                      alignment: Alignment = .center) -> View {
+        modifier(
             DynamicFrame(
-                minWidth: minWidth, idealWidth: idealWidth, maxWidth: maxWidth,
-                minHeight: minHeight, idealHeight: idealHeight, maxHeight: maxHeight,
+                minWidth: minWidth,
+                idealWidth: idealWidth,
+                maxWidth: maxWidth,
+                minHeight: minHeight,
+                idealHeight: idealHeight,
+                maxHeight: maxHeight,
                 alignment: alignment
             )
         )
     }
-
 }

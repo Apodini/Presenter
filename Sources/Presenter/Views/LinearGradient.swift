@@ -1,6 +1,4 @@
-
-public struct LinearGradient: SwiftUIView {
-
+public struct LinearGradient: CodableView {
     // MARK: Stored Properties
 
     private let gradient: Gradient
@@ -14,34 +12,28 @@ public struct LinearGradient: SwiftUIView {
         self.startPoint = startPoint
         self.endPoint = endPoint
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension LinearGradient: CustomStringConvertible {
-
     public var description: String {
         "LinearGradient(gradient: \(gradient), startPoint: \(startPoint), endPoint: \(endPoint))"
     }
-
 }
 
 // MARK: - View
 
 #if canImport(SwiftUI)
 
-extension LinearGradient {
-
-    public var view: some SwiftUI.View {
+extension LinearGradient: SwiftUI.View {
+    public var body: some SwiftUI.View {
         SwiftUI.LinearGradient(
             gradient: gradient.swiftUIValue,
             startPoint: startPoint.unitPoint,
             endPoint: endPoint.unitPoint
         )
     }
-
 }
 
 #endif
-

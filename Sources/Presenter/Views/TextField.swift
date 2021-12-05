@@ -1,6 +1,4 @@
-
-public struct TextField: SwiftUIView {
-
+public struct TextField: CodableView {
     // MARK: Stored Properties
 
     private let title: Value<String>
@@ -10,8 +8,10 @@ public struct TextField: SwiftUIView {
 
     // MARK: Initialization
 
-    public init(_ title: String, text: Binding<String>,
-                onCommit: Action? = nil, onEditingChanged: Action? = nil) {
+    public init(_ title: String,
+                text: Binding<String>,
+                onCommit: Action? = nil,
+                onEditingChanged: Action? = nil) {
         self.init(
             .static(title),
             text: text,
@@ -20,33 +20,31 @@ public struct TextField: SwiftUIView {
         )
     }
 
-    public init(_ title: Value<String>, text: Binding<String>,
-                onCommit: Action? = nil, onEditingChanged: Action? = nil) {
+    public init(_ title: Value<String>,
+                text: Binding<String>,
+                onCommit: Action? = nil,
+                onEditingChanged: Action? = nil) {
         self.title = title
         self.text = text
         self.onCommit = onCommit.map(CoderAction.init)
         self.onEditingChanged = onEditingChanged.map(CoderAction.init)
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension TextField: CustomStringConvertible {
-
     public var description: String {
         "TextField(\"\(title)\", text: \(text))"
     }
-
 }
 
 // MARK: - View
 
 #if canImport(SwiftUI)
 
-extension TextField {
-
-    public var view: some SwiftUI.View {
+extension TextField: SwiftUI.View {
+    public var body: some SwiftUI.View {
         ModelView { model in
             SwiftUI.TextField(
                 self.title.get(from: model),
@@ -56,7 +54,6 @@ extension TextField {
             )
         }
     }
-
 }
 
 #endif

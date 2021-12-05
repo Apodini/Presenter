@@ -1,4 +1,3 @@
-
 public protocol Action: Codable {
     static var type: String { get }
 
@@ -8,9 +7,7 @@ public protocol Action: Codable {
 }
 
 extension Action {
-
     public static var type: String {
         String(describing: Self.self)
     }
-
 }

@@ -1,6 +1,4 @@
-
-public struct Image: SwiftUIView {
-
+public struct Image: CodableView {
     // MARK: Nested Types
 
     fileprivate enum Kind: String, Codable {
@@ -46,18 +44,15 @@ public struct Image: SwiftUIView {
     public func resizable() -> Image {
         Image(kind: kind, identifier: identifier, isResizable: true)
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension Image: CustomStringConvertible {
-
     public var description: String {
         "Image(\(kind): \(identifier))"
         + (isResizable ? ".resizable()" : "")
     }
-
 }
 
 // MARK: - View
@@ -65,7 +60,6 @@ extension Image: CustomStringConvertible {
 #if canImport(SwiftUI) && canImport(Combine)
 
 private struct ImageView: SwiftUI.View {
-
     // MARK: Stored Properties
 
     var image: Image
@@ -86,7 +80,10 @@ private struct ImageView: SwiftUI.View {
     // MARK: Helpers
 
     private func load() {
-        guard !didStartLoading else { return }
+        guard !didStartLoading else {
+            return
+        }
+
         didStartLoading = true
 
         switch image.kind {
@@ -109,13 +106,11 @@ private struct ImageView: SwiftUI.View {
     private func set(_ img: SwiftUI.Image) {
         loadedImage = image.isResizable ? img.resizable() : img
     }
-
 }
 
 #if canImport(UIKit)
 
 extension ImageView {
-
     private func loadExternalImage(at url: URL) -> AnyPublisher<SwiftUI.Image?, Never> {
         URLSession.shared.dataTaskPublisher(for: url)
         .map { response -> SwiftUI.Image? in
@@ -127,13 +122,11 @@ extension ImageView {
         .replaceError(with: nil)
         .eraseToAnyPublisher()
     }
-
 }
 
 #elseif canImport(AppKit)
 
 extension ImageView {
-
     private func loadExternalImage(at url: URL) -> AnyPublisher<SwiftUI.Image?, Never> {
         URLSession.shared.dataTaskPublisher(for: url)
         .map { response -> SwiftUI.Image? in
@@ -145,17 +138,14 @@ extension ImageView {
         .replaceError(with: nil)
         .eraseToAnyPublisher()
     }
-
 }
 
 #endif
 
-extension Image {
-
-    public var view: some SwiftUI.View {
+extension Image: SwiftUI.View {
+    public var body: some SwiftUI.View {
         ImageView(image: self)
     }
-
 }
 
 #endif

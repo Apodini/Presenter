@@ -1,6 +1,4 @@
-
-public struct CoderViewModifier: Codable, AnyViewModifying {
-
+public struct CoderViewModifier: CodableViewModifier {
     // MARK: Nested Types
 
     private enum CodingKeys: String, CodingKey {
@@ -10,16 +8,16 @@ public struct CoderViewModifier: Codable, AnyViewModifying {
 
     private enum Error: Swift.Error {
         case unregisteredType(String)
-        case unexpectedType(AnyViewModifying.Type, expected: AnyViewModifying.Type)
+        case unexpectedType(ViewModifier.Type, expected: ViewModifier.Type)
     }
 
     // MARK: Stored Properties
 
-    let element: AnyViewModifying
+    let element: ViewModifier
 
     // MARK: Initialization
 
-    internal init(_ element: AnyViewModifying) {
+    internal init(_ element: ViewModifier) {
         self.element = element
     }
 
@@ -45,32 +43,29 @@ public struct CoderViewModifier: Codable, AnyViewModifying {
         }
         try coder.encode(element, encoder)
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension CoderViewModifier: CustomStringConvertible {
-
     public var description: String {
         "\(element)"
     }
-
 }
 
 // MARK: - Registration
 
 extension CoderViewModifier {
-
     // MARK: Nested Types
 
     private struct Coder {
-        var decode: (Decoder) throws -> AnyViewModifying
-        var encode: (AnyViewModifying, Encoder) throws -> Void
+        var decode: (Decoder) throws -> ViewModifier
+        var encode: (ViewModifier, Encoder) throws -> Void
     }
 
     // MARK: Static Properties
 
+    // swiftlint:disable:next discouraged_optional_collection
     private static var _registeredTypes: [String: Coder]?
 
     private static var registeredTypes: [String: Coder] {
@@ -89,7 +84,7 @@ extension CoderViewModifier {
 
     // MARK: Static Functions
 
-    public static func register<Modifier: AnyViewModifying>(_: Modifier.Type) {
+    public static func register<Modifier: CodableViewModifier>(_: Modifier.Type) {
         let coder = Coder(
             decode: { decoder in try Modifier(from: decoder) },
             encode: { modifier, encoder in
@@ -102,10 +97,9 @@ extension CoderViewModifier {
         registeredTypes.updateValue(coder, forKey: Modifier.type)
     }
 
-    public static func unregister<Modifier: AnyViewModifying>(_: Modifier.Type) {
+    public static func unregister<Modifier: CodableViewModifier>(_: Modifier.Type) {
         registeredTypes.removeValue(forKey: Modifier.type)
     }
-
 }
 
 // MARK: - AnyViewModifying
@@ -113,12 +107,9 @@ extension CoderViewModifier {
 #if canImport(SwiftUI)
 
 extension CoderViewModifier {
-
-    public func apply<V: SwiftUI.View>(to view: V) -> _View {
-        element.apply(to: view)
+    public func body<Content: SwiftUI.View>(for content: Content) -> View {
+        element.body(for: content)
     }
-
 }
 
 #endif
-

@@ -1,6 +1,4 @@
-
 public struct Value<Content: Codable>: Codable {
-
     // MARK: Stored Properties
 
     let key: String?
@@ -11,7 +9,7 @@ public struct Value<Content: Codable>: Codable {
     #if canImport(SwiftUI)
 
     public func get(from model: Model) -> Content {
-        key.flatMap { model.state[$0] as? Content } ?? self.default
+        key.flatMap { model.get($0) as? Content } ?? self.default
     }
 
     #endif
@@ -25,5 +23,4 @@ public struct Value<Content: Codable>: Codable {
     public static func at(_ key: String, default value: Content) -> Self {
         .init(key: key, default: value)
     }
-
 }

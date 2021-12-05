@@ -1,6 +1,4 @@
-
-public struct NavigationLink: InternalView, Codable {
-
+public struct NavigationLink: CodableWrapperView {
     // MARK: Stored Properties
 
     private let destination: CoderView
@@ -9,26 +7,23 @@ public struct NavigationLink: InternalView, Codable {
 
     // MARK: Initialization
 
-    public init<Destination: View, Label: View>(
-        destination: Destination,
+    public init(
+        destination: View,
         isActive: Binding<Bool>,
-        label: Label
+        label: View
     ) {
         self.destination = CoderView(destination)
         self.isActive = isActive
         self.label = CoderView(label)
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension NavigationLink: CustomStringConvertible {
-
     public var description: String {
         "NavigationLink(destination: \(destination), isActive: \(isActive), label: \(label))"
     }
-
 }
 
 // MARK: - View
@@ -36,28 +31,21 @@ extension NavigationLink: CustomStringConvertible {
 #if canImport(SwiftUI)
 
 extension NavigationLink {
-
-    public var view: _View {
-        destination.apply(Modifier1(label: label, isActive: isActive))
+    public var body: View {
+        destination.modifier(Modifier1(label: label, isActive: isActive))
     }
-
 }
 
 private struct Modifier1: ViewModifier {
-
     let label: CoderView
     let isActive: Binding<Bool>
 
-    func body(content: Content) -> some SwiftUI.View {
-        label
-            .apply(Modifier2(destination: content, isActive: isActive))
-            .eraseToAnyView()
+    func body<Content: SwiftUI.View>(for content: Content) -> View {
+        label.modifier(Modifier2(destination: content, isActive: isActive))
     }
-
 }
 
-private struct Modifier2<Destination: SwiftUI.View>: ViewModifier {
-
+private struct Modifier2<Destination: SwiftUI.View>: ViewModifier, SwiftUI.ViewModifier {
     var destination: Destination
     let isActive: Binding<Bool>
 
@@ -68,14 +56,20 @@ private struct Modifier2<Destination: SwiftUI.View>: ViewModifier {
 
     func body(content: Content) -> some SwiftUI.View {
         ModelView { model in
-            SwiftUI.NavigationLink(
-                destination: destination,
-                isActive: model.binding(for: self.isActive),
-                label: { content }
-            )
+            SwiftUI.ZStack {
+                SwiftUI.NavigationLink(
+                    destination: destination,
+                    isActive: model.binding(for: self.isActive),
+                    label: { content }
+                )
+
+                SwiftUI.NavigationLink(
+                    destination: EmptyView(),
+                    label: { EmptyView() }
+                )
+            }
         }
     }
-
 }
 
 #endif

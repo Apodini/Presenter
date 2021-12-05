@@ -1,4 +1,3 @@
-
 import SwiftUI
 
 @available(macOS 11.0, iOS 14.0, *)
@@ -17,13 +16,4 @@ struct ExampleApp: App {
                 .environmentObject(model)
         }
     }
-
 }
-
-
-struct ContentView_Provider: PreviewProvider {
-    static var previews: some SwiftUI.View {
-        ContentView().eraseToAnyView()
-    }
-}
-

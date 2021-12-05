@@ -1,32 +1,25 @@
-
-internal struct FontModifier: AnyViewModifying {
-
+internal struct FontModifier: CodableViewModifier {
     // MARK: Stored Properties
 
     let font: Font?
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension FontModifier: CustomStringConvertible {
-
     var description: String {
         "font(\(font?.description ?? "nil"))"
     }
-
 }
 
 // MARK: - ViewModifier
 
 #if canImport(SwiftUI)
 
-extension FontModifier: ViewModifier {
-
+extension FontModifier: SwiftUI.ViewModifier {
     func body(content: Content) -> some SwiftUI.View {
         content.font(font?.swiftUIValue)
     }
-
 }
 
 #endif
@@ -34,9 +27,7 @@ extension FontModifier: ViewModifier {
 // MARK: - View Extensions
 
 extension View {
-
-    public func font(_ font: Font?) -> some View {
-        modified(using: FontModifier(font: font))
+    public func font(_ font: Font?) -> View {
+        modifier(FontModifier(font: font))
     }
-
 }

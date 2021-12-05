@@ -1,6 +1,4 @@
-
-public struct If: SwiftUIView {
-
+public struct If: CodableWrapperView { // swiftlint:disable:this type_name
     // MARK: Nested Types
 
     private enum CodingKeys: String, CodingKey {
@@ -17,28 +15,28 @@ public struct If: SwiftUIView {
 
     // MARK: Initialization
 
-    public init<TrueView: View, FalseView: View>(
+    public init(
         _ condition: Value<Bool>,
-        then trueView: TrueView,
-        else falseView: FalseView
+        then trueView: View,
+        else falseView: View
     ) {
         self.condition = condition
         self.trueView = CoderView(trueView)
         self.falseView = CoderView(falseView)
     }
 
-    public init<TrueView: View>(
+    public init(
         _ condition: Value<Bool>,
-        then trueView: TrueView
+        then trueView: View
     ) {
         self.condition = condition
         self.trueView = CoderView(trueView)
         self.falseView = CoderView(Nil())
     }
 
-    public init<FalseView: View>(
+    public init(
         _ condition: Value<Bool>,
-        else falseView: FalseView
+        else falseView: View
     ) {
         self.condition = condition
         self.trueView = CoderView(Nil())
@@ -61,17 +59,14 @@ public struct If: SwiftUIView {
             try container.encode(falseView, forKey: .falseView)
         }
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension If: CustomStringConvertible {
-
     public var description: String {
         "If(\(condition), then: \(trueView), else: \(falseView))"
     }
-
 }
 
 // MARK: - View
@@ -79,17 +74,33 @@ extension If: CustomStringConvertible {
 #if canImport(SwiftUI)
 
 extension If {
+    public var body: View {
+        trueView.modifier(Modifier1(falseView: falseView, condition: condition))
+    }
+}
 
-    public var view: some SwiftUI.View {
-        ModelView<AnyView> { model in
+private struct Modifier1: ViewModifier {
+    let falseView: CoderView
+    let condition: Value<Bool>
+
+    func body<Content: SwiftUI.View>(for content: Content) -> View {
+        falseView.modifier(Modifier2(trueView: content, condition: condition))
+    }
+}
+
+private struct Modifier2<TrueView: SwiftUI.View>: ViewModifier, SwiftUI.ViewModifier {
+    let trueView: TrueView
+    let condition: Value<Bool>
+
+    func body(content: Content) -> some SwiftUI.View {
+        ModelView { model in
             if self.condition.get(from: model) {
-                return self.trueView.eraseToAnyView()
+                trueView
             } else {
-                return self.falseView.eraseToAnyView()
+                content
             }
         }
     }
-
 }
 
 #endif

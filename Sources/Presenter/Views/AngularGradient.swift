@@ -1,6 +1,4 @@
-
-public struct AngularGradient: SwiftUIView {
-
+public struct AngularGradient: CodableView {
     // MARK: Stored Properties
 
     private let gradient: Gradient
@@ -14,7 +12,6 @@ public struct AngularGradient: SwiftUIView {
                 center: UnitPoint,
                 startAngle: Angle = .zero,
                 endAngle: Angle = .zero) {
-
         self.gradient = gradient
         self.center = center
         self.startAngle = startAngle
@@ -24,32 +21,27 @@ public struct AngularGradient: SwiftUIView {
     public init(gradient: Gradient,
                 center: UnitPoint,
                 angle: Angle) {
-
         self.gradient = gradient
         self.center = center
         self.startAngle = angle
         self.endAngle = angle
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension AngularGradient: CustomStringConvertible {
-
     public var description: String {
         "AngularGradient(gradient: \(gradient), center: \(center), startAngle: \(startAngle), endAngle: \(endAngle))"
     }
-
 }
 
 // MARK: - View
 
 #if canImport(SwiftUI)
 
-extension AngularGradient {
-
-    public var view: some SwiftUI.View {
+extension AngularGradient: SwiftUI.View {
+    public var body: some SwiftUI.View {
         SwiftUI.AngularGradient(
             gradient: gradient.swiftUIValue,
             center: center.unitPoint,
@@ -57,8 +49,6 @@ extension AngularGradient {
             endAngle: endAngle.swiftUIValue
         )
     }
-
 }
 
 #endif
-

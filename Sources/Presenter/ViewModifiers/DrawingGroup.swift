@@ -1,44 +1,36 @@
-
 public enum ColorRenderingMode: String, Codable {
     case extendedLinear
     case linear
     case nonLinear
 }
 
-internal struct DrawingGroup: AnyViewModifying {
-
+internal struct DrawingGroup: CodableViewModifier {
     // MARK: Stored Properties
 
-    let opaque: Bool?
+    let opaque: Bool? // swiftlint:disable:this discouraged_optional_boolean
     let colorMode: ColorRenderingMode?
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension DrawingGroup: CustomStringConvertible {
-
     var description: String {
         "drawingGroup(opaque: \(opaque ?? true), colorMode: \(colorMode ?? .nonLinear))"
     }
-
 }
 
 // MARK: - ViewModifier
 
 #if canImport(SwiftUI)
 
-extension DrawingGroup: ViewModifier {
-
+extension DrawingGroup: SwiftUI.ViewModifier {
     func body(content: Content) -> some SwiftUI.View {
         content.drawingGroup(opaque: opaque ?? false,
                              colorMode: colorMode?.swiftUIValue ?? .nonLinear)
     }
-
 }
 
 extension ColorRenderingMode {
-
     var swiftUIValue: SwiftUI.ColorRenderingMode {
         switch self {
         case .extendedLinear:
@@ -49,7 +41,6 @@ extension ColorRenderingMode {
             return .nonLinear
         }
     }
-
 }
 
 #endif
@@ -57,9 +48,8 @@ extension ColorRenderingMode {
 // MARK: - View Extensions
 
 extension View {
-
-    public func drawingGroup(opaque: Bool? = nil, colorMode: ColorRenderingMode? = nil) -> some View {
-        modified(using: DrawingGroup(opaque: opaque, colorMode: colorMode))
+    public func drawingGroup(opaque: Bool? = nil, // swiftlint:disable:this discouraged_optional_boolean
+                             colorMode: ColorRenderingMode? = nil) -> View {
+        modifier(DrawingGroup(opaque: opaque, colorMode: colorMode))
     }
-
 }

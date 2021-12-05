@@ -1,6 +1,4 @@
-
 public struct SetAction<T: Codable>: Action {
-
     // MARK: Stored Properties
 
     private var key: String
@@ -18,9 +16,8 @@ public struct SetAction<T: Codable>: Action {
     #if canImport(SwiftUI)
 
     public func perform(on model: Model) {
-        model.state[key] = value
+        model.set(key, to: value)
     }
 
     #endif
-
 }

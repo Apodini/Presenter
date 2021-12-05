@@ -1,6 +1,4 @@
-
 public struct CoderAction {
-
     // MARK: Nested Types
 
     private enum CodingKeys: String, CodingKey {
@@ -46,13 +44,11 @@ public struct CoderAction {
         try container.encode(typeDescription, forKey: .type)
         try coder.encode(element, encoder)
     }
-
 }
 
 // MARK: - Registration
 
 extension CoderAction {
-
     // MARK: Nested Types
 
     private struct Coder {
@@ -62,6 +58,7 @@ extension CoderAction {
 
     // MARK: Static Properties
 
+    // swiftlint:disable:next discouraged_optional_collection
     private static var _registeredTypes: [String: Coder]?
 
     private static var registeredTypes: [String: Coder] {
@@ -96,13 +93,11 @@ extension CoderAction {
     internal static func unregister<A: Action>(_: A.Type) {
         registeredTypes.removeValue(forKey: A.type)
     }
-
 }
 
 // MARK: - ModelAction
 
 extension CoderAction: Action {
-
     #if canImport(SwiftUI)
 
     public func perform(on model: Model) {
@@ -110,5 +105,4 @@ extension CoderAction: Action {
     }
 
     #endif
-
 }

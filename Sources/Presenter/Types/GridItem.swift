@@ -1,16 +1,12 @@
-
 public struct GridItem: Codable {
-
     // MARK: Nested Types
 
     public enum Size {
-
         // MARK: Cases
 
         case adaptive(minimum: CGFloat, maximum: CGFloat)
         case fixed(CGFloat)
         case flexible(minimum: CGFloat, maximum: CGFloat)
-
     }
 
     // MARK: Stored Properties
@@ -26,13 +22,11 @@ public struct GridItem: Codable {
         self.spacing = spacing
         self.alignment = alignment
     }
-
 }
 
 #if canImport(SwiftUI)
 
 extension GridItem {
-
     #if !os(macOS) && !targetEnvironment(macCatalyst)
 
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, *)
@@ -41,11 +35,9 @@ extension GridItem {
     }
 
     #endif
-
 }
 
 extension GridItem.Size {
-
     #if !os(macOS) && !targetEnvironment(macCatalyst)
 
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, *)
@@ -61,13 +53,11 @@ extension GridItem.Size {
     }
 
     #endif
-
 }
 
 #endif
 
 extension GridItem.Size: Codable {
-
     // MARK: Nested Types
 
     enum CodingKeys: String, CodingKey {
@@ -126,5 +116,4 @@ extension GridItem.Size: Codable {
             try container.encode(value, forKey: .value)
         }
     }
-
 }

@@ -1,16 +1,14 @@
-
 public struct CopyAction: Action {
-
     // MARK: Stored Properties
 
-    private var from: String
-    private var to: String
+    private let fromKey: String
+    private let toKey: String
 
     // MARK: Initialization
 
-    public init(from: String, to: String) {
-        self.from = from
-        self.to = to
+    public init(from fromKey: String, to toKey: String) {
+        self.fromKey = fromKey
+        self.toKey = toKey
     }
 
     // MARK: Methods
@@ -18,9 +16,8 @@ public struct CopyAction: Action {
     #if canImport(SwiftUI)
 
     public func perform(on model: Model) {
-        model.state[to] = model.state[from]
+        model.set(toKey, to: model.get(fromKey))
     }
 
     #endif
-
 }

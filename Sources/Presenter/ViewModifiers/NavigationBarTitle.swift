@@ -1,35 +1,29 @@
-
 public enum NavigationBarTitleDisplayMode: String, Codable {
     case inline
     case automatic
     case large
 }
 
-internal struct NavigationBarTitle: AnyViewModifying {
-
+internal struct NavigationBarTitle: CodableViewModifier {
     // MARK: Stored Properties
 
     let title: Value<String>
     let displayMode: NavigationBarTitleDisplayMode?
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension NavigationBarTitle: CustomStringConvertible {
-
     var description: String {
         "navigationBarTitle(\(title), displayMode: \(displayMode ?? .automatic))"
     }
-
 }
 
 // MARK: - ViewModifier
 
 #if canImport(SwiftUI)
 
-extension NavigationBarTitle: ViewModifier {
-
+extension NavigationBarTitle: SwiftUI.ViewModifier {
     #if os(tvOS) || os(watchOS) || os(macOS)
 
     func body(content: Content) -> some SwiftUI.View {
@@ -46,13 +40,11 @@ extension NavigationBarTitle: ViewModifier {
     }
 
     #endif
-
 }
 
 #if canImport(UIKit)
 
 extension NavigationBarTitleDisplayMode {
-
     fileprivate var swiftUIValue: NavigationBarItem.TitleDisplayMode {
         switch self {
         case .automatic:
@@ -76,10 +68,8 @@ extension NavigationBarTitleDisplayMode {
 // MARK: - View Extensions
 
 extension View {
-
     public func navigationBarTitle(_ title: Value<String>,
-                                   displayMode: NavigationBarTitleDisplayMode? = nil) -> some View {
-        modified(using: NavigationBarTitle(title: title, displayMode: displayMode))
+                                   displayMode: NavigationBarTitleDisplayMode? = nil) -> View {
+        modifier(NavigationBarTitle(title: title, displayMode: displayMode))
     }
-
 }

@@ -1,6 +1,4 @@
-
-public struct TabView: SwiftUIView {
-
+public struct TabView: CodableView {
     // MARK: Stored Properties
 
     private let selection: Binding<String>?
@@ -8,35 +6,31 @@ public struct TabView: SwiftUIView {
 
     // MARK: Initialization
 
-    public init<Content: View>(
+    public init(
         selection: Binding<String>? = nil,
-        content: Content
+        content: View
     ) {
         self.selection = selection
         self.content = CoderView(content)
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension TabView: CustomStringConvertible {
-
     public var description: String {
         "TabView(selection: \(selection.map { "\($0)" } ?? "nil"), content: \(content))"
     }
-
 }
 
 // MARK: - View
 
 #if canImport(SwiftUI)
 
-extension TabView {
-
+extension TabView: SwiftUI.View {
     #if !os(macOS) && !targetEnvironment(macCatalyst) && !os(watchOS)
 
-    public var view: some SwiftUI.View {
+    public var body: some SwiftUI.View {
         ModelView { model in
             SwiftUI.TabView(
                 selection: selection.map(model.binding),
@@ -47,7 +41,7 @@ extension TabView {
 
     #elseif os(watchOS)
 
-    public var view: some SwiftUI.View {
+    public var body: some SwiftUI.View {
         if #available(watchOS 7.0, *) {
             ModelView { model in
                 SwiftUI.TabView(
@@ -62,12 +56,11 @@ extension TabView {
 
     #else
 
-    public var view: some SwiftUI.View {
+    public var body: some SwiftUI.View {
         SwiftUI.EmptyView()
     }
 
     #endif
-
 }
 
 #endif

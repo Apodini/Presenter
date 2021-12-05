@@ -1,4 +1,3 @@
-
 public enum RoundedCornerStyle: String, Codable {
     case circular
     case continuous
@@ -7,7 +6,6 @@ public enum RoundedCornerStyle: String, Codable {
 #if canImport(SwiftUI)
 
 extension RoundedCornerStyle {
-
     var swiftUIValue: SwiftUI.RoundedCornerStyle {
         switch self {
         case .circular:
@@ -16,7 +14,6 @@ extension RoundedCornerStyle {
             return .continuous
         }
     }
-
 }
 
 #endif

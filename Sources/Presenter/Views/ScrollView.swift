@@ -1,34 +1,29 @@
-
-public struct ScrollView: InternalView, Codable {
-
+public struct ScrollView: CodableWrapperView {
     // MARK: Stored Properties
 
     private let axis: AxisSet?
-    private let showsIndicators: Bool?
+    private let showsIndicators: Bool? // swiftlint:disable:this discouraged_optional_boolean
     private let content: CoderView
 
     // MARK: Initialization
 
-    public init<Content: View>(
+    public init(
         _ axis: AxisSet? = nil,
-        showsIndicators: Bool? = nil,
-        @ViewBuilder content: () -> Content
+        showsIndicators: Bool? = nil, // swiftlint:disable:this discouraged_optional_boolean
+        @ViewBuilder content: () -> View
     ) {
         self.axis = axis
         self.showsIndicators = showsIndicators
         self.content = CoderView(content())
     }
-
 }
 
 // MARK: - CustomStringConvertible
 
 extension ScrollView: CustomStringConvertible {
-
     public var description: String {
         "ScrollView(content: \(content))"
     }
-
 }
 
 // MARK: - View
@@ -36,18 +31,15 @@ extension ScrollView: CustomStringConvertible {
 #if canImport(SwiftUI)
 
 extension ScrollView {
-
-    public var view: _View {
-        content.apply(
+    public var body: View {
+        content.modifier(
             Modifier(axis: axis?.swiftUIValue ?? .vertical,
                      showsIndicators: showsIndicators ?? true)
         )
     }
-
 }
 
-private struct Modifier: ViewModifier {
-
+private struct Modifier: ViewModifier, SwiftUI.ViewModifier {
     let axis: SwiftUI.Axis.Set
     let showsIndicators: Bool
 
@@ -56,7 +48,6 @@ private struct Modifier: ViewModifier {
             content
         }
     }
-
 }
 
 #endif

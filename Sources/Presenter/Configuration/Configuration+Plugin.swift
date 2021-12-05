@@ -1,14 +1,14 @@
-
 import Foundation
 
 extension Presenter {
-
     private static var didImportPlugins = false
 
     // MARK: Plugins
 
-    static func usePlugins() {
-        guard !didImportPlugins else { return }
+    internal static func usePlugins() {
+        guard !didImportPlugins else {
+            return
+        }
         didImportPlugins = true
         use(plugin: DefaultPlugin())
     }
@@ -30,53 +30,44 @@ extension Presenter {
         plugin.plugins.forEach { $0.remove() }
         plugin.didRemove()
     }
-
 }
 
-extension _View where Self: Codable {
-
-    static func use() {
+extension View where Self: Decodable {
+    fileprivate static func use() {
         Presenter.use(view: Self.self)
     }
 
-    static func remove() {
+    fileprivate static func remove() {
         Presenter.remove(view: Self.self)
     }
-
 }
 
-extension AnyViewModifying {
-
-    static func use() {
+extension ViewModifier where Self: Codable {
+    fileprivate static func use() {
         Presenter.use(modifier: Self.self)
     }
 
-    static func remove() {
+    fileprivate static func remove() {
         Presenter.remove(modifier: Self.self)
     }
-
 }
 
 extension Action {
-
-    static func use() {
+    fileprivate static func use() {
         Presenter.use(action: Self.self)
     }
 
-    static func remove() {
+    fileprivate static func remove() {
         Presenter.remove(action: Self.self)
     }
-
 }
 
 extension Plugin {
-
-    func use() {
+    fileprivate func use() {
         Presenter.use(plugin: self)
     }
 
-    func remove() {
+    fileprivate func remove() {
         Presenter.remove(plugin: self)
     }
-
 }

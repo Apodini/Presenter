@@ -1,6 +1,4 @@
-
 public enum AxisSet: String, Codable, ExpressibleByArrayLiteral {
-
     // MARK: Cases
 
     case horizontal = "h"
@@ -19,13 +17,11 @@ public enum AxisSet: String, Codable, ExpressibleByArrayLiteral {
             self = value.contains(.horizontal) ? .horizontal : .none
         }
     }
-
 }
 
 #if canImport(SwiftUI)
 
 extension AxisSet {
-
     var swiftUIValue: Axis.Set {
         switch self {
         case .horizontal:

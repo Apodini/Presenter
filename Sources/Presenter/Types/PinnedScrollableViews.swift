@@ -1,6 +1,4 @@
-
 public struct PinnedScrollableViews: Codable, OptionSet {
-
     // MARK: Stored Properties
 
     public var rawValue: UInt32
@@ -15,13 +13,11 @@ public struct PinnedScrollableViews: Codable, OptionSet {
 
     public static let sectionHeaders: PinnedScrollableViews = .init(rawValue: 1 << 1)
     public static let sectionFooters: PinnedScrollableViews = .init(rawValue: 1 << 0)
-
 }
 
 #if canImport(SwiftUI)
 
 extension PinnedScrollableViews {
-
     #if !os(macOS) && !targetEnvironment(macCatalyst)
 
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, *)
@@ -37,7 +33,6 @@ extension PinnedScrollableViews {
     }
 
     #endif
-
 }
 
 #endif

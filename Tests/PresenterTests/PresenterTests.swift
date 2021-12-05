@@ -1,77 +1,46 @@
-
 #if !os(watchOS) && canImport(XCTest) && canImport(SwiftUI)
 
 import XCTest
 import Presenter
 
-typealias _Model = Model
-
 struct TestAction: Action {
     func perform(on model: Model) {
-        model.state["login-title"] = "Success"
+        model.set("login-title", to: "Success")
     }
 }
 
 extension Color {
-
     static var gray: Color {
         Color(red: 0.5, green: 0.5, blue: 0.5)
     }
-
 }
 
-struct MyCustomView: View {
-
+struct MyCustomView: UserView {
     @State("text", default: "")
     var text
 
-    @Binding<String>
+    @Binding
     var text2: Value<String>
 
-    var body: some View {
+    var body: View {
         VStack {
             TextField(text2, text: $text)
             MyCustomView2()
         }
     }
-
 }
 
-struct MyCustomView2: View {
-
-    var body: some View {
+struct MyCustomView2: UserView {
+    var body: View {
         Text("gallo")
     }
-
 }
 
 final class PresenterTests: XCTestCase {
-
     func testCustom() throws {
         let view = MyCustomView(text2: .at("test", default: ""))
         let data = try Presenter.encode(view)
         print(String(data: data, encoding: .utf8) ?? "nil")
-    }
-
-    func testInverseSquareRoot() {
-        func inverseSquareRoot(of value: Float) -> Float {
-            let x2 = value * 0.5
-            var y = value
-            var i = withUnsafeBytes(of: value) { $0.load(as: UInt32.self) }
-            i = 0x5f3759df &- (i &>> 1)
-            y = withUnsafeBytes(of: i) { $0.load(as: Float.self) }
-            y = y * (1.5 - (x2 * y * y))
-            y = y * (1.5 - (x2 * y * y))
-            y = y * (1.5 - (x2 * y * y))
-            return y
-        }
-
-        for _ in 0..<1_000_000 {
-            let value = Float.random(in: 0...1_000) + .ulpOfOne
-            let expected = 1 / sqrt(value)
-            let actual = inverseSquareRoot(of: value)
-            XCTAssertEqual(expected, actual, accuracy: expected * 0.000_001)
-        }
     }
 
     func testExample() {
@@ -79,19 +48,23 @@ final class PresenterTests: XCTestCase {
 
         let serverView = HStack(spacing: 8) {
             Text("Hallo")
-            .padding(8)
-            .frame(minWidth: 10, idealWidth: 30, maxWidth: 50,
-                   minHeight: 100, idealHeight: 110, maxHeight: 120,
-                   alignment: Alignment.center)
+                .padding(8)
+                .frame(minWidth: 10,
+                       idealWidth: 30,
+                       maxWidth: 50,
+                       minHeight: 100,
+                       idealHeight: 110,
+                       maxHeight: 120,
+                       alignment: .center)
 
             Text("Check")
-            .frame(width: 100)
+                .frame(width: 100)
 
             optional
 
             Text("What")
-            .padding(8)
-            .background(Color.gray)
+                .padding(8)
+                .background(Color.gray)
         }
 
         check(serverView)
@@ -131,8 +104,8 @@ final class PresenterTests: XCTestCase {
 
     func testJSAction() {
         let model = Model()
-        model.state["two"] = Int(2)
-        model.state["three"] = Int(3)
+        model.set("two", to: Int(2))
+        model.set("three", to: Int(3))
         let action = JavaScriptAction(
             script: """
             var five = two + three
@@ -143,8 +116,9 @@ final class PresenterTests: XCTestCase {
             errorKey: "error"
         )
         action.perform(on: model)
-        XCTAssert((model.state["error"] as AnyObject) is NSNull, "\(String(describing: model.state["error"]))")
-        XCTAssertEqual(model.state["five"] as? Int, 5)
+        XCTAssert((model.get("error") as AnyObject) is NSNull,
+                  "\(String(describing: model.get("error")))")
+        XCTAssertEqual(model.get("five") as? Int, 5)
     }
 
     private func check<V: View>(_ serverView: V) {
@@ -158,11 +132,6 @@ final class PresenterTests: XCTestCase {
             XCTFail("\(error)")
         }
     }
-
-    static var allTests = [
-        ("testExample", testExample),
-    ]
-
 }
 
 #endif

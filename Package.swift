@@ -26,7 +26,7 @@ let package = Package(
         .target(
             name: "ChartPresenter",
             dependencies: [
-                .product(name: "Charts", package: "swiftui-charts"),
+                .product(name: "Charts", package: "swiftui-charts", condition: .when(platforms: [.macOS, .macCatalyst, .iOS, .watchOS, .tvOS])),
                 .target(name: "Presenter"),
             ]),
         .executableTarget(
